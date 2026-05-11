@@ -1,0 +1,7 @@
+.vercel
+node_modules/
+dist/
+.omc/
+.DS_Store
+image/
+output/
