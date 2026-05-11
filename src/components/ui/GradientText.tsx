@@ -1,5 +1,6 @@
-import { useState, useCallback, useEffect, useRef, ReactNode } from 'react';
+import { useState, useCallback, useEffect, useRef, type ReactNode } from 'react';
 import { motion, useMotionValue, useAnimationFrame, useTransform } from 'motion/react';
+import './GradientText.css';
 
 interface GradientTextProps {
   children: ReactNode;
@@ -15,7 +16,7 @@ interface GradientTextProps {
 export default function GradientText({
   children,
   className = '',
-  colors = ['#5227FF', '#FF9FFC', '#B497CF'],
+  colors = ['#1a1a1a', '#8a7340', '#c8a96e'],
   animationSpeed = 8,
   showBorder = false,
   direction = 'horizontal',
@@ -54,7 +55,6 @@ export default function GradientText({
         progress.set(100 - ((cycleTime - animationDuration) / animationDuration) * 100);
       }
     } else {
-      // Continuously increase position for seamless looping
       progress.set((elapsedRef.current / animationDuration) * 100);
     }
   });
@@ -70,7 +70,6 @@ export default function GradientText({
     } else if (direction === 'vertical') {
       return `50% ${p}%`;
     } else {
-      // For diagonal, move only horizontally to avoid interference patterns
       return `${p}% 50%`;
     }
   });
@@ -85,42 +84,22 @@ export default function GradientText({
 
   const gradientAngle =
     direction === 'horizontal' ? 'to right' : direction === 'vertical' ? 'to bottom' : 'to bottom right';
-  // Duplicate first color at the end for seamless looping
   const gradientColors = [...colors, colors[0]].join(', ');
 
   const gradientStyle = {
     backgroundImage: `linear-gradient(${gradientAngle}, ${gradientColors})`,
     backgroundSize: direction === 'horizontal' ? '300% 100%' : direction === 'vertical' ? '100% 300%' : '300% 300%',
-    backgroundRepeat: 'repeat'
+    backgroundRepeat: 'repeat' as const
   };
 
   return (
     <motion.div
-      className={`relative mx-auto flex max-w-fit flex-row items-center justify-center rounded-[1.25rem] font-medium backdrop-blur transition-shadow duration-500 overflow-hidden cursor-pointer ${showBorder ? 'py-1 px-2' : ''} ${className}`}
+      className={`animated-gradient-text ${showBorder ? 'with-border' : ''} ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {showBorder && (
-        <motion.div
-          className="absolute inset-0 z-0 pointer-events-none rounded-[1.25rem]"
-          style={{ ...gradientStyle, backgroundPosition }}
-        >
-          <div
-            className="absolute bg-black rounded-[1.25rem] z-[-1]"
-            style={{
-              width: 'calc(100% - 2px)',
-              height: 'calc(100% - 2px)',
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%, -50%)'
-            }}
-          />
-        </motion.div>
-      )}
-      <motion.div
-        className="inline-block relative z-2 text-transparent bg-clip-text"
-        style={{ ...gradientStyle, backgroundPosition, WebkitBackgroundClip: 'text' }}
-      >
+      {showBorder && <motion.div className="gradient-overlay" style={{ ...gradientStyle, backgroundPosition }} />}
+      <motion.div className="text-content" style={{ ...gradientStyle, backgroundPosition }}>
         {children}
       </motion.div>
     </motion.div>

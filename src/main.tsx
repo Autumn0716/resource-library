@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 import { App } from "./App";
 import { Landing } from "./Landing";
+import { LangProvider } from "./i18n/LangContext";
 
 function Root() {
   const [showLanding, setShowLanding] = useState(true);
@@ -16,6 +17,8 @@ function Root() {
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Root />
+    <LangProvider>
+      <Root />
+    </LangProvider>
   </React.StrictMode>,
 );

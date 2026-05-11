@@ -1,122 +1,159 @@
 import { Button } from "@heroui/react";
 import SoftAurora from "./components/ui/SoftAurora";
-import LiquidEther from "./components/ui/LiquidEther";
 import GradientText from "./components/ui/GradientText";
-import { useState } from "react";
+import { MagicCard } from "./components/ui/MagicCard";
 import { resources, resourceGroups } from "./data/resources";
+import { useLang } from "./i18n/LangContext";
 
 interface LandingProps {
   onEnter: () => void;
 }
 
 export function Landing({ onEnter }: LandingProps) {
-  const [bgType, setBgType] = useState<"aurora" | "liquid">("aurora");
-
   const visible = resources.filter(r => r.status !== "pending").length;
+  const { lang, toggleLang, t } = useLang();
 
   return (
-    <div className="relative w-full h-[100dvh] overflow-hidden flex flex-col items-center justify-center bg-black">
-      {/* Background WebGL Animation */}
+    <div className="relative w-full h-[100dvh] overflow-hidden bg-[#fafafa]">
+      {/* Full-bleed atmospheric background */}
       <div className="absolute inset-0 z-0">
-        {bgType === "aurora" ? (
-          <SoftAurora 
-            color1="#a855f7" 
-            color2="#d946ef" 
-            speed={0.5} 
-            scale={1.2} 
-            brightness={0.8}
-          />
-        ) : (
-          <LiquidEther 
-            colors={['#1e1b4b', '#a855f7', '#d946ef']}
-            mouseForce={20}
-            autoDemo={true}
-            resolution={0.6}
-          />
-        )}
+        <SoftAurora
+          color1="#e8dcc8"
+          color2="#c8a96e"
+          speed={0.5}
+          scale={1.2}
+          brightness={0.5}
+        />
       </div>
 
-      <div className="absolute top-4 right-4 z-20 flex gap-2">
-        <button 
-          type="button"
-          onClick={() => setBgType("aurora")}
-          className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-mono transition-colors ${bgType === "aurora" ? "bg-purple-500/20 text-purple-300 border border-purple-500/40" : "bg-white/5 text-white/40 border border-transparent hover:bg-white/10 hover:text-white/80"}`}
+      {/* Radial dark wash for text contrast */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 25% 50%, rgba(250,250,250,0.55) 0%, rgba(250,250,250,0.3) 40%, transparent 70%)",
+        }}
+      />
+
+      {/* Dot field pattern */}
+      <div
+        className="absolute inset-0 z-[2] pointer-events-none opacity-40 mix-blend-multiply"
+        style={{
+          backgroundImage: "radial-gradient(rgba(200, 169, 110, 0.04) 1px, transparent 1px)",
+          backgroundSize: "26px 26px",
+        }}
+      />
+
+      {/* Floating nav pill */}
+      <nav
+        className="absolute top-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 px-5 py-2 rounded-full border border-black/6 bg-white/50 backdrop-blur-xl shadow-[0_2px_20px_rgba(180,150,90,0.08)]"
+        aria-label="Navigation"
+      >
+        <span className="font-semibold text-sm tracking-tight text-neutral-800">{t("intro.hero")}</span>
+        <span className="w-px h-4 bg-black/8" aria-hidden="true" />
+        <span className="text-neutral-400 text-xs font-mono">{t("rail.press")} <kbd className="px-1.5 py-0.5 rounded bg-black/5 text-neutral-500 text-[10px]">/</kbd> {t("rail.toFocusSearch")}</span>
+        <button
+          onClick={toggleLang}
+          className="px-2.5 py-0.5 rounded-full border border-black/8 bg-white/40 text-neutral-500 text-xs font-mono tracking-wider hover:bg-white/60 hover:border-black/12 transition-all"
+          title={lang === "en" ? "切换中文" : "Switch to English"}
         >
-          Aurora
+          {lang === "en" ? "中" : "EN"}
         </button>
-        <button 
-          type="button"
-          onClick={() => setBgType("liquid")}
-          className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-mono transition-colors ${bgType === "liquid" ? "bg-purple-500/20 text-purple-300 border border-purple-500/40" : "bg-white/5 text-white/40 border border-transparent hover:bg-white/10 hover:text-white/80"}`}
-        >
-          Liquid
-        </button>
-      </div>
+      </nav>
 
-      {/* Content overlay */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl">
-        <GradientText 
-          className="text-6xl md:text-8xl font-bold tracking-tighter mb-6"
-          colors={['#f8fafc', '#a855f7', '#d946ef', '#f8fafc']}
-          animationSpeed={5}
-        >
-          AI Builder Atlas
-        </GradientText>
-        
-        <p className="text-zinc-200 text-xl md:text-2xl mx-auto mb-8 font-medium tracking-tight">
-          The Ultimate Design-Engineering Resource Library
-        </p>
+      {/* Main content — editorial left-offset */}
+      <div className="relative z-10 flex h-full items-center">
+        <div className="w-full max-w-[680px] pl-[8%] pr-6">
+          <p className="text-neutral-400 text-xs tracking-[0.2em] uppercase font-mono mb-6">
+            {t("landing.designEngineering")}
+          </p>
 
-        <p className="text-zinc-400 text-base md:text-lg mx-auto mb-12 leading-relaxed font-mono max-w-2xl">
-          A meticulously curated collection of world-class UI components, advanced engineering foundations, and cutting-edge AI workflow tools designed for the modern builder.
-        </p>
+          <GradientText
+            className="text-6xl md:text-8xl font-bold tracking-[-0.04em] mb-5"
+            colors={['#1a1a1a', '#8a7340', '#c8a96e', '#8a7340']}
+            animationSpeed={5}
+          >
+            AI Builder Atlas
+          </GradientText>
 
-        <div className="flex flex-col md:flex-row gap-6 items-stretch justify-center mb-12 w-full">
-          <div className="flex flex-col items-start bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex-1 text-left">
-            <span className="text-xs tracking-widest text-purple-400 font-bold mb-3 uppercase">MISSION</span>
-            <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">Refine Your Aesthetic System</h2>
-            <p className="text-sm text-zinc-400 leading-relaxed">
-              We bridge the gap between extreme aesthetics and solid engineering, providing {resources.length} hand-picked entry points to elevate your product's taste and quality.
-            </p>
+          <p className="text-neutral-600 text-2xl md:text-3xl font-medium tracking-[-0.02em] mb-4" style={{ textWrap: "balance" }}>
+            {t("landing.hero")}
+          </p>
+
+          <p className="text-neutral-500 text-base leading-relaxed max-w-md mb-10" style={{ textWrap: "pretty" }}>
+            {t("landing.subtitle")}
+          </p>
+
+          <div className="flex items-center gap-4 mb-10">
+            <Button
+              size="lg"
+              variant="primary"
+              className="font-sans tracking-wide font-semibold px-10 py-6 text-base text-white border-0 transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#c8a96e]"
+              style={{
+                background: '#c8a96e',
+                boxShadow: '0 2px 20px rgba(200, 169, 110, 0.35)',
+              }}
+              onPress={onEnter}
+            >
+              {t("landing.cta")}
+            </Button>
+            <span className="text-neutral-400 text-sm font-mono">
+              {visible} {t("status.curated")} · {resourceGroups.length} {t("meta.groups")}
+            </span>
           </div>
 
-          <div className="flex flex-col gap-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 w-full md:w-64 text-left">
-            <div className="flex justify-between items-center border-b border-white/5 pb-2">
-              <strong className="text-white text-xl">{resources.length}</strong>
-              <span className="text-zinc-400 text-xs tracking-wider uppercase">Resources</span>
+          {/* Stats row — inline, not a card */}
+          <div className="flex gap-8 text-neutral-400">
+            <div>
+              <span className="block text-2xl font-semibold text-neutral-800 tracking-tight" style={{ fontVariantNumeric: "tabular-nums" }}>{resources.length}</span>
+              <span className="text-[11px] tracking-wider">{t("meta.resources")}</span>
             </div>
-            <div className="flex justify-between items-center border-b border-white/5 pb-2">
-              <strong className="text-white text-xl">{resourceGroups.length}</strong>
-              <span className="text-zinc-400 text-xs tracking-wider uppercase">Categories</span>
+            <div className="w-px bg-black/8" aria-hidden="true" />
+            <div>
+              <span className="block text-2xl font-semibold text-neutral-800 tracking-tight" style={{ fontVariantNumeric: "tabular-nums" }}>{resourceGroups.length}</span>
+              <span className="text-[11px] tracking-wider">{t("meta.groups")}</span>
             </div>
-            <div className="flex justify-between items-center">
-              <strong className="text-white text-xl">{visible}</strong>
-              <span className="text-zinc-400 text-xs tracking-wider uppercase">Curated</span>
-            </div>
-            <div className="mt-4 pt-3 border-t border-white/10 text-[10px] text-zinc-500 font-mono text-center uppercase tracking-widest">
-              Keyboard Driven Interface
+            <div className="w-px bg-black/8" aria-hidden="true" />
+            <div>
+              <span className="block text-2xl font-semibold text-neutral-800 tracking-tight" style={{ fontVariantNumeric: "tabular-nums" }}>{visible}</span>
+              <span className="text-[11px] tracking-wider">{t("status.curated")}</span>
             </div>
           </div>
         </div>
-        
-        <Button 
-          size="lg" 
-          variant="primary"
-          className="font-mono tracking-widest font-bold px-12 py-7 text-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 shadow-[0_0_20px_rgba(168,85,247,0.5)] border-0"
-          onPress={onEnter}
-        >
-          ENTER LIBRARY
-        </Button>
+
+        {/* Right side — atmospheric, stats card floating */}
+        <div className="hidden lg:flex flex-1 items-center justify-center">
+          <MagicCard
+            className="rounded-3xl max-w-xs"
+            gradientSize={340}
+            gradientFrom="#333333"
+            gradientTo="#e5e5e5"
+            gradientColor="#1a1a1a"
+            gradientOpacity={0.08}
+          >
+            <div className="p-8">
+              <h2 className="text-xl font-semibold text-neutral-900 mb-2 tracking-tight" style={{ textWrap: "balance" }}>
+                {t("landing.refineAesthetic")}
+              </h2>
+              <p className="text-sm text-neutral-500 leading-relaxed mb-6">
+                {t("landing.refineDesc")}
+              </p>
+              <div className="flex gap-2">
+                <kbd className="px-2 py-1 rounded-md bg-black/4 text-neutral-500 text-[10px] font-mono tracking-wider">J/K</kbd>
+                <span className="text-neutral-400 text-xs self-center">Navigate</span>
+                <span className="text-neutral-300 self-center mx-1">·</span>
+                <kbd className="px-2 py-1 rounded-md bg-black/4 text-neutral-500 text-[10px] font-mono tracking-wider">R</kbd>
+                <span className="text-neutral-400 text-xs self-center">Surprise</span>
+              </div>
+            </div>
+          </MagicCard>
+        </div>
       </div>
 
-      {/* Decorative dot overlay */}
-      <div 
-        className="absolute inset-0 z-0 pointer-events-none opacity-40 mix-blend-screen"
-        style={{
-          backgroundImage: 'radial-gradient(rgba(180, 151, 207, 0.4) 1px, transparent 1px)',
-          backgroundSize: '26px 26px',
-        }}
-      />
+      {/* Bottom hint */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 font-mono text-[11px] text-neutral-400 tracking-wider">
+        {t("landing.keyboard")}
+      </div>
     </div>
   );
 }

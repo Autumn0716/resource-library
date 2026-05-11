@@ -1,6 +1,6 @@
-import { Button, Card } from "@heroui/react";
+import { Button, Card, Skeleton } from "@heroui/react";
 import Fuse from "fuse.js";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import {
   useCallback,
   useEffect,
@@ -17,10 +17,38 @@ import {
 } from "./data/resources";
 import { IntroductionHero } from "./components/IntroductionHero";
 import { AnimatedGradientText } from "./components/ui/animated-gradient-text";
+import { MagicCard } from "./components/ui/MagicCard";
+import { useLang } from "./i18n/LangContext";
+
+import { BlurFade } from "./components/ui/BlurFade";
 
 const updatedGroups = new Set(["极端审美参考", "UI 工程基建"]);
 const defaultOpenGroups = ["极端审美参考", "UI 工程基建"];
 const PENDING_GROUP = "待补充方向";
+
+function useReveal(selector: string, deps: unknown[]) {
+  useEffect(() => {
+    const elements = document.querySelectorAll<HTMLElement>(selector);
+    if (!elements.length) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const idx = Number(el.dataset.revealIdx ?? 0);
+            el.style.transitionDelay = `${idx * 40}ms`;
+            el.classList.add("visible");
+            observer.unobserve(el);
+          }
+        }
+      },
+      { threshold: 0.05 },
+    );
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
+}
 
 function countByGroup() {
   return resources.reduce<Map<string, number>>((map, item) => {
@@ -113,6 +141,7 @@ export function App() {
   const [pendingOnly, setPendingOnly] = useState(false);
   const [scrollingGroup, setScrollingGroup] = useState<string | null>(null);
   const [viewFading, setViewFading] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
   const lastSurpriseId = useRef<string | null>(null);
   const flatFocusBackup = useRef<number | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -317,7 +346,8 @@ export function App() {
         return;
       }
       if (key === "Escape") {
-        if (selected) setSelected(null);
+        if (showHelp) setShowHelp(false);
+        else if (selected) setSelected(null);
         else if (typing) (event.target as HTMLInputElement).blur();
         return;
       }
@@ -401,17 +431,7 @@ export function App() {
       }
       if (key === "?") {
         event.preventDefault();
-        window.alert(
-          "Keyboard shortcuts\n\n" +
-            "/        Focus search\n" +
-            "J or ↓   Next row (drawer: next related)\n" +
-            "K or ↑   Previous row (drawer: previous related)\n" +
-            "Enter    Open selected\n" +
-            "O        Open external URL in new tab\n" +
-            "R        Surprise me (random curated)\n" +
-            "Esc      Close drawer / blur search\n" +
-            "?        Show this list",
-        );
+        setShowHelp((v) => !v);
         return;
       }
     }
@@ -422,6 +442,7 @@ export function App() {
     flatRows,
     focusedIndex,
     selected,
+    showHelp,
     drawerFocusIdx,
     drawerRelatedFlat,
     openResource,
@@ -551,15 +572,21 @@ export function App() {
         </div>
       </main>
 
-      {selected && (
-        <ResourceDetail
-          item={selected}
-          related={relatedPair}
-          relatedFlat={drawerRelatedFlat}
-          drawerFocusIdx={drawerFocusIdx}
-          onClose={() => setSelected(null)}
-          onInspect={openResource}
-        />
+      <AnimatePresence>
+        {selected && (
+          <ResourceDetail
+            item={selected}
+            related={relatedPair}
+            relatedFlat={drawerRelatedFlat}
+            drawerFocusIdx={drawerFocusIdx}
+            onClose={() => setSelected(null)}
+            onInspect={openResource}
+          />
+        )}
+      </AnimatePresence>
+
+      {showHelp && (
+        <HelpModal onClose={() => setShowHelp(false)} />
       )}
     </div>
   );
@@ -592,6 +619,7 @@ function Sidebar({
   onOpenResource: (item: Resource) => void;
   onSurprise: () => void;
 }) {
+  const { t } = useLang();
   const activeRef = useRef<HTMLButtonElement | null>(null);
   const scrollingRef = useRef<HTMLButtonElement | null>(null);
   const navRef = useRef<HTMLElement>(null);
@@ -651,7 +679,7 @@ function Sidebar({
   // We use a shared wrapper to ensure the absolute positioning coordinates are consistent (always left: -12px relative to the container).
 
   return (
-    <aside className="sidebar" aria-label="资源分类" onMouseLeave={handleSidebarLeave}>
+    <aside className="sidebar" aria-label={t("sidebar.collections")} onMouseLeave={handleSidebarLeave}>
       <a className="brand" href="#top" onClick={() => onChooseGroup("intro")}>
         <span className="brand-mark" aria-hidden="true">
           RB
@@ -686,14 +714,14 @@ function Sidebar({
           </section>
 
           <section className="relative">
-            <p className="nav-kicker">Collections</p>
+            <p className="nav-kicker">{t("sidebar.collections")}</p>
             <button
               ref={isAllViewActive ? activeRef : null}
               className={activeGroup === "all" ? "nav-item active" : "nav-item"}
               type="button"
               onClick={() => onChooseGroup("all")}
             >
-              <span>全部资源</span>
+              <span>{t("sidebar.allResources")}</span>
               <span className="nav-count">{resources.length}</span>
             </button>
             {visibleGroups.map((group) => {
@@ -704,8 +732,7 @@ function Sidebar({
 
               return (
                 <div key={group.id} className="relative">
-                  <button
-                    ref={isScrolling ? scrollingRef : null}
+                  <div
                     className={[
                       "nav-group-head",
                       isOpen || isActive ? "open" : "",
@@ -713,46 +740,49 @@ function Sidebar({
                     ]
                       .filter(Boolean)
                       .join(" ")}
-                    type="button"
-                    onClick={() => {
-                      if (!isOpen) onToggleGroup(group.title);
-                      onChooseGroup(group.title);
-                    }}
-                    aria-expanded={isOpen}
                   >
-                    <ChevronIcon />
-                    <span>
-                      {isActive || isScrolling ? (
-                        <AnimatedGradientText
-                          colorFrom="#c084fc"
-                          colorTo="#d946ef"
-                          speed={2}
-                        >
-                          {group.title}
-                        </AnimatedGradientText>
-                      ) : (
-                        group.title
-                      )}
-                      {updatedGroups.has(group.title) ? (
-                        <span className="updated-tag">Updated</span>
-                      ) : null}
-                    </span>
-                    <span className="nav-count">{groupCounts.get(group.title) ?? 0}</span>
-                  </button>
+                    <button
+                      className="nav-chevron-btn"
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onToggleGroup(group.title);
+                      }}
+                      aria-expanded={isOpen}
+                      aria-label={isOpen ? "收起" : "展开"}
+                    >
+                      <ChevronIcon />
+                    </button>
+                    <button
+                      ref={isScrolling ? scrollingRef : null}
+                      className="nav-title-btn"
+                      type="button"
+                      onClick={() => {
+                        if (!isOpen) onToggleGroup(group.title);
+                        onChooseGroup(group.title);
+                      }}
+                    >
+                      <span>
+                        {isActive || isScrolling ? (
+                          <AnimatedGradientText
+                            colorFrom="#1a1a1a"
+                            colorTo="#c8a96e"
+                            speed={2}
+                          >
+                            {group.title}
+                          </AnimatedGradientText>
+                        ) : (
+                          group.title
+                        )}
+                        {updatedGroups.has(group.title) ? (
+                          <span className="updated-tag">{t("status.updated")}</span>
+                        ) : null}
+                      </span>
+                      <span className="nav-count">{groupCounts.get(group.title) ?? 0}</span>
+                    </button>
+                  </div>
                   {isOpen && (
                     <div className="nav-subitems">
-                      <button
-                        ref={isActive && !selectedId ? activeRef : null}
-                        className={
-                          isActive
-                            ? "nav-subitem browse-all active"
-                            : "nav-subitem browse-all"
-                        }
-                        type="button"
-                        onClick={() => onChooseGroup(group.title)}
-                      >
-                        Browse all →
-                      </button>
                       {groupResources.map((item) => {
                         const isActiveItem = selectedId === item.id;
                         const classes = [
@@ -794,14 +824,14 @@ function Sidebar({
           className="surprise-btn"
           type="button"
           onClick={onSurprise}
-          title="Random curated resource · R"
+          title={t("sidebar.surpriseMe")}
         >
           <ShuffleIcon />
-          <span>Surprise me</span>
+          <span>{t("sidebar.surpriseMe")}</span>
           <kbd>R</kbd>
         </button>
         <p className="shortcut-hints">
-          <kbd>/</kbd> Search &nbsp; <kbd>J</kbd>/<kbd>K</kbd> Navigate &nbsp; <kbd>?</kbd> Help
+          <kbd>/</kbd> {t("sidebar.search")} &nbsp; <kbd>J</kbd>/<kbd>K</kbd> {t("sidebar.navigate")} &nbsp; <kbd>?</kbd> {t("sidebar.help")}
         </p>
       </div>
     </aside>
@@ -821,6 +851,7 @@ function Topbar({
   query: string;
   onQueryChange: (value: string) => void;
 }) {
+  const { lang, toggleLang, t } = useLang();
   return (
     <header className="topbar">
       <span className="topbar-mark" aria-hidden="true">
@@ -832,11 +863,14 @@ function Topbar({
           ref={searchRef}
           value={query}
           onChange={(event) => onQueryChange(event.target.value)}
-          placeholder="Search resources, patterns, tools..."
-          aria-label="搜索资源"
+          placeholder={t("topbar.search")}
+          aria-label={t("topbar.search")}
         />
         <kbd>/</kbd>
       </label>
+      <button className="lang-toggle" onClick={toggleLang} title={lang === "en" ? "切换中文" : "Switch to English"}>
+        {lang === "en" ? "中" : "EN"}
+      </button>
     </header>
   );
 }
@@ -854,18 +888,19 @@ function CurrentGroupChip({
   count: number;
   onClick: () => void;
 }) {
+  const { t } = useLang();
   return (
     <button
       className="current-group-chip"
       type="button"
       onClick={onClick}
-      title={`View ${title} as grid`}
+      title={t("meta.viewAsGrid")}
     >
-      <span className="cg-label">CURRENT</span>
+      <span className="cg-label">{t("chip.browsing")}</span>
       <span className="cg-sep">·</span>
       <span className="cg-title">{title}</span>
       <span className="cg-count">{count}</span>
-      <span className="cg-cta">view as grid →</span>
+      <span className="cg-cta">{t("meta.viewAsGrid")}</span>
     </button>
   );
 }
@@ -905,6 +940,8 @@ function FlatList({
   flatRows.forEach((r, i) => globalIndex.set(r.id, i));
   const visibleCount = flatRows.length;
 
+  useReveal(".flat-row", [flatRows.length, pendingOnly, query]);
+
   return (
     <div className="flat-list">
       <header className="atlas-meta">
@@ -942,7 +979,7 @@ function FlatList({
       {pendingOnly ? (
         <section className="flat-section" data-section={PENDING_GROUP}>
           <FlatSectionHeader
-            kicker="ROADMAP"
+            kicker="Upcoming"
             title="待补充方向"
             keywords="规格·架构·方向"
             hideViewAs
@@ -997,7 +1034,7 @@ function FlatList({
           {groupedForFlat.map(({ group, items }) => (
             <section key={group.id} className="flat-section" data-section={group.title}>
               <FlatSectionHeader
-                kicker={`COLLECTION · ${items.length}`}
+                kicker={`${items.length} resources`}
                 title={group.title}
                 keywords={extractKeywords(group.description)}
                 onViewAsGrid={() => onChooseGroup(group.title)}
@@ -1018,7 +1055,7 @@ function FlatList({
           ))}
           {roadmap.length > 0 && (
             <section className="roadmap-footer" aria-label="待补充方向">
-              <p className="roadmap-label">ROADMAP · 待补充方向</p>
+              <p className="roadmap-label">Upcoming · 待补充方向</p>
               <p className="roadmap-list">
                 {roadmap.map((item, i) => (
                   <span key={item.id}>
@@ -1092,6 +1129,7 @@ function FlatRow({
     <div
       className={`flat-row ${focused ? "focused" : ""} ${pending ? "pending" : ""}`}
       data-row-idx={index}
+      data-reveal-idx={index}
     >
       <button
         className="flat-row-main"
@@ -1200,24 +1238,33 @@ function GroupView({
   onBackToAll: () => void;
 }) {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [loading, setLoading] = useState(true);
   const group = resourceGroups.find((g) => g.title === activeGroup);
+
+  useEffect(() => {
+    setLoading(true);
+    const t = setTimeout(() => setLoading(false), 400);
+    return () => clearTimeout(t);
+  }, [activeGroup, activeType]);
+
+  useReveal(".flat-row", [items.length, activeType, viewMode, loading]);
   return (
     <div className="group-view">
       <div className="section-heading">
-        <div>
-          <button className="crumb-back" type="button" onClick={onBackToAll}>
-            ← all resources
-          </button>
-          <h1>{activeGroup}</h1>
-          <p>{group?.description ?? "跨分类浏览。"}</p>
-        </div>
-        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-          <span>{items.length} items</span>
-          <div className="view-toggle">
-            <button type="button" className={viewMode === "list" ? "active" : ""} onClick={() => setViewMode("list")}>List</button>
-            <button type="button" className={viewMode === "grid" ? "active" : ""} onClick={() => setViewMode("grid")}>Grid</button>
+        <button className="crumb-back" type="button" onClick={onBackToAll}>
+          ← all resources
+        </button>
+        <div className="section-heading-title-row">
+          <h1 className="section-heading-title">{activeGroup}</h1>
+          <div className="section-heading-meta">
+            <span>{items.length} items</span>
+            <div className="view-toggle">
+              <button type="button" className={viewMode === "list" ? "active" : ""} onClick={() => setViewMode("list")}>List</button>
+              <button type="button" className={viewMode === "grid" ? "active" : ""} onClick={() => setViewMode("grid")}>Grid</button>
+            </div>
           </div>
         </div>
+        <p>{group?.description ?? "跨分类浏览。"}</p>
       </div>
 
       <FilterBar
@@ -1230,15 +1277,22 @@ function GroupView({
       {items.length ? (
         viewMode === "grid" ? (
           <div className="resource-grid">
-            {items.map((item, i) => (
-              <ResourceCard
-                item={item}
-                key={item.id}
-                focused={i === focusedIndex}
-                index={i}
-                onInspect={onInspect}
-              />
-            ))}
+            {loading ? (
+              Array.from({ length: 6 }).map((_, i) => (
+                <ResourceCardSkeleton key={`skel-${i}`} />
+              ))
+            ) : (
+              items.map((item, i) => (
+                <BlurFade key={item.id} delay={i * 0.05} inView offset={10} blur="6px">
+                  <ResourceCard
+                    item={item}
+                    focused={i === focusedIndex}
+                    index={i}
+                    onInspect={onInspect}
+                  />
+                </BlurFade>
+              ))
+            )}
           </div>
         ) : (
           <div className="flat-rows" style={{ marginTop: "24px" }}>
@@ -1273,36 +1327,45 @@ function ResourceCard({
   onInspect: (item: Resource) => void;
 }) {
   return (
-    <Card
+    <MagicCard
       className={`resource-card ${focused ? "focused" : ""}`}
-      variant="transparent"
       data-row-idx={index}
-      onMouseMove={onMoveSpotlight as unknown as React.MouseEventHandler<HTMLDivElement>}
+      gradientSize={340}
+      gradientFrom="#5a4020"
+      gradientTo="#f5e6c8"
+      gradientColor="#c8a96e"
+      gradientOpacity={0.12}
     >
-      <Card.Header className="card-head">
-        <div className="card-head-title">
-          <FaviconImg id={item.id} />
-          <Card.Title>{item.name}</Card.Title>
+      <div className="resource-card-inner">
+        <div className="card-head">
+          <div className="card-head-title">
+            <FaviconImg id={item.id} />
+            <h3>{item.name}</h3>
+          </div>
+          <StatusBadge status={item.status} />
         </div>
-        <StatusBadge status={item.status} />
-      </Card.Header>
-      <Card.Description>{item.use}</Card.Description>
-      <Card.Footer className="card-actions">
-        <span className="card-type">{item.type}</span>
-        <div className="card-actions-right">
-          <Button onPress={() => onInspect(item)} size="sm" variant="ghost">
-            Details
-          </Button>
-          {isExternal(item) ? (
-            <a href={item.url} rel="noreferrer" target="_blank">
-              Open →
-            </a>
-          ) : (
-            <span className="disabled-link">待补充</span>
-          )}
+        <p className="resource-card-desc">{item.use}</p>
+        <div className="card-actions">
+          <span className="card-type">{item.type}</span>
+          <div className="card-actions-right">
+            <button
+              className="card-detail-btn"
+              type="button"
+              onClick={() => onInspect(item)}
+            >
+              Details
+            </button>
+            {isExternal(item) ? (
+              <a href={item.url} rel="noreferrer" target="_blank">
+                Open →
+              </a>
+            ) : (
+              <span className="disabled-link">待补充</span>
+            )}
+          </div>
         </div>
-      </Card.Footer>
-    </Card>
+      </div>
+    </MagicCard>
   );
 }
 
@@ -1324,7 +1387,10 @@ function FilterBar({
         type="button"
         onClick={() => onChange("all")}
       >
-        全部类型
+        {activeType === "all" && (
+          <motion.span className="filter-indicator" layoutId="filter-indicator" />
+        )}
+        <span className="filter-label">全部类型</span>
       </button>
       {types.map((type) => (
         <button
@@ -1333,7 +1399,10 @@ function FilterBar({
           type="button"
           onClick={() => onChange(type)}
         >
-          {type}
+          {activeType === type && (
+            <motion.span className="filter-indicator" layoutId="filter-indicator" />
+          )}
+          <span className="filter-label">{type}</span>
         </button>
       ))}
       <span>{count} visible</span>
@@ -1403,124 +1472,236 @@ function ResourceDetail({
   onClose: () => void;
   onInspect: (item: Resource) => void;
 }) {
+  const { t } = useLang();
   const idxMap = new Map<string, number>();
   relatedFlat.forEach((r, i) => idxMap.set(r.id, i));
 
+  const stagger = {
+    hidden: { opacity: 0, y: 12, filter: "blur(4px)" },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { delay: 0.12 + i * 0.05, duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+    }),
+  };
+
+  const hasRelated = related.sameType.length > 0 || related.sameGroup.length > 0;
+
   return (
-    <div className="detail-layer" role="presentation" onMouseDown={onClose}>
-      <aside
+    <motion.div
+      className="detail-layer"
+      role="presentation"
+      onMouseDown={onClose}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+    >
+      <motion.aside
         aria-label="资源详情"
         className="detail-panel"
         onMouseDown={(event) => event.stopPropagation()}
         role="dialog"
+        initial={{ scale: 0.96, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.98, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 320, damping: 28, mass: 0.5 }}
       >
-        <div className="detail-header">
-          <span className="docs-badge">Resource Inspector</span>
-          <Button onPress={onClose} size="sm" variant="ghost">
-            Close
-          </Button>
-        </div>
-        <div className="detail-title-row">
-          <FaviconImg id={item.id} />
-          <h2>{item.name}</h2>
-        </div>
-        <div className="detail-tags">
-          <span>{item.group}</span>
-          <span>{item.type}</span>
-          <StatusBadge status={item.status} />
-        </div>
-        <section>
-          <h3>Use when</h3>
-          <p>{item.use}</p>
-        </section>
-        <section>
-          <h3>Decision note</h3>
-          <p>
-            {item.status === "pending"
-              ? "这是待补充方向，适合作为后续资料扩展入口。"
-              : "这是已收录资源。使用时先看它所处分类，再和同类型资源比较，不要把它当作唯一答案。"}
-          </p>
-        </section>
+        {/* Header */}
+        <motion.div custom={0} variants={stagger} initial="hidden" animate="visible">
+          <div className="detail-header">
+            <div className="detail-header-left">
+              <span className="detail-header-text">
+                <span className="detail-kicker">{item.group}</span>
+                <span className="detail-meta-dot" aria-hidden="true">·</span>
+                <span>{item.type}</span>
+              </span>
+              <StatusBadge status={item.status} />
+            </div>
+            <button className="detail-close-btn" type="button" onClick={onClose} aria-label={t("detail.close")}>
+              ×
+            </button>
+          </div>
+        </motion.div>
 
-        {(related.sameType.length > 0 || related.sameGroup.length > 0) && (
-          <section className="related-sections">
-            <h3>Related</h3>
-            {related.sameType.length > 0 && (
-              <div className="related-block">
-                <p className="related-label">
-                  SAME TYPE <span className="related-label-value">· {item.type}</span>
-                </p>
-                <div className="related-list">
-                  {related.sameType.map((next) => {
-                    const idx = idxMap.get(next.id) ?? -1;
-                    return (
-                      <button
-                        key={next.id}
-                        type="button"
-                        className={idx === drawerFocusIdx ? "focused" : ""}
-                        data-drawer-rel-idx={idx}
-                        onClick={() => onInspect(next)}
-                      >
-                        <FaviconImg id={next.id} />
-                        <span>
-                          <span className="rel-name">{next.name}</span>
-                          <small>{next.group}</small>
-                        </span>
-                      </button>
-                    );
-                  })}
+        {/* Title */}
+        <motion.div custom={1} variants={stagger} initial="hidden" animate="visible">
+          <div className="detail-title-row">
+            <FaviconImg id={item.id} />
+            <h2 className="detail-title">{item.name}</h2>
+          </div>
+        </motion.div>
+
+        {/* Scrollable body */}
+        <div className="detail-body">
+          {/* Bento body */}
+          <div className={`detail-bento ${hasRelated ? "with-related" : ""}`}>
+            {/* Left: description */}
+            <motion.div custom={2} variants={stagger} initial="hidden" animate="visible">
+              <div className="detail-bento-main">
+                <div>
+                  <h3>{t("detail.reachFor")}</h3>
+                  <p>{item.use}</p>
+
+                  {item.status === "pending" && (
+                    <div className="detail-pending-notice">
+                      {t("detail.pendingNotice")}
+                    </div>
+                  )}
+                </div>
+
+                <div className="detail-actions">
+                  {isExternal(item) ? (
+                    <a className="detail-primary-link" href={item.url} rel="noreferrer" target="_blank">
+                      {t("detail.open")} {item.name} →
+                    </a>
+                  ) : (
+                    <span className="detail-pending-link">{t("detail.linkPending")}</span>
+                  )}
                 </div>
               </div>
-            )}
-            {related.sameGroup.length > 0 && (
-              <div className="related-block">
-                <p className="related-label">
-                  SAME GROUP <span className="related-label-value">· {item.group}</span>
-                </p>
-                <div className="related-list">
-                  {related.sameGroup.map((next) => {
-                    const idx = idxMap.get(next.id) ?? -1;
-                    return (
-                      <button
-                        key={next.id}
-                        type="button"
-                        className={idx === drawerFocusIdx ? "focused" : ""}
-                        data-drawer-rel-idx={idx}
-                        onClick={() => onInspect(next)}
-                      >
-                        <FaviconImg id={next.id} />
-                        <span>
-                          <span className="rel-name">{next.name}</span>
-                          <small>{next.type}</small>
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-          </section>
-        )}
+            </motion.div>
 
-        <div className="detail-actions">
-          {isExternal(item) ? (
-            <a className="detail-primary-link" href={item.url} rel="noreferrer" target="_blank">
-              Open {item.name} →
-            </a>
-          ) : (
-            <Button isDisabled variant="secondary">
-              待补充
-            </Button>
-          )}
+            {/* Right: related */}
+            {hasRelated && (
+              <motion.div custom={3} variants={stagger} initial="hidden" animate="visible">
+                <div className="detail-bento-related">
+                  <h3>{t("detail.related")}</h3>
+                  {related.sameType.length > 0 && (
+                    <div className="related-block">
+                      <p className="related-label">
+                        {t("detail.byType")} <span className="related-label-value">· {item.type}</span>
+                      </p>
+                      <div className="related-list">
+                        {related.sameType.map((next) => {
+                          const idx = idxMap.get(next.id) ?? -1;
+                          return (
+                            <motion.button
+                              key={next.id}
+                              type="button"
+                              className={idx === drawerFocusIdx ? "focused" : ""}
+                              data-drawer-rel-idx={idx}
+                              onClick={() => onInspect(next)}
+                              whileHover={{ x: 3 }}
+                              whileTap={{ scale: 0.96 }}
+                              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                            >
+                              <FaviconImg id={next.id} />
+                              <span className="rel-name">{next.name}</span>
+                            </motion.button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                  {related.sameGroup.length > 0 && (
+                    <div className="related-block">
+                      <p className="related-label">
+                        By group <span className="related-label-value">· {item.group}</span>
+                      </p>
+                      <div className="related-list">
+                        {related.sameGroup.map((next) => {
+                          const idx = idxMap.get(next.id) ?? -1;
+                          return (
+                            <motion.button
+                              key={next.id}
+                              type="button"
+                              className={idx === drawerFocusIdx ? "focused" : ""}
+                              data-drawer-rel-idx={idx}
+                              onClick={() => onInspect(next)}
+                              whileHover={{ x: 3 }}
+                              whileTap={{ scale: 0.96 }}
+                              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                            >
+                              <FaviconImg id={next.id} />
+                              <span className="rel-name">{next.name}</span>
+                            </motion.button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            )}
+          </div>
         </div>
-      </aside>
-    </div>
+      </motion.aside>
+    </motion.div>
   );
 }
 
 function StatusBadge({ status }: { status: Resource["status"] }) {
+  const { t } = useLang();
   return (
-    <span className={status === "pending" ? "status pending" : "status"}>{status}</span>
+    <span className={status === "pending" ? "status pending" : "status"}>
+      {status === "pending" ? t("status.pending") : t("status.curated")}
+    </span>
+  );
+}
+
+function ResourceCardSkeleton() {
+  return (
+    <div className="resource-card-skeleton">
+      <div className="rcs-head">
+        <div className="rcs-head-left">
+          <div className="rcs-avatar" />
+          <Skeleton className="h-3.5 w-3/5 rounded-lg" />
+        </div>
+        <Skeleton className="h-4 w-14 rounded-md" />
+      </div>
+      <div className="rcs-body">
+        <Skeleton className="h-2.5 w-full rounded" />
+        <Skeleton className="h-2.5 w-3/5 rounded" />
+      </div>
+      <div className="rcs-footer">
+        <Skeleton className="h-5 w-12 rounded-md" />
+        <div className="rcs-footer-right">
+          <Skeleton className="h-5 w-14 rounded-md" />
+          <Skeleton className="h-3 w-12 rounded" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ===================================================================
+   HelpModal
+   =================================================================== */
+
+function HelpModal({ onClose }: { onClose: () => void }) {
+  const { t } = useLang();
+  const shortcuts = [
+    { keys: "/", desc: t("help.focusSearch") },
+    { keys: "J / ↓", desc: t("help.nextRow") },
+    { keys: "K / ↑", desc: t("help.prevRow") },
+    { keys: "Enter", desc: t("help.openSelected") },
+    { keys: "O", desc: t("help.openExternal") },
+    { keys: "R", desc: t("help.surprise") },
+    { keys: "Esc", desc: t("help.closeBlur") },
+    { keys: "?", desc: t("help.togglePanel") },
+  ];
+
+  return (
+    <div className="help-overlay" role="presentation" onMouseDown={onClose}>
+      <div
+        className="help-panel"
+        role="dialog"
+        aria-label={t("help.title")}
+        onMouseDown={(e) => e.stopPropagation()}
+      >
+        <h3 className="help-title">{t("help.title")}</h3>
+        <div className="help-grid">
+          {shortcuts.map((s) => (
+            <div key={s.keys} className="help-row">
+              <kbd>{s.keys}</kbd>
+              <span>{s.desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
