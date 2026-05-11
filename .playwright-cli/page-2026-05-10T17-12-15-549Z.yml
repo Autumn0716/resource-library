@@ -1,0 +1,2538 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Private Atlas
+      - heading "Resources Library" [level=1] [ref=e6]
+      - paragraph [ref=e7]: 一个面向 AI 全栈工程师的资源地图：先作为单文件手册使用，之后可以升级成 Fumadocs / Next.js 站点。
+    - navigation [ref=e8]:
+      - button "全部资源 204" [ref=e179] [cursor=pointer]:
+        - generic [ref=e180]: 全部资源
+        - generic [ref=e181]: "204"
+      - button "学术创作 3" [ref=e182] [cursor=pointer]:
+        - generic [ref=e183]: 学术创作
+        - generic [ref=e184]: "3"
+      - button "极端审美参考 25" [ref=e185] [cursor=pointer]:
+        - generic [ref=e186]: 极端审美参考
+        - generic [ref=e187]: "25"
+      - button "UI 工程基建 47" [ref=e188] [cursor=pointer]:
+        - generic [ref=e189]: UI 工程基建
+        - generic [ref=e190]: "47"
+      - button "视觉素材与生成器 60" [ref=e191] [cursor=pointer]:
+        - generic [ref=e192]: 视觉素材与生成器
+        - generic [ref=e193]: "60"
+      - button "AI 生成与 Vibe Coding 11" [ref=e194] [cursor=pointer]:
+        - generic [ref=e195]: AI 生成与 Vibe Coding
+        - generic [ref=e196]: "11"
+      - button "个人知识库与文档网站 35" [ref=e197] [cursor=pointer]:
+        - generic [ref=e198]: 个人知识库与文档网站
+        - generic [ref=e199]: "35"
+      - button "开发者速查与质量验证 15" [ref=e200] [cursor=pointer]:
+        - generic [ref=e201]: 开发者速查与质量验证
+        - generic [ref=e202]: "15"
+      - button "待补充方向 8" [ref=e203] [cursor=pointer]:
+        - generic [ref=e204]: 待补充方向
+        - generic [ref=e205]: "8"
+    - generic [ref=e36]: 数据来自本地 Markdown 整理稿。网页里只收录资源入口和说明，不展示私有密钥。
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - img [ref=e40]
+        - searchbox / [ref=e42]
+        - generic [ref=e43]: /
+      - button "Command ⌘K" [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]: Command
+        - generic [ref=e46]: ⌘K
+      - tablist "视图切换" [ref=e47]:
+        - tab "手册" [ref=e48] [cursor=pointer]
+        - tab "资源库" [active] [selected] [ref=e49] [cursor=pointer]
+        - tab "矩阵" [ref=e50] [cursor=pointer]
+        - tab "路线" [ref=e51] [cursor=pointer]
+    - generic [ref=e206]:
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - heading "学术创作" [level=3] [ref=e209]
+          - paragraph [ref=e210]: 论文写作、科研阅读、润色、翻译和学术表达相关的 AI 辅助资源。
+        - generic [ref=e211]: 3 items
+      - generic [ref=e212]:
+        - article [ref=e213]:
+          - generic [ref=e214]:
+            - heading "humanizer" [level=4] [ref=e215]
+            - generic [ref=e216]: curated
+          - paragraph [ref=e217]: 消除文本中人工智能生成的痕迹，使表达更自然。
+          - generic [ref=e218]:
+            - button "查看细节" [ref=e219] [cursor=pointer]
+            - link "打开资源" [ref=e220] [cursor=pointer]:
+              - /url: https://github.com/blader/humanizer/blob/main/SKILL.md
+          - generic [ref=e221]:
+            - generic [ref=e222]: 学术创作
+            - generic [ref=e223]: 写作
+        - article [ref=e224]:
+          - generic [ref=e225]:
+            - heading "awesome-ai-research-writing" [level=4] [ref=e226]
+            - generic [ref=e227]: curated
+          - paragraph [ref=e228]: 论文翻译、润色、分析相关 prompt 和 agent skills。
+          - generic [ref=e229]:
+            - button "查看细节" [ref=e230] [cursor=pointer]
+            - link "打开资源" [ref=e231] [cursor=pointer]:
+              - /url: https://github.com/Leey21/awesome-ai-research-writing
+          - generic [ref=e232]:
+            - generic [ref=e233]: 学术创作
+            - generic [ref=e234]: 写作
+        - article [ref=e235]:
+          - generic [ref=e236]:
+            - heading "claude-scientific-skills" [level=4] [ref=e237]
+            - generic [ref=e238]: curated
+          - paragraph [ref=e239]: 科研写作、阅读、分析相关技巧库。
+          - generic [ref=e240]:
+            - button "查看细节" [ref=e241] [cursor=pointer]
+            - link "打开资源" [ref=e242] [cursor=pointer]:
+              - /url: https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/scientific-skills/scientific-writing/SKILL.md
+          - generic [ref=e243]:
+            - generic [ref=e244]: 学术创作
+            - generic [ref=e245]: 科研
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - heading "极端审美参考" [level=3] [ref=e248]
+          - paragraph [ref=e249]: 网站、落地页、产品 UI、UX 流程和设计师社区。用于建立品味、拆解结构、判断高级感。
+        - generic [ref=e250]: 25 items
+      - generic [ref=e251]:
+        - article [ref=e252]:
+          - generic [ref=e253]:
+            - heading "Awwwards" [level=4] [ref=e254]
+            - generic [ref=e255]: curated
+          - paragraph [ref=e256]: 获奖网站设计，看顶级视觉、动效和创意交互。
+          - generic [ref=e257]:
+            - button "查看细节" [ref=e258] [cursor=pointer]
+            - link "打开资源" [ref=e259] [cursor=pointer]:
+              - /url: https://www.awwwards.com
+          - generic [ref=e260]:
+            - generic [ref=e261]: 极端审美参考
+            - generic [ref=e262]: 网站灵感
+        - article [ref=e263]:
+          - generic [ref=e264]:
+            - heading "CSS Design Awards" [level=4] [ref=e265]
+            - generic [ref=e266]: curated
+          - paragraph [ref=e267]: 高质量网页视觉、UI、UX、创新作品。
+          - generic [ref=e268]:
+            - button "查看细节" [ref=e269] [cursor=pointer]
+            - link "打开资源" [ref=e270] [cursor=pointer]:
+              - /url: https://www.cssdesignawards.com
+          - generic [ref=e271]:
+            - generic [ref=e272]: 极端审美参考
+            - generic [ref=e273]: 网站灵感
+        - article [ref=e274]:
+          - generic [ref=e275]:
+            - heading "Siteinspire" [level=4] [ref=e276]
+            - generic [ref=e277]: curated
+          - paragraph [ref=e278]: 网页设计灵感，适合建立版式直觉。
+          - generic [ref=e279]:
+            - button "查看细节" [ref=e280] [cursor=pointer]
+            - link "打开资源" [ref=e281] [cursor=pointer]:
+              - /url: https://www.siteinspire.com
+          - generic [ref=e282]:
+            - generic [ref=e283]: 极端审美参考
+            - generic [ref=e284]: 网站灵感
+        - article [ref=e285]:
+          - generic [ref=e286]:
+            - heading "Godly" [level=4] [ref=e287]
+            - generic [ref=e288]: curated
+          - paragraph [ref=e289]: AI / SaaS 类产品落地页集合。
+          - generic [ref=e290]:
+            - button "查看细节" [ref=e291] [cursor=pointer]
+            - link "打开资源" [ref=e292] [cursor=pointer]:
+              - /url: https://godly.website
+          - generic [ref=e293]:
+            - generic [ref=e294]: 极端审美参考
+            - generic [ref=e295]: 落地页
+        - article [ref=e296]:
+          - generic [ref=e297]:
+            - heading "Landingfolio" [level=4] [ref=e298]
+            - generic [ref=e299]: curated
+          - paragraph [ref=e300]: Landing page 设计合集。
+          - generic [ref=e301]:
+            - button "查看细节" [ref=e302] [cursor=pointer]
+            - link "打开资源" [ref=e303] [cursor=pointer]:
+              - /url: https://www.landingfolio.com
+          - generic [ref=e304]:
+            - generic [ref=e305]: 极端审美参考
+            - generic [ref=e306]: 落地页
+        - article [ref=e307]:
+          - generic [ref=e308]:
+            - heading "Saaslandingpage" [level=4] [ref=e309]
+            - generic [ref=e310]: curated
+          - paragraph [ref=e311]: SaaS 落地页参考。
+          - generic [ref=e312]:
+            - button "查看细节" [ref=e313] [cursor=pointer]
+            - link "打开资源" [ref=e314] [cursor=pointer]:
+              - /url: https://saaslandingpage.com
+          - generic [ref=e315]:
+            - generic [ref=e316]: 极端审美参考
+            - generic [ref=e317]: 落地页
+        - article [ref=e318]:
+          - generic [ref=e319]:
+            - heading "One Page Love" [level=4] [ref=e320]
+            - generic [ref=e321]: curated
+          - paragraph [ref=e322]: 单页网站设计参考。
+          - generic [ref=e323]:
+            - button "查看细节" [ref=e324] [cursor=pointer]
+            - link "打开资源" [ref=e325] [cursor=pointer]:
+              - /url: https://onepagelove.com
+          - generic [ref=e326]:
+            - generic [ref=e327]: 极端审美参考
+            - generic [ref=e328]: 落地页
+        - article [ref=e329]:
+          - generic [ref=e330]:
+            - heading "Dark Mode Design" [level=4] [ref=e331]
+            - generic [ref=e332]: curated
+          - paragraph [ref=e333]: 深色模式专项参考。
+          - generic [ref=e334]:
+            - button "查看细节" [ref=e335] [cursor=pointer]
+            - link "打开资源" [ref=e336] [cursor=pointer]:
+              - /url: https://www.darkmodedesign.com
+          - generic [ref=e337]:
+            - generic [ref=e338]: 极端审美参考
+            - generic [ref=e339]: 主题
+        - article [ref=e340]:
+          - generic [ref=e341]:
+            - heading "Land-book" [level=4] [ref=e342]
+            - generic [ref=e343]: curated
+          - paragraph [ref=e344]: 高质量官网与落地页集合。
+          - generic [ref=e345]:
+            - button "查看细节" [ref=e346] [cursor=pointer]
+            - link "打开资源" [ref=e347] [cursor=pointer]:
+              - /url: https://land-book.com
+          - generic [ref=e348]:
+            - generic [ref=e349]: 极端审美参考
+            - generic [ref=e350]: 网站灵感
+        - article [ref=e351]:
+          - generic [ref=e352]:
+            - heading "Lapa Ninja" [level=4] [ref=e353]
+            - generic [ref=e354]: curated
+          - paragraph [ref=e355]: 落地页、作品集、创意网站灵感。
+          - generic [ref=e356]:
+            - button "查看细节" [ref=e357] [cursor=pointer]
+            - link "打开资源" [ref=e358] [cursor=pointer]:
+              - /url: https://www.lapa.ninja
+          - generic [ref=e359]:
+            - generic [ref=e360]: 极端审美参考
+            - generic [ref=e361]: 落地页
+        - article [ref=e362]:
+          - generic [ref=e363]:
+            - heading "Minimal Gallery" [level=4] [ref=e364]
+            - generic [ref=e365]: curated
+          - paragraph [ref=e366]: 极简网页、排版、留白与高级感参考。
+          - generic [ref=e367]:
+            - button "查看细节" [ref=e368] [cursor=pointer]
+            - link "打开资源" [ref=e369] [cursor=pointer]:
+              - /url: https://minimal.gallery
+          - generic [ref=e370]:
+            - generic [ref=e371]: 极端审美参考
+            - generic [ref=e372]: 极简
+        - article [ref=e373]:
+          - generic [ref=e374]:
+            - heading "Hoverstat.es" [level=4] [ref=e375]
+            - generic [ref=e376]: curated
+          - paragraph [ref=e377]: 交互动效、hover 状态和实验性网页参考。
+          - generic [ref=e378]:
+            - button "查看细节" [ref=e379] [cursor=pointer]
+            - link "打开资源" [ref=e380] [cursor=pointer]:
+              - /url: https://hoverstat.es
+          - generic [ref=e381]:
+            - generic [ref=e382]: 极端审美参考
+            - generic [ref=e383]: 交互
+        - article [ref=e384]:
+          - generic [ref=e385]:
+            - heading "Codrops" [level=4] [ref=e386]
+            - generic [ref=e387]: curated
+          - paragraph [ref=e388]: 高级 Web 交互、动效、实验性 UI 教程。
+          - generic [ref=e389]:
+            - button "查看细节" [ref=e390] [cursor=pointer]
+            - link "打开资源" [ref=e391] [cursor=pointer]:
+              - /url: https://tympanus.net/codrops
+          - generic [ref=e392]:
+            - generic [ref=e393]: 极端审美参考
+            - generic [ref=e394]: 交互
+        - article [ref=e395]:
+          - generic [ref=e396]:
+            - heading "Mobbin" [level=4] [ref=e397]
+            - generic [ref=e398]: curated
+          - paragraph [ref=e399]: 真实产品 UI 截图，按功能和平台筛选。
+          - generic [ref=e400]:
+            - button "查看细节" [ref=e401] [cursor=pointer]
+            - link "打开资源" [ref=e402] [cursor=pointer]:
+              - /url: https://mobbin.com
+          - generic [ref=e403]:
+            - generic [ref=e404]: 极端审美参考
+            - generic [ref=e405]: 产品 UI
+        - article [ref=e406]:
+          - generic [ref=e407]:
+            - heading "Refero" [level=4] [ref=e408]
+            - generic [ref=e409]: curated
+          - paragraph [ref=e410]: 按组件类型分类的 UI 参考。
+          - generic [ref=e411]:
+            - button "查看细节" [ref=e412] [cursor=pointer]
+            - link "打开资源" [ref=e413] [cursor=pointer]:
+              - /url: https://refero.design
+          - generic [ref=e414]:
+            - generic [ref=e415]: 极端审美参考
+            - generic [ref=e416]: 产品 UI
+        - article [ref=e417]:
+          - generic [ref=e418]:
+            - heading "Page Flows" [level=4] [ref=e419]
+            - generic [ref=e420]: curated
+          - paragraph [ref=e421]: 产品流程录屏，看真实交互路径。
+          - generic [ref=e422]:
+            - button "查看细节" [ref=e423] [cursor=pointer]
+            - link "打开资源" [ref=e424] [cursor=pointer]:
+              - /url: https://pageflows.com
+          - generic [ref=e425]:
+            - generic [ref=e426]: 极端审美参考
+            - generic [ref=e427]: UX 流程
+        - article [ref=e428]:
+          - generic [ref=e429]:
+            - heading "Design Vault" [level=4] [ref=e430]
+            - generic [ref=e431]: curated
+          - paragraph [ref=e432]: App / 网站设计截图库。
+          - generic [ref=e433]:
+            - button "查看细节" [ref=e434] [cursor=pointer]
+            - link "打开资源" [ref=e435] [cursor=pointer]:
+              - /url: https://designvault.io
+          - generic [ref=e436]:
+            - generic [ref=e437]: 极端审美参考
+            - generic [ref=e438]: 产品 UI
+        - article [ref=e439]:
+          - generic [ref=e440]:
+            - heading "Screenlane" [level=4] [ref=e441]
+            - generic [ref=e442]: curated
+          - paragraph [ref=e443]: 移动端 UI 截图参考。
+          - generic [ref=e444]:
+            - button "查看细节" [ref=e445] [cursor=pointer]
+            - link "打开资源" [ref=e446] [cursor=pointer]:
+              - /url: https://screenlane.com
+          - generic [ref=e447]:
+            - generic [ref=e448]: 极端审美参考
+            - generic [ref=e449]: 移动端
+        - article [ref=e450]:
+          - generic [ref=e451]:
+            - heading "Built for Mars" [level=4] [ref=e452]
+            - generic [ref=e453]: curated
+          - paragraph [ref=e454]: 产品 UX 拆解，学习细节与转化路径。
+          - generic [ref=e455]:
+            - button "查看细节" [ref=e456] [cursor=pointer]
+            - link "打开资源" [ref=e457] [cursor=pointer]:
+              - /url: https://builtformars.com
+          - generic [ref=e458]:
+            - generic [ref=e459]: 极端审美参考
+            - generic [ref=e460]: UX 研究
+        - article [ref=e461]:
+          - generic [ref=e462]:
+            - heading "Baymard" [level=4] [ref=e463]
+            - generic [ref=e464]: curated
+          - paragraph [ref=e465]: 电商与转化 UX 研究，适合商业产品判断。
+          - generic [ref=e466]:
+            - button "查看细节" [ref=e467] [cursor=pointer]
+            - link "打开资源" [ref=e468] [cursor=pointer]:
+              - /url: https://baymard.com
+          - generic [ref=e469]:
+            - generic [ref=e470]: 极端审美参考
+            - generic [ref=e471]: UX 研究
+        - article [ref=e472]:
+          - generic [ref=e473]:
+            - heading "Nielsen Norman Group" [level=4] [ref=e474]
+            - generic [ref=e475]: curated
+          - paragraph [ref=e476]: UX 研究、可用性、信息架构基础。
+          - generic [ref=e477]:
+            - button "查看细节" [ref=e478] [cursor=pointer]
+            - link "打开资源" [ref=e479] [cursor=pointer]:
+              - /url: https://www.nngroup.com
+          - generic [ref=e480]:
+            - generic [ref=e481]: 极端审美参考
+            - generic [ref=e482]: UX 研究
+        - article [ref=e483]:
+          - generic [ref=e484]:
+            - heading "Laws of UX" [level=4] [ref=e485]
+            - generic [ref=e486]: curated
+          - paragraph [ref=e487]: 常用 UX 心理学原则速查。
+          - generic [ref=e488]:
+            - button "查看细节" [ref=e489] [cursor=pointer]
+            - link "打开资源" [ref=e490] [cursor=pointer]:
+              - /url: https://lawsofux.com
+          - generic [ref=e491]:
+            - generic [ref=e492]: 极端审美参考
+            - generic [ref=e493]: UX 原则
+        - article [ref=e494]:
+          - generic [ref=e495]:
+            - heading "Dribbble" [level=4] [ref=e496]
+            - generic [ref=e497]: curated
+          - paragraph [ref=e498]: 设计师作品，偏视觉概念和风格探索。
+          - generic [ref=e499]:
+            - button "查看细节" [ref=e500] [cursor=pointer]
+            - link "打开资源" [ref=e501] [cursor=pointer]:
+              - /url: https://dribbble.com
+          - generic [ref=e502]:
+            - generic [ref=e503]: 极端审美参考
+            - generic [ref=e504]: 社区
+        - article [ref=e505]:
+          - generic [ref=e506]:
+            - heading "Behance" [level=4] [ref=e507]
+            - generic [ref=e508]: curated
+          - paragraph [ref=e509]: Adobe 设计师社区，全品类作品集。
+          - generic [ref=e510]:
+            - button "查看细节" [ref=e511] [cursor=pointer]
+            - link "打开资源" [ref=e512] [cursor=pointer]:
+              - /url: https://www.behance.net
+          - generic [ref=e513]:
+            - generic [ref=e514]: 极端审美参考
+            - generic [ref=e515]: 社区
+        - article [ref=e516]:
+          - generic [ref=e517]:
+            - heading "Figma Community" [level=4] [ref=e518]
+            - generic [ref=e519]: curated
+          - paragraph [ref=e520]: 免费 Figma 模板、组件库、设计稿。
+          - generic [ref=e521]:
+            - button "查看细节" [ref=e522] [cursor=pointer]
+            - link "打开资源" [ref=e523] [cursor=pointer]:
+              - /url: https://www.figma.com/community
+          - generic [ref=e524]:
+            - generic [ref=e525]: 极端审美参考
+            - generic [ref=e526]: 社区
+      - generic [ref=e527]:
+        - generic [ref=e528]:
+          - heading "UI 工程基建" [level=3] [ref=e529]
+          - paragraph [ref=e530]: 组件库、headless primitive、动效、产品工程库、数据可视化库。用于真正搭产品界面。
+        - generic [ref=e531]: 47 items
+      - generic [ref=e532]:
+        - article [ref=e533]:
+          - generic [ref=e534]:
+            - heading "shadcn/ui" [level=4] [ref=e535]
+            - generic [ref=e536]: curated
+          - paragraph [ref=e537]: 极简、高度可定制，源码拷贝到项目中。
+          - generic [ref=e538]:
+            - button "查看细节" [ref=e539] [cursor=pointer]
+            - link "打开资源" [ref=e540] [cursor=pointer]:
+              - /url: https://ui.shadcn.com
+          - generic [ref=e541]:
+            - generic [ref=e542]: UI 工程基建
+            - generic [ref=e543]: 组件库
+        - article [ref=e544]:
+          - generic [ref=e545]:
+            - heading "Base UI" [level=4] [ref=e546]
+            - generic [ref=e547]: curated
+          - paragraph [ref=e548]: 无样式、可组合、重视无障碍，适合自定义设计系统。
+          - generic [ref=e549]:
+            - button "查看细节" [ref=e550] [cursor=pointer]
+            - link "打开资源" [ref=e551] [cursor=pointer]:
+              - /url: https://base-ui.com
+          - generic [ref=e552]:
+            - generic [ref=e553]: UI 工程基建
+            - generic [ref=e554]: Headless
+        - article [ref=e555]:
+          - generic [ref=e556]:
+            - heading "Radix UI" [level=4] [ref=e557]
+            - generic [ref=e558]: curated
+          - paragraph [ref=e559]: 无样式，只提供无障碍行为和交互 primitive。
+          - generic [ref=e560]:
+            - button "查看细节" [ref=e561] [cursor=pointer]
+            - link "打开资源" [ref=e562] [cursor=pointer]:
+              - /url: https://www.radix-ui.com
+          - generic [ref=e563]:
+            - generic [ref=e564]: UI 工程基建
+            - generic [ref=e565]: Headless
+        - article [ref=e566]:
+          - generic [ref=e567]:
+            - heading "React Aria" [level=4] [ref=e568]
+            - generic [ref=e569]: curated
+          - paragraph [ref=e570]: Adobe 出品，无障碍、国际化、复杂交互能力强。
+          - generic [ref=e571]:
+            - button "查看细节" [ref=e572] [cursor=pointer]
+            - link "打开资源" [ref=e573] [cursor=pointer]:
+              - /url: https://react-spectrum.adobe.com/react-aria
+          - generic [ref=e574]:
+            - generic [ref=e575]: UI 工程基建
+            - generic [ref=e576]: Headless
+        - article [ref=e577]:
+          - generic [ref=e578]:
+            - heading "Ark UI" [level=4] [ref=e579]
+            - generic [ref=e580]: curated
+          - paragraph [ref=e581]: 支持 React / Vue / Solid 的 headless 组件。
+          - generic [ref=e582]:
+            - button "查看细节" [ref=e583] [cursor=pointer]
+            - link "打开资源" [ref=e584] [cursor=pointer]:
+              - /url: https://ark-ui.com
+          - generic [ref=e585]:
+            - generic [ref=e586]: UI 工程基建
+            - generic [ref=e587]: Headless
+        - article [ref=e588]:
+          - generic [ref=e589]:
+            - heading "Ariakit" [level=4] [ref=e590]
+            - generic [ref=e591]: curated
+          - paragraph [ref=e592]: Headless、无障碍、适合复杂交互。
+          - generic [ref=e593]:
+            - button "查看细节" [ref=e594] [cursor=pointer]
+            - link "打开资源" [ref=e595] [cursor=pointer]:
+              - /url: https://ariakit.org
+          - generic [ref=e596]:
+            - generic [ref=e597]: UI 工程基建
+            - generic [ref=e598]: Headless
+        - article [ref=e599]:
+          - generic [ref=e600]:
+            - heading "Headless UI" [level=4] [ref=e601]
+            - generic [ref=e602]: curated
+          - paragraph [ref=e603]: Tailwind 团队出品，无样式交互组件。
+          - generic [ref=e604]:
+            - button "查看细节" [ref=e605] [cursor=pointer]
+            - link "打开资源" [ref=e606] [cursor=pointer]:
+              - /url: https://headlessui.com
+          - generic [ref=e607]:
+            - generic [ref=e608]: UI 工程基建
+            - generic [ref=e609]: Headless
+        - article [ref=e610]:
+          - generic [ref=e611]:
+            - heading "HeroUI" [level=4] [ref=e612]
+            - generic [ref=e613]: curated
+          - paragraph [ref=e614]: 现代、设计感强、暗色主题好看。
+          - generic [ref=e615]:
+            - button "查看细节" [ref=e616] [cursor=pointer]
+            - link "打开资源" [ref=e617] [cursor=pointer]:
+              - /url: https://www.heroui.com
+          - generic [ref=e618]:
+            - generic [ref=e619]: UI 工程基建
+            - generic [ref=e620]: 组件库
+        - article [ref=e621]:
+          - generic [ref=e622]:
+            - heading "Ant Design" [level=4] [ref=e623]
+            - generic [ref=e624]: curated
+          - paragraph [ref=e625]: 企业级、组件最全、中文友好。
+          - generic [ref=e626]:
+            - button "查看细节" [ref=e627] [cursor=pointer]
+            - link "打开资源" [ref=e628] [cursor=pointer]:
+              - /url: https://ant.design
+          - generic [ref=e629]:
+            - generic [ref=e630]: UI 工程基建
+            - generic [ref=e631]: 组件库
+        - article [ref=e632]:
+          - generic [ref=e633]:
+            - heading "Mantine" [level=4] [ref=e634]
+            - generic [ref=e635]: curated
+          - paragraph [ref=e636]: Hooks 丰富、TypeScript 原生。
+          - generic [ref=e637]:
+            - button "查看细节" [ref=e638] [cursor=pointer]
+            - link "打开资源" [ref=e639] [cursor=pointer]:
+              - /url: https://mantine.dev
+          - generic [ref=e640]:
+            - generic [ref=e641]: UI 工程基建
+            - generic [ref=e642]: 组件库
+        - article [ref=e643]:
+          - generic [ref=e644]:
+            - heading "Chakra UI" [level=4] [ref=e645]
+            - generic [ref=e646]: curated
+          - paragraph [ref=e647]: 简洁、样式通过 props 写，适合快速原型。
+          - generic [ref=e648]:
+            - button "查看细节" [ref=e649] [cursor=pointer]
+            - link "打开资源" [ref=e650] [cursor=pointer]:
+              - /url: https://chakra-ui.com
+          - generic [ref=e651]:
+            - generic [ref=e652]: UI 工程基建
+            - generic [ref=e653]: 组件库
+        - article [ref=e654]:
+          - generic [ref=e655]:
+            - heading "Material UI" [level=4] [ref=e656]
+            - generic [ref=e657]: curated
+          - paragraph [ref=e658]: Google Material Design 规范。
+          - generic [ref=e659]:
+            - button "查看细节" [ref=e660] [cursor=pointer]
+            - link "打开资源" [ref=e661] [cursor=pointer]:
+              - /url: https://mui.com
+          - generic [ref=e662]:
+            - generic [ref=e663]: UI 工程基建
+            - generic [ref=e664]: 组件库
+        - article [ref=e665]:
+          - generic [ref=e666]:
+            - heading "Flowbite React" [level=4] [ref=e667]
+            - generic [ref=e668]: curated
+          - paragraph [ref=e669]: Tailwind 风格组件库。
+          - generic [ref=e670]:
+            - button "查看细节" [ref=e671] [cursor=pointer]
+            - link "打开资源" [ref=e672] [cursor=pointer]:
+              - /url: https://flowbite-react.com
+          - generic [ref=e673]:
+            - generic [ref=e674]: UI 工程基建
+            - generic [ref=e675]: 组件库
+        - article [ref=e676]:
+          - generic [ref=e677]:
+            - heading "Gluestack UI" [level=4] [ref=e678]
+            - generic [ref=e679]: curated
+          - paragraph [ref=e680]: React Native + Web 双端。
+          - generic [ref=e681]:
+            - button "查看细节" [ref=e682] [cursor=pointer]
+            - link "打开资源" [ref=e683] [cursor=pointer]:
+              - /url: https://gluestack.io
+          - generic [ref=e684]:
+            - generic [ref=e685]: UI 工程基建
+            - generic [ref=e686]: 跨平台
+        - article [ref=e687]:
+          - generic [ref=e688]:
+            - heading "Aceternity UI" [level=4] [ref=e689]
+            - generic [ref=e690]: curated
+          - paragraph [ref=e691]: 液态玻璃、光效、鼠标追踪、苹果风动画。
+          - generic [ref=e692]:
+            - button "查看细节" [ref=e693] [cursor=pointer]
+            - link "打开资源" [ref=e694] [cursor=pointer]:
+              - /url: https://ui.aceternity.com
+          - generic [ref=e695]:
+            - generic [ref=e696]: UI 工程基建
+            - generic [ref=e697]: 组件灵感
+        - article [ref=e698]:
+          - generic [ref=e699]:
+            - heading "Magic UI" [level=4] [ref=e700]
+            - generic [ref=e701]: curated
+          - paragraph [ref=e702]: 3D 地球、Dock 栏、聚光灯、渐变边框。
+          - generic [ref=e703]:
+            - button "查看细节" [ref=e704] [cursor=pointer]
+            - link "打开资源" [ref=e705] [cursor=pointer]:
+              - /url: https://magicui.design
+          - generic [ref=e706]:
+            - generic [ref=e707]: UI 工程基建
+            - generic [ref=e708]: 组件灵感
+        - article [ref=e709]:
+          - generic [ref=e710]:
+            - heading "React Bits" [level=4] [ref=e711]
+            - generic [ref=e712]: curated
+          - paragraph [ref=e713]: 高质量动画交互组件。
+          - generic [ref=e714]:
+            - button "查看细节" [ref=e715] [cursor=pointer]
+            - link "打开资源" [ref=e716] [cursor=pointer]:
+              - /url: https://reactbits.dev
+          - generic [ref=e717]:
+            - generic [ref=e718]: UI 工程基建
+            - generic [ref=e719]: 组件灵感
+        - article [ref=e720]:
+          - generic [ref=e721]:
+            - heading "Cult UI" [level=4] [ref=e722]
+            - generic [ref=e723]: curated
+          - paragraph [ref=e724]: 创意动效，鼠标跟随、弹性布局。
+          - generic [ref=e725]:
+            - button "查看细节" [ref=e726] [cursor=pointer]
+            - link "打开资源" [ref=e727] [cursor=pointer]:
+              - /url: https://www.cult-ui.com
+          - generic [ref=e728]:
+            - generic [ref=e729]: UI 工程基建
+            - generic [ref=e730]: 组件灵感
+        - article [ref=e731]:
+          - generic [ref=e732]:
+            - heading "Park UI" [level=4] [ref=e733]
+            - generic [ref=e734]: curated
+          - paragraph [ref=e735]: 多框架支持 React / Vue / Solid。
+          - generic [ref=e736]:
+            - button "查看细节" [ref=e737] [cursor=pointer]
+            - link "打开资源" [ref=e738] [cursor=pointer]:
+              - /url: https://park-ui.com
+          - generic [ref=e739]:
+            - generic [ref=e740]: UI 工程基建
+            - generic [ref=e741]: 组件灵感
+        - article [ref=e742]:
+          - generic [ref=e743]:
+            - heading "Motion" [level=4] [ref=e744]
+            - generic [ref=e745]: curated
+          - paragraph [ref=e746]: 产品 UI 动效、页面转场。
+          - generic [ref=e747]:
+            - button "查看细节" [ref=e748] [cursor=pointer]
+            - link "打开资源" [ref=e749] [cursor=pointer]:
+              - /url: https://motion.dev
+          - generic [ref=e750]:
+            - generic [ref=e751]: UI 工程基建
+            - generic [ref=e752]: 动效
+        - article [ref=e753]:
+          - generic [ref=e754]:
+            - heading "GSAP" [level=4] [ref=e755]
+            - generic [ref=e756]: curated
+          - paragraph [ref=e757]: 复杂滚动叙事、品牌官网动画。
+          - generic [ref=e758]:
+            - button "查看细节" [ref=e759] [cursor=pointer]
+            - link "打开资源" [ref=e760] [cursor=pointer]:
+              - /url: https://gsap.com
+          - generic [ref=e761]:
+            - generic [ref=e762]: UI 工程基建
+            - generic [ref=e763]: 动效
+        - article [ref=e764]:
+          - generic [ref=e765]:
+            - heading "React Spring" [level=4] [ref=e766]
+            - generic [ref=e767]: curated
+          - paragraph [ref=e768]: 物理弹簧动效，自然感。
+          - generic [ref=e769]:
+            - button "查看细节" [ref=e770] [cursor=pointer]
+            - link "打开资源" [ref=e771] [cursor=pointer]:
+              - /url: https://www.react-spring.dev
+          - generic [ref=e772]:
+            - generic [ref=e773]: UI 工程基建
+            - generic [ref=e774]: 动效
+        - article [ref=e775]:
+          - generic [ref=e776]:
+            - heading "Lottie Files" [level=4] [ref=e777]
+            - generic [ref=e778]: curated
+          - paragraph [ref=e779]: AE 动画 JSON 播放和素材。
+          - generic [ref=e780]:
+            - button "查看细节" [ref=e781] [cursor=pointer]
+            - link "打开资源" [ref=e782] [cursor=pointer]:
+              - /url: https://lottiefiles.com
+          - generic [ref=e783]:
+            - generic [ref=e784]: UI 工程基建
+            - generic [ref=e785]: 动效
+        - article [ref=e786]:
+          - generic [ref=e787]:
+            - heading "Rive" [level=4] [ref=e788]
+            - generic [ref=e789]: curated
+          - paragraph [ref=e790]: 可交互矢量动画和状态机动画。
+          - generic [ref=e791]:
+            - button "查看细节" [ref=e792] [cursor=pointer]
+            - link "打开资源" [ref=e793] [cursor=pointer]:
+              - /url: https://rive.app
+          - generic [ref=e794]:
+            - generic [ref=e795]: UI 工程基建
+            - generic [ref=e796]: 动效
+        - article [ref=e797]:
+          - generic [ref=e798]:
+            - heading "Lenis" [level=4] [ref=e799]
+            - generic [ref=e800]: curated
+          - paragraph [ref=e801]: 丝滑滚动，适合高端滚动体验。
+          - generic [ref=e802]:
+            - button "查看细节" [ref=e803] [cursor=pointer]
+            - link "打开资源" [ref=e804] [cursor=pointer]:
+              - /url: https://lenis.darkroom.engineering
+          - generic [ref=e805]:
+            - generic [ref=e806]: UI 工程基建
+            - generic [ref=e807]: 滚动
+        - article [ref=e808]:
+          - generic [ref=e809]:
+            - heading "React Three Fiber" [level=4] [ref=e810]
+            - generic [ref=e811]: curated
+          - paragraph [ref=e812]: Three.js React 封装。
+          - generic [ref=e813]:
+            - button "查看细节" [ref=e814] [cursor=pointer]
+            - link "打开资源" [ref=e815] [cursor=pointer]:
+              - /url: https://docs.pmnd.rs/react-three-fiber
+          - generic [ref=e816]:
+            - generic [ref=e817]: UI 工程基建
+            - generic [ref=e818]: 3D
+        - article [ref=e819]:
+          - generic [ref=e820]:
+            - heading "Drei" [level=4] [ref=e821]
+            - generic [ref=e822]: curated
+          - paragraph [ref=e823]: React Three Fiber 常用 helper。
+          - generic [ref=e824]:
+            - button "查看细节" [ref=e825] [cursor=pointer]
+            - link "打开资源" [ref=e826] [cursor=pointer]:
+              - /url: https://github.com/pmndrs/drei
+          - generic [ref=e827]:
+            - generic [ref=e828]: UI 工程基建
+            - generic [ref=e829]: 3D
+        - article [ref=e830]:
+          - generic [ref=e831]:
+            - heading "Theatre.js" [level=4] [ref=e832]
+            - generic [ref=e833]: curated
+          - paragraph [ref=e834]: 时间线式 3D / 动画编排。
+          - generic [ref=e835]:
+            - button "查看细节" [ref=e836] [cursor=pointer]
+            - link "打开资源" [ref=e837] [cursor=pointer]:
+              - /url: https://www.theatrejs.com
+          - generic [ref=e838]:
+            - generic [ref=e839]: UI 工程基建
+            - generic [ref=e840]: 动画编排
+        - article [ref=e841]:
+          - generic [ref=e842]:
+            - heading "Splide" [level=4] [ref=e843]
+            - generic [ref=e844]: curated
+          - paragraph [ref=e845]: 轻量轮播 / 滑块。
+          - generic [ref=e846]:
+            - button "查看细节" [ref=e847] [cursor=pointer]
+            - link "打开资源" [ref=e848] [cursor=pointer]:
+              - /url: https://splidejs.com
+          - generic [ref=e849]:
+            - generic [ref=e850]: UI 工程基建
+            - generic [ref=e851]: 轮播
+        - article [ref=e852]:
+          - generic [ref=e853]:
+            - heading "TanStack Query" [level=4] [ref=e854]
+            - generic [ref=e855]: curated
+          - paragraph [ref=e856]: 数据请求、缓存、同步服务端状态。
+          - generic [ref=e857]:
+            - button "查看细节" [ref=e858] [cursor=pointer]
+            - link "打开资源" [ref=e859] [cursor=pointer]:
+              - /url: https://tanstack.com/query
+          - generic [ref=e860]:
+            - generic [ref=e861]: UI 工程基建
+            - generic [ref=e862]: 产品工程
+        - article [ref=e863]:
+          - generic [ref=e864]:
+            - heading "TanStack Router" [level=4] [ref=e865]
+            - generic [ref=e866]: curated
+          - paragraph [ref=e867]: 类型安全路由。
+          - generic [ref=e868]:
+            - button "查看细节" [ref=e869] [cursor=pointer]
+            - link "打开资源" [ref=e870] [cursor=pointer]:
+              - /url: https://tanstack.com/router
+          - generic [ref=e871]:
+            - generic [ref=e872]: UI 工程基建
+            - generic [ref=e873]: 产品工程
+        - article [ref=e874]:
+          - generic [ref=e875]:
+            - heading "TanStack Table" [level=4] [ref=e876]
+            - generic [ref=e877]: curated
+          - paragraph [ref=e878]: 高级表格、排序、过滤、虚拟滚动。
+          - generic [ref=e879]:
+            - button "查看细节" [ref=e880] [cursor=pointer]
+            - link "打开资源" [ref=e881] [cursor=pointer]:
+              - /url: https://tanstack.com/table
+          - generic [ref=e882]:
+            - generic [ref=e883]: UI 工程基建
+            - generic [ref=e884]: 产品工程
+        - article [ref=e885]:
+          - generic [ref=e886]:
+            - heading "React Hook Form" [level=4] [ref=e887]
+            - generic [ref=e888]: curated
+          - paragraph [ref=e889]: 表单状态管理。
+          - generic [ref=e890]:
+            - button "查看细节" [ref=e891] [cursor=pointer]
+            - link "打开资源" [ref=e892] [cursor=pointer]:
+              - /url: https://react-hook-form.com
+          - generic [ref=e893]:
+            - generic [ref=e894]: UI 工程基建
+            - generic [ref=e895]: 产品工程
+        - article [ref=e896]:
+          - generic [ref=e897]:
+            - heading "Zod" [level=4] [ref=e898]
+            - generic [ref=e899]: curated
+          - paragraph [ref=e900]: Schema 校验、类型推导。
+          - generic [ref=e901]:
+            - button "查看细节" [ref=e902] [cursor=pointer]
+            - link "打开资源" [ref=e903] [cursor=pointer]:
+              - /url: https://zod.dev
+          - generic [ref=e904]:
+            - generic [ref=e905]: UI 工程基建
+            - generic [ref=e906]: 产品工程
+        - article [ref=e907]:
+          - generic [ref=e908]:
+            - heading "Zustand" [level=4] [ref=e909]
+            - generic [ref=e910]: curated
+          - paragraph [ref=e911]: 简洁全局状态管理。
+          - generic [ref=e912]:
+            - button "查看细节" [ref=e913] [cursor=pointer]
+            - link "打开资源" [ref=e914] [cursor=pointer]:
+              - /url: https://zustand-demo.pmnd.rs
+          - generic [ref=e915]:
+            - generic [ref=e916]: UI 工程基建
+            - generic [ref=e917]: 产品工程
+        - article [ref=e918]:
+          - generic [ref=e919]:
+            - heading "Jotai" [level=4] [ref=e920]
+            - generic [ref=e921]: curated
+          - paragraph [ref=e922]: 原子化状态管理。
+          - generic [ref=e923]:
+            - button "查看细节" [ref=e924] [cursor=pointer]
+            - link "打开资源" [ref=e925] [cursor=pointer]:
+              - /url: https://jotai.org
+          - generic [ref=e926]:
+            - generic [ref=e927]: UI 工程基建
+            - generic [ref=e928]: 产品工程
+        - article [ref=e929]:
+          - generic [ref=e930]:
+            - heading "XState" [level=4] [ref=e931]
+            - generic [ref=e932]: curated
+          - paragraph [ref=e933]: 状态机，适合复杂交互流程。
+          - generic [ref=e934]:
+            - button "查看细节" [ref=e935] [cursor=pointer]
+            - link "打开资源" [ref=e936] [cursor=pointer]:
+              - /url: https://xstate.js.org
+          - generic [ref=e937]:
+            - generic [ref=e938]: UI 工程基建
+            - generic [ref=e939]: 产品工程
+        - article [ref=e940]:
+          - generic [ref=e941]:
+            - heading "cmdk" [level=4] [ref=e942]
+            - generic [ref=e943]: curated
+          - paragraph [ref=e944]: Command Menu / 快捷命令面板。
+          - generic [ref=e945]:
+            - button "查看细节" [ref=e946] [cursor=pointer]
+            - link "打开资源" [ref=e947] [cursor=pointer]:
+              - /url: https://cmdk.paco.me
+          - generic [ref=e948]:
+            - generic [ref=e949]: UI 工程基建
+            - generic [ref=e950]: 产品工程
+        - article [ref=e951]:
+          - generic [ref=e952]:
+            - heading "Sonner" [level=4] [ref=e953]
+            - generic [ref=e954]: curated
+          - paragraph [ref=e955]: 精致 Toast 通知。
+          - generic [ref=e956]:
+            - button "查看细节" [ref=e957] [cursor=pointer]
+            - link "打开资源" [ref=e958] [cursor=pointer]:
+              - /url: https://sonner.emilkowal.ski
+          - generic [ref=e959]:
+            - generic [ref=e960]: UI 工程基建
+            - generic [ref=e961]: 产品工程
+        - article [ref=e962]:
+          - generic [ref=e963]:
+            - heading "Vaul" [level=4] [ref=e964]
+            - generic [ref=e965]: curated
+          - paragraph [ref=e966]: Drawer / Sheet 交互。
+          - generic [ref=e967]:
+            - button "查看细节" [ref=e968] [cursor=pointer]
+            - link "打开资源" [ref=e969] [cursor=pointer]:
+              - /url: https://vaul.emilkowal.ski
+          - generic [ref=e970]:
+            - generic [ref=e971]: UI 工程基建
+            - generic [ref=e972]: 产品工程
+        - article [ref=e973]:
+          - generic [ref=e974]:
+            - heading "React Day Picker" [level=4] [ref=e975]
+            - generic [ref=e976]: curated
+          - paragraph [ref=e977]: 日期选择器。
+          - generic [ref=e978]:
+            - button "查看细节" [ref=e979] [cursor=pointer]
+            - link "打开资源" [ref=e980] [cursor=pointer]:
+              - /url: https://react-day-picker.js.org
+          - generic [ref=e981]:
+            - generic [ref=e982]: UI 工程基建
+            - generic [ref=e983]: 产品工程
+        - article [ref=e984]:
+          - generic [ref=e985]:
+            - heading "Apache ECharts" [level=4] [ref=e986]
+            - generic [ref=e987]: curated
+          - paragraph [ref=e988]: 图表类型丰富，适合业务 Dashboard。
+          - generic [ref=e989]:
+            - button "查看细节" [ref=e990] [cursor=pointer]
+            - link "打开资源" [ref=e991] [cursor=pointer]:
+              - /url: https://echarts.apache.org
+          - generic [ref=e992]:
+            - generic [ref=e993]: UI 工程基建
+            - generic [ref=e994]: 可视化
+        - article [ref=e995]:
+          - generic [ref=e996]:
+            - heading "D3" [level=4] [ref=e997]
+            - generic [ref=e998]: curated
+          - paragraph [ref=e999]: 自定义数据可视化底层能力。
+          - generic [ref=e1000]:
+            - button "查看细节" [ref=e1001] [cursor=pointer]
+            - link "打开资源" [ref=e1002] [cursor=pointer]:
+              - /url: https://d3js.org
+          - generic [ref=e1003]:
+            - generic [ref=e1004]: UI 工程基建
+            - generic [ref=e1005]: 可视化
+        - article [ref=e1006]:
+          - generic [ref=e1007]:
+            - heading "Observable Plot" [level=4] [ref=e1008]
+            - generic [ref=e1009]: curated
+          - paragraph [ref=e1010]: 更快生成高质量统计图表。
+          - generic [ref=e1011]:
+            - button "查看细节" [ref=e1012] [cursor=pointer]
+            - link "打开资源" [ref=e1013] [cursor=pointer]:
+              - /url: https://observablehq.com/plot
+          - generic [ref=e1014]:
+            - generic [ref=e1015]: UI 工程基建
+            - generic [ref=e1016]: 可视化
+        - article [ref=e1017]:
+          - generic [ref=e1018]:
+            - heading "Visx" [level=4] [ref=e1019]
+            - generic [ref=e1020]: curated
+          - paragraph [ref=e1021]: React + D3 思路的数据可视化。
+          - generic [ref=e1022]:
+            - button "查看细节" [ref=e1023] [cursor=pointer]
+            - link "打开资源" [ref=e1024] [cursor=pointer]:
+              - /url: https://airbnb.io/visx
+          - generic [ref=e1025]:
+            - generic [ref=e1026]: UI 工程基建
+            - generic [ref=e1027]: 可视化
+        - article [ref=e1028]:
+          - generic [ref=e1029]:
+            - heading "Recharts" [level=4] [ref=e1030]
+            - generic [ref=e1031]: curated
+          - paragraph [ref=e1032]: React 常用图表库，易上手。
+          - generic [ref=e1033]:
+            - button "查看细节" [ref=e1034] [cursor=pointer]
+            - link "打开资源" [ref=e1035] [cursor=pointer]:
+              - /url: https://recharts.org
+          - generic [ref=e1036]:
+            - generic [ref=e1037]: UI 工程基建
+            - generic [ref=e1038]: 可视化
+        - article [ref=e1039]:
+          - generic [ref=e1040]:
+            - heading "Tremor" [level=4] [ref=e1041]
+            - generic [ref=e1042]: curated
+          - paragraph [ref=e1043]: Dashboard 组件和图表。
+          - generic [ref=e1044]:
+            - button "查看细节" [ref=e1045] [cursor=pointer]
+            - link "打开资源" [ref=e1046] [cursor=pointer]:
+              - /url: https://www.tremor.so
+          - generic [ref=e1047]:
+            - generic [ref=e1048]: UI 工程基建
+            - generic [ref=e1049]: 可视化
+      - generic [ref=e1050]:
+        - generic [ref=e1051]:
+          - heading "视觉素材与生成器" [level=3] [ref=e1052]
+          - paragraph [ref=e1053]: 渐变、纹理、插画、照片、3D、图标、字体、配色、CSS 生成器。用于提升视觉完成度。
+        - generic [ref=e1054]: 60 items
+      - generic [ref=e1055]:
+        - article [ref=e1056]:
+          - generic [ref=e1057]:
+            - heading "Grainient" [level=4] [ref=e1058]
+            - generic [ref=e1059]: curated
+          - paragraph [ref=e1060]: 渐变、动态渐变、颗粒纹理、AI 背景、Shader 工具。
+          - generic [ref=e1061]:
+            - button "查看细节" [ref=e1062] [cursor=pointer]
+            - link "打开资源" [ref=e1063] [cursor=pointer]:
+              - /url: https://grainient.supply
+          - generic [ref=e1064]:
+            - generic [ref=e1065]: 视觉素材与生成器
+            - generic [ref=e1066]: 背景
+        - article [ref=e1067]:
+          - generic [ref=e1068]:
+            - heading "Web Gradients" [level=4] [ref=e1069]
+            - generic [ref=e1070]: curated
+          - paragraph [ref=e1071]: 现成渐变背景，复制 CSS。
+          - generic [ref=e1072]:
+            - button "查看细节" [ref=e1073] [cursor=pointer]
+            - link "打开资源" [ref=e1074] [cursor=pointer]:
+              - /url: https://webgradients.com
+          - generic [ref=e1075]:
+            - generic [ref=e1076]: 视觉素材与生成器
+            - generic [ref=e1077]: 背景
+        - article [ref=e1078]:
+          - generic [ref=e1079]:
+            - heading "Grabient" [level=4] [ref=e1080]
+            - generic [ref=e1081]: curated
+          - paragraph [ref=e1082]: 渐变编辑器，拖拽调色。
+          - generic [ref=e1083]:
+            - button "查看细节" [ref=e1084] [cursor=pointer]
+            - link "打开资源" [ref=e1085] [cursor=pointer]:
+              - /url: https://www.grabient.com
+          - generic [ref=e1086]:
+            - generic [ref=e1087]: 视觉素材与生成器
+            - generic [ref=e1088]: 背景
+        - article [ref=e1089]:
+          - generic [ref=e1090]:
+            - heading "Mesh Gradients" [level=4] [ref=e1091]
+            - generic [ref=e1092]: curated
+          - paragraph [ref=e1093]: Mesh 渐变素材下载。
+          - generic [ref=e1094]:
+            - button "查看细节" [ref=e1095] [cursor=pointer]
+            - link "打开资源" [ref=e1096] [cursor=pointer]:
+              - /url: https://meshgradient.in
+          - generic [ref=e1097]:
+            - generic [ref=e1098]: 视觉素材与生成器
+            - generic [ref=e1099]: 背景
+        - article [ref=e1100]:
+          - generic [ref=e1101]:
+            - heading "CSS Gradient" [level=4] [ref=e1102]
+            - generic [ref=e1103]: curated
+          - paragraph [ref=e1104]: CSS 渐变代码生成器。
+          - generic [ref=e1105]:
+            - button "查看细节" [ref=e1106] [cursor=pointer]
+            - link "打开资源" [ref=e1107] [cursor=pointer]:
+              - /url: https://cssgradient.io
+          - generic [ref=e1108]:
+            - generic [ref=e1109]: 视觉素材与生成器
+            - generic [ref=e1110]: 背景
+        - article [ref=e1111]:
+          - generic [ref=e1112]:
+            - heading "Haikei" [level=4] [ref=e1113]
+            - generic [ref=e1114]: curated
+          - paragraph [ref=e1115]: SVG 背景、形状、纹理、波浪生成器。
+          - generic [ref=e1116]:
+            - button "查看细节" [ref=e1117] [cursor=pointer]
+            - link "打开资源" [ref=e1118] [cursor=pointer]:
+              - /url: https://haikei.app
+          - generic [ref=e1119]:
+            - generic [ref=e1120]: 视觉素材与生成器
+            - generic [ref=e1121]: 背景
+        - article [ref=e1122]:
+          - generic [ref=e1123]:
+            - heading "Pattern Monster" [level=4] [ref=e1124]
+            - generic [ref=e1125]: curated
+          - paragraph [ref=e1126]: SVG 图案素材，可调颜色和大小。
+          - generic [ref=e1127]:
+            - button "查看细节" [ref=e1128] [cursor=pointer]
+            - link "打开资源" [ref=e1129] [cursor=pointer]:
+              - /url: https://pattern.monster
+          - generic [ref=e1130]:
+            - generic [ref=e1131]: 视觉素材与生成器
+            - generic [ref=e1132]: 背景
+        - article [ref=e1133]:
+          - generic [ref=e1134]:
+            - heading "Humaaans" [level=4] [ref=e1135]
+            - generic [ref=e1136]: curated
+          - paragraph [ref=e1137]: 可定制人物插画。
+          - generic [ref=e1138]:
+            - button "查看细节" [ref=e1139] [cursor=pointer]
+            - link "打开资源" [ref=e1140] [cursor=pointer]:
+              - /url: https://www.humaaans.com
+          - generic [ref=e1141]:
+            - generic [ref=e1142]: 视觉素材与生成器
+            - generic [ref=e1143]: 插画
+        - article [ref=e1144]:
+          - generic [ref=e1145]:
+            - heading "Open Peeps" [level=4] [ref=e1146]
+            - generic [ref=e1147]: curated
+          - paragraph [ref=e1148]: 手绘风格人物插画。
+          - generic [ref=e1149]:
+            - button "查看细节" [ref=e1150] [cursor=pointer]
+            - link "打开资源" [ref=e1151] [cursor=pointer]:
+              - /url: https://www.openpeeps.com
+          - generic [ref=e1152]:
+            - generic [ref=e1153]: 视觉素材与生成器
+            - generic [ref=e1154]: 插画
+        - article [ref=e1155]:
+          - generic [ref=e1156]:
+            - heading "Blush" [level=4] [ref=e1157]
+            - generic [ref=e1158]: curated
+          - paragraph [ref=e1159]: 免费可定制插画集合。
+          - generic [ref=e1160]:
+            - button "查看细节" [ref=e1161] [cursor=pointer]
+            - link "打开资源" [ref=e1162] [cursor=pointer]:
+              - /url: https://blush.design
+          - generic [ref=e1163]:
+            - generic [ref=e1164]: 视觉素材与生成器
+            - generic [ref=e1165]: 插画
+        - article [ref=e1166]:
+          - generic [ref=e1167]:
+            - heading "Storyset" [level=4] [ref=e1168]
+            - generic [ref=e1169]: curated
+          - paragraph [ref=e1170]: 动态插画，可调颜色和动画。
+          - generic [ref=e1171]:
+            - button "查看细节" [ref=e1172] [cursor=pointer]
+            - link "打开资源" [ref=e1173] [cursor=pointer]:
+              - /url: https://storyset.com
+          - generic [ref=e1174]:
+            - generic [ref=e1175]: 视觉素材与生成器
+            - generic [ref=e1176]: 插画
+        - article [ref=e1177]:
+          - generic [ref=e1178]:
+            - heading "Isometric" [level=4] [ref=e1179]
+            - generic [ref=e1180]: curated
+          - paragraph [ref=e1181]: 等距风格插画。
+          - generic [ref=e1182]:
+            - button "查看细节" [ref=e1183] [cursor=pointer]
+            - link "打开资源" [ref=e1184] [cursor=pointer]:
+              - /url: https://isometric.online
+          - generic [ref=e1185]:
+            - generic [ref=e1186]: 视觉素材与生成器
+            - generic [ref=e1187]: 插画
+        - article [ref=e1188]:
+          - generic [ref=e1189]:
+            - heading "Ouch!" [level=4] [ref=e1190]
+            - generic [ref=e1191]: curated
+          - paragraph [ref=e1192]: 多风格插画。
+          - generic [ref=e1193]:
+            - button "查看细节" [ref=e1194] [cursor=pointer]
+            - link "打开资源" [ref=e1195] [cursor=pointer]:
+              - /url: https://icons8.com/illustrations
+          - generic [ref=e1196]:
+            - generic [ref=e1197]: 视觉素材与生成器
+            - generic [ref=e1198]: 插画
+        - article [ref=e1199]:
+          - generic [ref=e1200]:
+            - heading "Drawkit" [level=4] [ref=e1201]
+            - generic [ref=e1202]: curated
+          - paragraph [ref=e1203]: 免费 SVG 插画包。
+          - generic [ref=e1204]:
+            - button "查看细节" [ref=e1205] [cursor=pointer]
+            - link "打开资源" [ref=e1206] [cursor=pointer]:
+              - /url: https://www.drawkit.com
+          - generic [ref=e1207]:
+            - generic [ref=e1208]: 视觉素材与生成器
+            - generic [ref=e1209]: 插画
+        - article [ref=e1210]:
+          - generic [ref=e1211]:
+            - heading "Unsplash" [level=4] [ref=e1212]
+            - generic [ref=e1213]: curated
+          - paragraph [ref=e1214]: 高质量免费照片。
+          - generic [ref=e1215]:
+            - button "查看细节" [ref=e1216] [cursor=pointer]
+            - link "打开资源" [ref=e1217] [cursor=pointer]:
+              - /url: https://unsplash.com
+          - generic [ref=e1218]:
+            - generic [ref=e1219]: 视觉素材与生成器
+            - generic [ref=e1220]: 照片视频
+        - article [ref=e1221]:
+          - generic [ref=e1222]:
+            - heading "Pexels" [level=4] [ref=e1223]
+            - generic [ref=e1224]: curated
+          - paragraph [ref=e1225]: 免费照片和视频。
+          - generic [ref=e1226]:
+            - button "查看细节" [ref=e1227] [cursor=pointer]
+            - link "打开资源" [ref=e1228] [cursor=pointer]:
+              - /url: https://www.pexels.com
+          - generic [ref=e1229]:
+            - generic [ref=e1230]: 视觉素材与生成器
+            - generic [ref=e1231]: 照片视频
+        - article [ref=e1232]:
+          - generic [ref=e1233]:
+            - heading "Pixabay" [level=4] [ref=e1234]
+            - generic [ref=e1235]: curated
+          - paragraph [ref=e1236]: 免费照片、视频、插画。
+          - generic [ref=e1237]:
+            - button "查看细节" [ref=e1238] [cursor=pointer]
+            - link "打开资源" [ref=e1239] [cursor=pointer]:
+              - /url: https://pixabay.com
+          - generic [ref=e1240]:
+            - generic [ref=e1241]: 视觉素材与生成器
+            - generic [ref=e1242]: 照片视频
+        - article [ref=e1243]:
+          - generic [ref=e1244]:
+            - heading "Coverr" [level=4] [ref=e1245]
+            - generic [ref=e1246]: curated
+          - paragraph [ref=e1247]: 免费视频素材。
+          - generic [ref=e1248]:
+            - button "查看细节" [ref=e1249] [cursor=pointer]
+            - link "打开资源" [ref=e1250] [cursor=pointer]:
+              - /url: https://coverr.co
+          - generic [ref=e1251]:
+            - generic [ref=e1252]: 视觉素材与生成器
+            - generic [ref=e1253]: 照片视频
+        - article [ref=e1254]:
+          - generic [ref=e1255]:
+            - heading "Mixkit" [level=4] [ref=e1256]
+            - generic [ref=e1257]: curated
+          - paragraph [ref=e1258]: 免费视频和音效。
+          - generic [ref=e1259]:
+            - button "查看细节" [ref=e1260] [cursor=pointer]
+            - link "打开资源" [ref=e1261] [cursor=pointer]:
+              - /url: https://mixkit.co
+          - generic [ref=e1262]:
+            - generic [ref=e1263]: 视觉素材与生成器
+            - generic [ref=e1264]: 照片视频
+        - article [ref=e1265]:
+          - generic [ref=e1266]:
+            - heading "Spline" [level=4] [ref=e1267]
+            - generic [ref=e1268]: curated
+          - paragraph [ref=e1269]: 3D 场景设计，导出 React 组件。
+          - generic [ref=e1270]:
+            - button "查看细节" [ref=e1271] [cursor=pointer]
+            - link "打开资源" [ref=e1272] [cursor=pointer]:
+              - /url: https://spline.design
+          - generic [ref=e1273]:
+            - generic [ref=e1274]: 视觉素材与生成器
+            - generic [ref=e1275]: 3D
+        - article [ref=e1276]:
+          - generic [ref=e1277]:
+            - heading "Three.js Journey" [level=4] [ref=e1278]
+            - generic [ref=e1279]: curated
+          - paragraph [ref=e1280]: 3D Web 开发教程。
+          - generic [ref=e1281]:
+            - button "查看细节" [ref=e1282] [cursor=pointer]
+            - link "打开资源" [ref=e1283] [cursor=pointer]:
+              - /url: https://threejs-journey.com
+          - generic [ref=e1284]:
+            - generic [ref=e1285]: 视觉素材与生成器
+            - generic [ref=e1286]: 3D
+        - article [ref=e1287]:
+          - generic [ref=e1288]:
+            - heading "Poly Pizza" [level=4] [ref=e1289]
+            - generic [ref=e1290]: curated
+          - paragraph [ref=e1291]: 免费 3D 模型素材。
+          - generic [ref=e1292]:
+            - button "查看细节" [ref=e1293] [cursor=pointer]
+            - link "打开资源" [ref=e1294] [cursor=pointer]:
+              - /url: https://poly.pizza
+          - generic [ref=e1295]:
+            - generic [ref=e1296]: 视觉素材与生成器
+            - generic [ref=e1297]: 3D
+        - article [ref=e1298]:
+          - generic [ref=e1299]:
+            - heading "Sketchfab" [level=4] [ref=e1300]
+            - generic [ref=e1301]: curated
+          - paragraph [ref=e1302]: 3D 模型市场。
+          - generic [ref=e1303]:
+            - button "查看细节" [ref=e1304] [cursor=pointer]
+            - link "打开资源" [ref=e1305] [cursor=pointer]:
+              - /url: https://sketchfab.com
+          - generic [ref=e1306]:
+            - generic [ref=e1307]: 视觉素材与生成器
+            - generic [ref=e1308]: 3D
+        - article [ref=e1309]:
+          - generic [ref=e1310]:
+            - heading "Lucide" [level=4] [ref=e1311]
+            - generic [ref=e1312]: curated
+          - paragraph [ref=e1313]: React 常用线性图标库。
+          - generic [ref=e1314]:
+            - button "查看细节" [ref=e1315] [cursor=pointer]
+            - link "打开资源" [ref=e1316] [cursor=pointer]:
+              - /url: https://lucide.dev
+          - generic [ref=e1317]:
+            - generic [ref=e1318]: 视觉素材与生成器
+            - generic [ref=e1319]: 图标
+        - article [ref=e1320]:
+          - generic [ref=e1321]:
+            - heading "Phosphor Icons" [level=4] [ref=e1322]
+            - generic [ref=e1323]: curated
+          - paragraph [ref=e1324]: 6 种粗细风格，更圆润。
+          - generic [ref=e1325]:
+            - button "查看细节" [ref=e1326] [cursor=pointer]
+            - link "打开资源" [ref=e1327] [cursor=pointer]:
+              - /url: https://phosphoricons.com
+          - generic [ref=e1328]:
+            - generic [ref=e1329]: 视觉素材与生成器
+            - generic [ref=e1330]: 图标
+        - article [ref=e1331]:
+          - generic [ref=e1332]:
+            - heading "Tabler Icons" [level=4] [ref=e1333]
+            - generic [ref=e1334]: curated
+          - paragraph [ref=e1335]: 开发者风格，线条简洁。
+          - generic [ref=e1336]:
+            - button "查看细节" [ref=e1337] [cursor=pointer]
+            - link "打开资源" [ref=e1338] [cursor=pointer]:
+              - /url: https://tabler-icons.io
+          - generic [ref=e1339]:
+            - generic [ref=e1340]: 视觉素材与生成器
+            - generic [ref=e1341]: 图标
+        - article [ref=e1342]:
+          - generic [ref=e1343]:
+            - heading "Heroicons" [level=4] [ref=e1344]
+            - generic [ref=e1345]: curated
+          - paragraph [ref=e1346]: Tailwind 官方出品。
+          - generic [ref=e1347]:
+            - button "查看细节" [ref=e1348] [cursor=pointer]
+            - link "打开资源" [ref=e1349] [cursor=pointer]:
+              - /url: https://heroicons.com
+          - generic [ref=e1350]:
+            - generic [ref=e1351]: 视觉素材与生成器
+            - generic [ref=e1352]: 图标
+        - article [ref=e1353]:
+          - generic [ref=e1354]:
+            - heading "SF Symbols" [level=4] [ref=e1355]
+            - generic [ref=e1356]: curated
+          - paragraph [ref=e1357]: Apple 系统图标。
+          - generic [ref=e1358]:
+            - button "查看细节" [ref=e1359] [cursor=pointer]
+            - link "打开资源" [ref=e1360] [cursor=pointer]:
+              - /url: https://developer.apple.com/sf-symbols
+          - generic [ref=e1361]:
+            - generic [ref=e1362]: 视觉素材与生成器
+            - generic [ref=e1363]: 图标
+        - article [ref=e1364]:
+          - generic [ref=e1365]:
+            - heading "Iconoir" [level=4] [ref=e1366]
+            - generic [ref=e1367]: curated
+          - paragraph [ref=e1368]: 开源免费，风格统一。
+          - generic [ref=e1369]:
+            - button "查看细节" [ref=e1370] [cursor=pointer]
+            - link "打开资源" [ref=e1371] [cursor=pointer]:
+              - /url: https://iconoir.com
+          - generic [ref=e1372]:
+            - generic [ref=e1373]: 视觉素材与生成器
+            - generic [ref=e1374]: 图标
+        - article [ref=e1375]:
+          - generic [ref=e1376]:
+            - heading "3dicons" [level=4] [ref=e1377]
+            - generic [ref=e1378]: curated
+          - paragraph [ref=e1379]: 3D 立体图标，产品展示用。
+          - generic [ref=e1380]:
+            - button "查看细节" [ref=e1381] [cursor=pointer]
+            - link "打开资源" [ref=e1382] [cursor=pointer]:
+              - /url: https://3dicons.co
+          - generic [ref=e1383]:
+            - generic [ref=e1384]: 视觉素材与生成器
+            - generic [ref=e1385]: 图标
+        - article [ref=e1386]:
+          - generic [ref=e1387]:
+            - heading "Icons8" [level=4] [ref=e1388]
+            - generic [ref=e1389]: curated
+          - paragraph [ref=e1390]: 图标、插画、照片综合站。
+          - generic [ref=e1391]:
+            - button "查看细节" [ref=e1392] [cursor=pointer]
+            - link "打开资源" [ref=e1393] [cursor=pointer]:
+              - /url: https://icons8.com
+          - generic [ref=e1394]:
+            - generic [ref=e1395]: 视觉素材与生成器
+            - generic [ref=e1396]: 图标
+        - article [ref=e1397]:
+          - generic [ref=e1398]:
+            - heading "Google Fonts" [level=4] [ref=e1399]
+            - generic [ref=e1400]: curated
+          - paragraph [ref=e1401]: 免费字体，覆盖广。
+          - generic [ref=e1402]:
+            - button "查看细节" [ref=e1403] [cursor=pointer]
+            - link "打开资源" [ref=e1404] [cursor=pointer]:
+              - /url: https://fonts.google.com
+          - generic [ref=e1405]:
+            - generic [ref=e1406]: 视觉素材与生成器
+            - generic [ref=e1407]: 字体
+        - article [ref=e1408]:
+          - generic [ref=e1409]:
+            - heading "Fontshare" [level=4] [ref=e1410]
+            - generic [ref=e1411]: curated
+          - paragraph [ref=e1412]: 免费高品质字体。
+          - generic [ref=e1413]:
+            - button "查看细节" [ref=e1414] [cursor=pointer]
+            - link "打开资源" [ref=e1415] [cursor=pointer]:
+              - /url: https://www.fontshare.com
+          - generic [ref=e1416]:
+            - generic [ref=e1417]: 视觉素材与生成器
+            - generic [ref=e1418]: 字体
+        - article [ref=e1419]:
+          - generic [ref=e1420]:
+            - heading "Type Scale" [level=4] [ref=e1421]
+            - generic [ref=e1422]: curated
+          - paragraph [ref=e1423]: 字号层级可视化调整。
+          - generic [ref=e1424]:
+            - button "查看细节" [ref=e1425] [cursor=pointer]
+            - link "打开资源" [ref=e1426] [cursor=pointer]:
+              - /url: https://typescale.com
+          - generic [ref=e1427]:
+            - generic [ref=e1428]: 视觉素材与生成器
+            - generic [ref=e1429]: 字体
+        - article [ref=e1430]:
+          - generic [ref=e1431]:
+            - heading "Font Pair" [level=4] [ref=e1432]
+            - generic [ref=e1433]: curated
+          - paragraph [ref=e1434]: 字体搭配推荐。
+          - generic [ref=e1435]:
+            - button "查看细节" [ref=e1436] [cursor=pointer]
+            - link "打开资源" [ref=e1437] [cursor=pointer]:
+              - /url: https://www.fontpair.co
+          - generic [ref=e1438]:
+            - generic [ref=e1439]: 视觉素材与生成器
+            - generic [ref=e1440]: 字体
+        - article [ref=e1441]:
+          - generic [ref=e1442]:
+            - heading "Fontesk" [level=4] [ref=e1443]
+            - generic [ref=e1444]: curated
+          - paragraph [ref=e1445]: 免费字体下载。
+          - generic [ref=e1446]:
+            - button "查看细节" [ref=e1447] [cursor=pointer]
+            - link "打开资源" [ref=e1448] [cursor=pointer]:
+              - /url: https://fontesk.com
+          - generic [ref=e1449]:
+            - generic [ref=e1450]: 视觉素材与生成器
+            - generic [ref=e1451]: 字体
+        - article [ref=e1452]:
+          - generic [ref=e1453]:
+            - heading "Variable Fonts" [level=4] [ref=e1454]
+            - generic [ref=e1455]: curated
+          - paragraph [ref=e1456]: 可变字体参考。
+          - generic [ref=e1457]:
+            - button "查看细节" [ref=e1458] [cursor=pointer]
+            - link "打开资源" [ref=e1459] [cursor=pointer]:
+              - /url: https://v-fonts.com
+          - generic [ref=e1460]:
+            - generic [ref=e1461]: 视觉素材与生成器
+            - generic [ref=e1462]: 字体
+        - article [ref=e1463]:
+          - generic [ref=e1464]:
+            - heading "Typewolf" [level=4] [ref=e1465]
+            - generic [ref=e1466]: curated
+          - paragraph [ref=e1467]: 高质量网页字体搭配灵感。
+          - generic [ref=e1468]:
+            - button "查看细节" [ref=e1469] [cursor=pointer]
+            - link "打开资源" [ref=e1470] [cursor=pointer]:
+              - /url: https://www.typewolf.com
+          - generic [ref=e1471]:
+            - generic [ref=e1472]: 视觉素材与生成器
+            - generic [ref=e1473]: 字体
+        - article [ref=e1474]:
+          - generic [ref=e1475]:
+            - heading "Realtime Colors" [level=4] [ref=e1476]
+            - generic [ref=e1477]: curated
+          - paragraph [ref=e1478]: 实时预览配色在真实页面上的效果。
+          - generic [ref=e1479]:
+            - button "查看细节" [ref=e1480] [cursor=pointer]
+            - link "打开资源" [ref=e1481] [cursor=pointer]:
+              - /url: https://www.realtimecolors.com
+          - generic [ref=e1482]:
+            - generic [ref=e1483]: 视觉素材与生成器
+            - generic [ref=e1484]: 配色
+        - article [ref=e1485]:
+          - generic [ref=e1486]:
+            - heading "Coolors" [level=4] [ref=e1487]
+            - generic [ref=e1488]: curated
+          - paragraph [ref=e1489]: 配色方案生成器。
+          - generic [ref=e1490]:
+            - button "查看细节" [ref=e1491] [cursor=pointer]
+            - link "打开资源" [ref=e1492] [cursor=pointer]:
+              - /url: https://coolors.co
+          - generic [ref=e1493]:
+            - generic [ref=e1494]: 视觉素材与生成器
+            - generic [ref=e1495]: 配色
+        - article [ref=e1496]:
+          - generic [ref=e1497]:
+            - heading "Happy Hues" [level=4] [ref=e1498]
+            - generic [ref=e1499]: curated
+          - paragraph [ref=e1500]: 现成配色方案和页面预览。
+          - generic [ref=e1501]:
+            - button "查看细节" [ref=e1502] [cursor=pointer]
+            - link "打开资源" [ref=e1503] [cursor=pointer]:
+              - /url: https://www.happyhues.co
+          - generic [ref=e1504]:
+            - generic [ref=e1505]: 视觉素材与生成器
+            - generic [ref=e1506]: 配色
+        - article [ref=e1507]:
+          - generic [ref=e1508]:
+            - heading "UI Colors" [level=4] [ref=e1509]
+            - generic [ref=e1510]: curated
+          - paragraph [ref=e1511]: Tailwind 色板生成器。
+          - generic [ref=e1512]:
+            - button "查看细节" [ref=e1513] [cursor=pointer]
+            - link "打开资源" [ref=e1514] [cursor=pointer]:
+              - /url: https://uicolors.app
+          - generic [ref=e1515]:
+            - generic [ref=e1516]: 视觉素材与生成器
+            - generic [ref=e1517]: 配色
+        - article [ref=e1518]:
+          - generic [ref=e1519]:
+            - heading "OkLCH Color Picker" [level=4] [ref=e1520]
+            - generic [ref=e1521]: curated
+          - paragraph [ref=e1522]: 精确颜色选择，OKLCH 格式。
+          - generic [ref=e1523]:
+            - button "查看细节" [ref=e1524] [cursor=pointer]
+            - link "打开资源" [ref=e1525] [cursor=pointer]:
+              - /url: https://oklch.com
+          - generic [ref=e1526]:
+            - generic [ref=e1527]: 视觉素材与生成器
+            - generic [ref=e1528]: 配色
+        - article [ref=e1529]:
+          - generic [ref=e1530]:
+            - heading "Color Hunt" [level=4] [ref=e1531]
+            - generic [ref=e1532]: curated
+          - paragraph [ref=e1533]: 社区投票配色方案。
+          - generic [ref=e1534]:
+            - button "查看细节" [ref=e1535] [cursor=pointer]
+            - link "打开资源" [ref=e1536] [cursor=pointer]:
+              - /url: https://colorhunt.co
+          - generic [ref=e1537]:
+            - generic [ref=e1538]: 视觉素材与生成器
+            - generic [ref=e1539]: 配色
+        - article [ref=e1540]:
+          - generic [ref=e1541]:
+            - heading "Tints and Shades" [level=4] [ref=e1542]
+            - generic [ref=e1543]: curated
+          - paragraph [ref=e1544]: 给一个颜色生成明暗梯度。
+          - generic [ref=e1545]:
+            - button "查看细节" [ref=e1546] [cursor=pointer]
+            - link "打开资源" [ref=e1547] [cursor=pointer]:
+              - /url: https://maketintsandshades.com
+          - generic [ref=e1548]:
+            - generic [ref=e1549]: 视觉素材与生成器
+            - generic [ref=e1550]: 配色
+        - article [ref=e1551]:
+          - generic [ref=e1552]:
+            - heading "Palette App" [level=4] [ref=e1553]
+            - generic [ref=e1554]: curated
+          - paragraph [ref=e1555]: AI 从图片提取配色。
+          - generic [ref=e1556]:
+            - button "查看细节" [ref=e1557] [cursor=pointer]
+            - link "打开资源" [ref=e1558] [cursor=pointer]:
+              - /url: https://palette.app
+          - generic [ref=e1559]:
+            - generic [ref=e1560]: 视觉素材与生成器
+            - generic [ref=e1561]: 配色
+        - article [ref=e1562]:
+          - generic [ref=e1563]:
+            - heading "CSS Grid Generator" [level=4] [ref=e1564]
+            - generic [ref=e1565]: curated
+          - paragraph [ref=e1566]: Grid 布局可视化编辑。
+          - generic [ref=e1567]:
+            - button "查看细节" [ref=e1568] [cursor=pointer]
+            - link "打开资源" [ref=e1569] [cursor=pointer]:
+              - /url: https://cssgrid-generator.netlify.app
+          - generic [ref=e1570]:
+            - generic [ref=e1571]: 视觉素材与生成器
+            - generic [ref=e1572]: CSS
+        - article [ref=e1573]:
+          - generic [ref=e1574]:
+            - heading "Fancy Border Radius" [level=4] [ref=e1575]
+            - generic [ref=e1576]: curated
+          - paragraph [ref=e1577]: 不规则圆角生成器。
+          - generic [ref=e1578]:
+            - button "查看细节" [ref=e1579] [cursor=pointer]
+            - link "打开资源" [ref=e1580] [cursor=pointer]:
+              - /url: https://9elements.github.io/fancy-border-radius
+          - generic [ref=e1581]:
+            - generic [ref=e1582]: 视觉素材与生成器
+            - generic [ref=e1583]: CSS
+        - article [ref=e1584]:
+          - generic [ref=e1585]:
+            - heading "Get Waves" [level=4] [ref=e1586]
+            - generic [ref=e1587]: curated
+          - paragraph [ref=e1588]: SVG 波浪背景生成。
+          - generic [ref=e1589]:
+            - button "查看细节" [ref=e1590] [cursor=pointer]
+            - link "打开资源" [ref=e1591] [cursor=pointer]:
+              - /url: https://getwaves.io
+          - generic [ref=e1592]:
+            - generic [ref=e1593]: 视觉素材与生成器
+            - generic [ref=e1594]: CSS
+        - article [ref=e1595]:
+          - generic [ref=e1596]:
+            - heading "Blobmaker" [level=4] [ref=e1597]
+            - generic [ref=e1598]: curated
+          - paragraph [ref=e1599]: SVG Blob 形状生成。
+          - generic [ref=e1600]:
+            - button "查看细节" [ref=e1601] [cursor=pointer]
+            - link "打开资源" [ref=e1602] [cursor=pointer]:
+              - /url: https://www.blobmaker.app
+          - generic [ref=e1603]:
+            - generic [ref=e1604]: 视觉素材与生成器
+            - generic [ref=e1605]: CSS
+        - article [ref=e1606]:
+          - generic [ref=e1607]:
+            - heading "Shadows Brm" [level=4] [ref=e1608]
+            - generic [ref=e1609]: curated
+          - paragraph [ref=e1610]: 阴影参数调试器。
+          - generic [ref=e1611]:
+            - button "查看细节" [ref=e1612] [cursor=pointer]
+            - link "打开资源" [ref=e1613] [cursor=pointer]:
+              - /url: https://shadows.brumm.af
+          - generic [ref=e1614]:
+            - generic [ref=e1615]: 视觉素材与生成器
+            - generic [ref=e1616]: CSS
+        - article [ref=e1617]:
+          - generic [ref=e1618]:
+            - heading "Smooth Shadow" [level=4] [ref=e1619]
+            - generic [ref=e1620]: curated
+          - paragraph [ref=e1621]: 多层平滑阴影生成器。
+          - generic [ref=e1622]:
+            - button "查看细节" [ref=e1623] [cursor=pointer]
+            - link "打开资源" [ref=e1624] [cursor=pointer]:
+              - /url: https://smoothshadow.com
+          - generic [ref=e1625]:
+            - generic [ref=e1626]: 视觉素材与生成器
+            - generic [ref=e1627]: CSS
+        - article [ref=e1628]:
+          - generic [ref=e1629]:
+            - heading "Glass UI" [level=4] [ref=e1630]
+            - generic [ref=e1631]: curated
+          - paragraph [ref=e1632]: Glassmorphism 毛玻璃效果生成器。
+          - generic [ref=e1633]:
+            - button "查看细节" [ref=e1634] [cursor=pointer]
+            - link "打开资源" [ref=e1635] [cursor=pointer]:
+              - /url: https://glassui.dev
+          - generic [ref=e1636]:
+            - generic [ref=e1637]: 视觉素材与生成器
+            - generic [ref=e1638]: CSS
+        - article [ref=e1639]:
+          - generic [ref=e1640]:
+            - heading "Neumorphism.io" [level=4] [ref=e1641]
+            - generic [ref=e1642]: curated
+          - paragraph [ref=e1643]: 新拟态效果生成器。
+          - generic [ref=e1644]:
+            - button "查看细节" [ref=e1645] [cursor=pointer]
+            - link "打开资源" [ref=e1646] [cursor=pointer]:
+              - /url: https://neumorphism.io
+          - generic [ref=e1647]:
+            - generic [ref=e1648]: 视觉素材与生成器
+            - generic [ref=e1649]: CSS
+        - article [ref=e1650]:
+          - generic [ref=e1651]:
+            - heading "Animate CSS" [level=4] [ref=e1652]
+            - generic [ref=e1653]: curated
+          - paragraph [ref=e1654]: CSS 动画预设库。
+          - generic [ref=e1655]:
+            - button "查看细节" [ref=e1656] [cursor=pointer]
+            - link "打开资源" [ref=e1657] [cursor=pointer]:
+              - /url: https://animate.style
+          - generic [ref=e1658]:
+            - generic [ref=e1659]: 视觉素材与生成器
+            - generic [ref=e1660]: 动效工具
+        - article [ref=e1661]:
+          - generic [ref=e1662]:
+            - heading "Cubic Bezier" [level=4] [ref=e1663]
+            - generic [ref=e1664]: curated
+          - paragraph [ref=e1665]: 贝塞尔曲线调试器。
+          - generic [ref=e1666]:
+            - button "查看细节" [ref=e1667] [cursor=pointer]
+            - link "打开资源" [ref=e1668] [cursor=pointer]:
+              - /url: https://cubic-bezier.com
+          - generic [ref=e1669]:
+            - generic [ref=e1670]: 视觉素材与生成器
+            - generic [ref=e1671]: 动效工具
+        - article [ref=e1672]:
+          - generic [ref=e1673]:
+            - heading "Keyframes.app" [level=4] [ref=e1674]
+            - generic [ref=e1675]: curated
+          - paragraph [ref=e1676]: CSS 动画关键帧编辑器。
+          - generic [ref=e1677]:
+            - button "查看细节" [ref=e1678] [cursor=pointer]
+            - link "打开资源" [ref=e1679] [cursor=pointer]:
+              - /url: https://keyframes.app
+          - generic [ref=e1680]:
+            - generic [ref=e1681]: 视觉素材与生成器
+            - generic [ref=e1682]: 动效工具
+        - article [ref=e1683]:
+          - generic [ref=e1684]:
+            - heading "Figma" [level=4] [ref=e1685]
+            - generic [ref=e1686]: curated
+          - paragraph [ref=e1687]: 设计稿协作，行业标准。
+          - generic [ref=e1688]:
+            - button "查看细节" [ref=e1689] [cursor=pointer]
+            - link "打开资源" [ref=e1690] [cursor=pointer]:
+              - /url: https://www.figma.com
+          - generic [ref=e1691]:
+            - generic [ref=e1692]: 视觉素材与生成器
+            - generic [ref=e1693]: 设计工具
+        - article [ref=e1694]:
+          - generic [ref=e1695]:
+            - heading "Shots" [level=4] [ref=e1696]
+            - generic [ref=e1697]: curated
+          - paragraph [ref=e1698]: 设计稿 Mockup 生成器。
+          - generic [ref=e1699]:
+            - button "查看细节" [ref=e1700] [cursor=pointer]
+            - link "打开资源" [ref=e1701] [cursor=pointer]:
+              - /url: https://shots.so
+          - generic [ref=e1702]:
+            - generic [ref=e1703]: 视觉素材与生成器
+            - generic [ref=e1704]: Mockup
+        - article [ref=e1705]:
+          - generic [ref=e1706]:
+            - heading "Mockup World" [level=4] [ref=e1707]
+            - generic [ref=e1708]: curated
+          - paragraph [ref=e1709]: 免费 Mockup 素材。
+          - generic [ref=e1710]:
+            - button "查看细节" [ref=e1711] [cursor=pointer]
+            - link "打开资源" [ref=e1712] [cursor=pointer]:
+              - /url: https://www.mockupworld.co
+          - generic [ref=e1713]:
+            - generic [ref=e1714]: 视觉素材与生成器
+            - generic [ref=e1715]: Mockup
+      - generic [ref=e1716]:
+        - generic [ref=e1717]:
+          - heading "AI 生成与 Vibe Coding" [level=3] [ref=e1718]
+          - paragraph [ref=e1719]: AI 生成 UI、全栈应用、视觉素材和原型的工具。用于快速探索和出草稿。
+        - generic [ref=e1720]: 11 items
+      - generic [ref=e1721]:
+        - article [ref=e1722]:
+          - generic [ref=e1723]:
+            - heading "v0" [level=4] [ref=e1724]
+            - generic [ref=e1725]: curated
+          - paragraph [ref=e1726]: Vercel AI 生成 UI、全栈应用、原型和部署。
+          - generic [ref=e1727]:
+            - button "查看细节" [ref=e1728] [cursor=pointer]
+            - link "打开资源" [ref=e1729] [cursor=pointer]:
+              - /url: https://v0.app
+          - generic [ref=e1730]:
+            - generic [ref=e1731]: AI 生成与 Vibe Coding
+            - generic [ref=e1732]: AI 生成
+        - article [ref=e1733]:
+          - generic [ref=e1734]:
+            - heading "Lovable" [level=4] [ref=e1735]
+            - generic [ref=e1736]: curated
+          - paragraph [ref=e1737]: AI 生成完整 Web 应用。
+          - generic [ref=e1738]:
+            - button "查看细节" [ref=e1739] [cursor=pointer]
+            - link "打开资源" [ref=e1740] [cursor=pointer]:
+              - /url: https://lovable.dev
+          - generic [ref=e1741]:
+            - generic [ref=e1742]: AI 生成与 Vibe Coding
+            - generic [ref=e1743]: AI 生成
+        - article [ref=e1744]:
+          - generic [ref=e1745]:
+            - heading "Bolt" [level=4] [ref=e1746]
+            - generic [ref=e1747]: curated
+          - paragraph [ref=e1748]: AI 全栈应用生成，浏览器内运行项目。
+          - generic [ref=e1749]:
+            - button "查看细节" [ref=e1750] [cursor=pointer]
+            - link "打开资源" [ref=e1751] [cursor=pointer]:
+              - /url: https://bolt.new
+          - generic [ref=e1752]:
+            - generic [ref=e1753]: AI 生成与 Vibe Coding
+            - generic [ref=e1754]: AI 生成
+        - article [ref=e1755]:
+          - generic [ref=e1756]:
+            - heading "Cursor" [level=4] [ref=e1757]
+            - generic [ref=e1758]: curated
+          - paragraph [ref=e1759]: AI 代码编辑器，内联生成和修改 UI。
+          - generic [ref=e1760]:
+            - button "查看细节" [ref=e1761] [cursor=pointer]
+            - link "打开资源" [ref=e1762] [cursor=pointer]:
+              - /url: https://cursor.com
+          - generic [ref=e1763]:
+            - generic [ref=e1764]: AI 生成与 Vibe Coding
+            - generic [ref=e1765]: AI 编码
+        - article [ref=e1766]:
+          - generic [ref=e1767]:
+            - heading "Replit Agent" [level=4] [ref=e1768]
+            - generic [ref=e1769]: curated
+          - paragraph [ref=e1770]: AI 生成、运行、部署应用。
+          - generic [ref=e1771]:
+            - button "查看细节" [ref=e1772] [cursor=pointer]
+            - link "打开资源" [ref=e1773] [cursor=pointer]:
+              - /url: https://replit.com
+          - generic [ref=e1774]:
+            - generic [ref=e1775]: AI 生成与 Vibe Coding
+            - generic [ref=e1776]: AI 编码
+        - article [ref=e1777]:
+          - generic [ref=e1778]:
+            - heading "Figma AI" [level=4] [ref=e1779]
+            - generic [ref=e1780]: curated
+          - paragraph [ref=e1781]: Figma 内置 AI 设计辅助。
+          - generic [ref=e1782]:
+            - button "查看细节" [ref=e1783] [cursor=pointer]
+            - link "打开资源" [ref=e1784] [cursor=pointer]:
+              - /url: https://www.figma.com
+          - generic [ref=e1785]:
+            - generic [ref=e1786]: AI 生成与 Vibe Coding
+            - generic [ref=e1787]: AI 设计
+        - article [ref=e1788]:
+          - generic [ref=e1789]:
+            - heading "Framer AI" [level=4] [ref=e1790]
+            - generic [ref=e1791]: curated
+          - paragraph [ref=e1792]: AI 生成网站、视觉页面和 CMS 站点。
+          - generic [ref=e1793]:
+            - button "查看细节" [ref=e1794] [cursor=pointer]
+            - link "打开资源" [ref=e1795] [cursor=pointer]:
+              - /url: https://www.framer.com
+          - generic [ref=e1796]:
+            - generic [ref=e1797]: AI 生成与 Vibe Coding
+            - generic [ref=e1798]: AI 站点
+        - article [ref=e1799]:
+          - generic [ref=e1800]:
+            - heading "Relume" [level=4] [ref=e1801]
+            - generic [ref=e1802]: curated
+          - paragraph [ref=e1803]: AI 生成 sitemap、wireframe、Webflow / Figma 结构。
+          - generic [ref=e1804]:
+            - button "查看细节" [ref=e1805] [cursor=pointer]
+            - link "打开资源" [ref=e1806] [cursor=pointer]:
+              - /url: https://www.relume.io
+          - generic [ref=e1807]:
+            - generic [ref=e1808]: AI 生成与 Vibe Coding
+            - generic [ref=e1809]: AI 站点
+        - article [ref=e1810]:
+          - generic [ref=e1811]:
+            - heading "Uizard" [level=4] [ref=e1812]
+            - generic [ref=e1813]: curated
+          - paragraph [ref=e1814]: AI 生成 UI 原型和界面设计。
+          - generic [ref=e1815]:
+            - button "查看细节" [ref=e1816] [cursor=pointer]
+            - link "打开资源" [ref=e1817] [cursor=pointer]:
+              - /url: https://uizard.io
+          - generic [ref=e1818]:
+            - generic [ref=e1819]: AI 生成与 Vibe Coding
+            - generic [ref=e1820]: AI 原型
+        - article [ref=e1821]:
+          - generic [ref=e1822]:
+            - heading "Midjourney" [level=4] [ref=e1823]
+            - generic [ref=e1824]: curated
+          - paragraph [ref=e1825]: AI 生成视觉参考图。
+          - generic [ref=e1826]:
+            - button "查看细节" [ref=e1827] [cursor=pointer]
+            - link "打开资源" [ref=e1828] [cursor=pointer]:
+              - /url: https://www.midjourney.com
+          - generic [ref=e1829]:
+            - generic [ref=e1830]: AI 生成与 Vibe Coding
+            - generic [ref=e1831]: AI 图像
+        - article [ref=e1832]:
+          - generic [ref=e1833]:
+            - heading "OpenAI Images" [level=4] [ref=e1834]
+            - generic [ref=e1835]: curated
+          - paragraph [ref=e1836]: AI 生成插画、图标、产品视觉素材。
+          - generic [ref=e1837]:
+            - button "查看细节" [ref=e1838] [cursor=pointer]
+            - link "打开资源" [ref=e1839] [cursor=pointer]:
+              - /url: https://openai.com
+          - generic [ref=e1840]:
+            - generic [ref=e1841]: AI 生成与 Vibe Coding
+            - generic [ref=e1842]: AI 图像
+      - generic [ref=e1843]:
+        - generic [ref=e1844]:
+          - heading "个人知识库与文档网站" [level=3] [ref=e1845]
+          - paragraph [ref=e1846]: Obsidian、数字花园、文档站框架、技术写作、AI 友好文档和部署平台。用于把知识长期发布。
+        - generic [ref=e1847]: 35 items
+      - generic [ref=e1848]:
+        - article [ref=e1849]:
+          - generic [ref=e1850]:
+            - heading "Obsidian" [level=4] [ref=e1851]
+            - generic [ref=e1852]: curated
+          - paragraph [ref=e1853]: 本地 Markdown 知识库，适合长期笔记。
+          - generic [ref=e1854]:
+            - button "查看细节" [ref=e1855] [cursor=pointer]
+            - link "打开资源" [ref=e1856] [cursor=pointer]:
+              - /url: https://obsidian.md
+          - generic [ref=e1857]:
+            - generic [ref=e1858]: 个人知识库与文档网站
+            - generic [ref=e1859]: 知识库
+        - article [ref=e1860]:
+          - generic [ref=e1861]:
+            - heading "Quartz" [level=4] [ref=e1862]
+            - generic [ref=e1863]: curated
+          - paragraph [ref=e1864]: 把 Obsidian Vault 发布成数字花园。
+          - generic [ref=e1865]:
+            - button "查看细节" [ref=e1866] [cursor=pointer]
+            - link "打开资源" [ref=e1867] [cursor=pointer]:
+              - /url: https://quartz.jzhao.xyz
+          - generic [ref=e1868]:
+            - generic [ref=e1869]: 个人知识库与文档网站
+            - generic [ref=e1870]: 数字花园
+        - article [ref=e1871]:
+          - generic [ref=e1872]:
+            - heading "Obsidian Publish" [level=4] [ref=e1873]
+            - generic [ref=e1874]: curated
+          - paragraph [ref=e1875]: Obsidian 官方发布服务。
+          - generic [ref=e1876]:
+            - button "查看细节" [ref=e1877] [cursor=pointer]
+            - link "打开资源" [ref=e1878] [cursor=pointer]:
+              - /url: https://obsidian.md/publish
+          - generic [ref=e1879]:
+            - generic [ref=e1880]: 个人知识库与文档网站
+            - generic [ref=e1881]: 数字花园
+        - article [ref=e1882]:
+          - generic [ref=e1883]:
+            - heading "Digital Garden Plugin" [level=4] [ref=e1884]
+            - generic [ref=e1885]: curated
+          - paragraph [ref=e1886]: Obsidian 插件式发布数字花园。
+          - generic [ref=e1887]:
+            - button "查看细节" [ref=e1888] [cursor=pointer]
+            - link "打开资源" [ref=e1889] [cursor=pointer]:
+              - /url: https://github.com/oleeskild/obsidian-digital-garden
+          - generic [ref=e1890]:
+            - generic [ref=e1891]: 个人知识库与文档网站
+            - generic [ref=e1892]: 数字花园
+        - article [ref=e1893]:
+          - generic [ref=e1894]:
+            - heading "Logseq" [level=4] [ref=e1895]
+            - generic [ref=e1896]: curated
+          - paragraph [ref=e1897]: 大纲式双链笔记。
+          - generic [ref=e1898]:
+            - button "查看细节" [ref=e1899] [cursor=pointer]
+            - link "打开资源" [ref=e1900] [cursor=pointer]:
+              - /url: https://logseq.com
+          - generic [ref=e1901]:
+            - generic [ref=e1902]: 个人知识库与文档网站
+            - generic [ref=e1903]: 知识库
+        - article [ref=e1904]:
+          - generic [ref=e1905]:
+            - heading "Tana" [level=4] [ref=e1906]
+            - generic [ref=e1907]: curated
+          - paragraph [ref=e1908]: 结构化知识管理、super tag 思路。
+          - generic [ref=e1909]:
+            - button "查看细节" [ref=e1910] [cursor=pointer]
+            - link "打开资源" [ref=e1911] [cursor=pointer]:
+              - /url: https://tana.inc
+          - generic [ref=e1912]:
+            - generic [ref=e1913]: 个人知识库与文档网站
+            - generic [ref=e1914]: 知识库
+        - article [ref=e1915]:
+          - generic [ref=e1916]:
+            - heading "Notion" [level=4] [ref=e1917]
+            - generic [ref=e1918]: curated
+          - paragraph [ref=e1919]: 协作知识库、轻量发布和数据库。
+          - generic [ref=e1920]:
+            - button "查看细节" [ref=e1921] [cursor=pointer]
+            - link "打开资源" [ref=e1922] [cursor=pointer]:
+              - /url: https://www.notion.so
+          - generic [ref=e1923]:
+            - generic [ref=e1924]: 个人知识库与文档网站
+            - generic [ref=e1925]: 知识库
+        - article [ref=e1926]:
+          - generic [ref=e1927]:
+            - heading "Fumadocs" [level=4] [ref=e1928]
+            - generic [ref=e1929]: curated
+          - paragraph [ref=e1930]: Next.js / React 文档框架，适合高定制审美。
+          - generic [ref=e1931]:
+            - button "查看细节" [ref=e1932] [cursor=pointer]
+            - link "打开资源" [ref=e1933] [cursor=pointer]:
+              - /url: https://www.fumadocs.dev
+          - generic [ref=e1934]:
+            - generic [ref=e1935]: 个人知识库与文档网站
+            - generic [ref=e1936]: 文档站
+        - article [ref=e1937]:
+          - generic [ref=e1938]:
+            - heading "Nextra" [level=4] [ref=e1939]
+            - generic [ref=e1940]: curated
+          - paragraph [ref=e1941]: Next.js + MDX 文档站，简单灵活。
+          - generic [ref=e1942]:
+            - button "查看细节" [ref=e1943] [cursor=pointer]
+            - link "打开资源" [ref=e1944] [cursor=pointer]:
+              - /url: https://nextra.site
+          - generic [ref=e1945]:
+            - generic [ref=e1946]: 个人知识库与文档网站
+            - generic [ref=e1947]: 文档站
+        - article [ref=e1948]:
+          - generic [ref=e1949]:
+            - heading "Astro Starlight" [level=4] [ref=e1950]
+            - generic [ref=e1951]: curated
+          - paragraph [ref=e1952]: Astro 官方文档主题，快、轻、默认无障碍。
+          - generic [ref=e1953]:
+            - button "查看细节" [ref=e1954] [cursor=pointer]
+            - link "打开资源" [ref=e1955] [cursor=pointer]:
+              - /url: https://starlight.astro.build
+          - generic [ref=e1956]:
+            - generic [ref=e1957]: 个人知识库与文档网站
+            - generic [ref=e1958]: 文档站
+        - article [ref=e1959]:
+          - generic [ref=e1960]:
+            - heading "Docusaurus" [level=4] [ref=e1961]
+            - generic [ref=e1962]: curated
+          - paragraph [ref=e1963]: 成熟文档站框架，版本管理、插件生态好。
+          - generic [ref=e1964]:
+            - button "查看细节" [ref=e1965] [cursor=pointer]
+            - link "打开资源" [ref=e1966] [cursor=pointer]:
+              - /url: https://docusaurus.io
+          - generic [ref=e1967]:
+            - generic [ref=e1968]: 个人知识库与文档网站
+            - generic [ref=e1969]: 文档站
+        - article [ref=e1970]:
+          - generic [ref=e1971]:
+            - heading "Material for MkDocs" [level=4] [ref=e1972]
+            - generic [ref=e1973]: curated
+          - paragraph [ref=e1974]: Python / Markdown 文档站，漂亮且成熟。
+          - generic [ref=e1975]:
+            - button "查看细节" [ref=e1976] [cursor=pointer]
+            - link "打开资源" [ref=e1977] [cursor=pointer]:
+              - /url: https://squidfunk.github.io/mkdocs-material
+          - generic [ref=e1978]:
+            - generic [ref=e1979]: 个人知识库与文档网站
+            - generic [ref=e1980]: 文档站
+        - article [ref=e1981]:
+          - generic [ref=e1982]:
+            - heading "VitePress" [level=4] [ref=e1983]
+            - generic [ref=e1984]: curated
+          - paragraph [ref=e1985]: Vue / Vite 文档站，轻量快速。
+          - generic [ref=e1986]:
+            - button "查看细节" [ref=e1987] [cursor=pointer]
+            - link "打开资源" [ref=e1988] [cursor=pointer]:
+              - /url: https://vitepress.dev
+          - generic [ref=e1989]:
+            - generic [ref=e1990]: 个人知识库与文档网站
+            - generic [ref=e1991]: 文档站
+        - article [ref=e1992]:
+          - generic [ref=e1993]:
+            - heading "Mintlify" [level=4] [ref=e1994]
+            - generic [ref=e1995]: curated
+          - paragraph [ref=e1996]: 商业文档平台，AI 搜索、API playground、分析。
+          - generic [ref=e1997]:
+            - button "查看细节" [ref=e1998] [cursor=pointer]
+            - link "打开资源" [ref=e1999] [cursor=pointer]:
+              - /url: https://mintlify.com
+          - generic [ref=e2000]:
+            - generic [ref=e2001]: 个人知识库与文档网站
+            - generic [ref=e2002]: 文档平台
+        - article [ref=e2003]:
+          - generic [ref=e2004]:
+            - heading "ReadMe" [level=4] [ref=e2005]
+            - generic [ref=e2006]: curated
+          - paragraph [ref=e2007]: 商业开发者文档平台，API 文档能力强。
+          - generic [ref=e2008]:
+            - button "查看细节" [ref=e2009] [cursor=pointer]
+            - link "打开资源" [ref=e2010] [cursor=pointer]:
+              - /url: https://readme.com
+          - generic [ref=e2011]:
+            - generic [ref=e2012]: 个人知识库与文档网站
+            - generic [ref=e2013]: 文档平台
+        - article [ref=e2014]:
+          - generic [ref=e2015]:
+            - heading "GitBook" [level=4] [ref=e2016]
+            - generic [ref=e2017]: curated
+          - paragraph [ref=e2018]: 团队协作文档和公开文档站。
+          - generic [ref=e2019]:
+            - button "查看细节" [ref=e2020] [cursor=pointer]
+            - link "打开资源" [ref=e2021] [cursor=pointer]:
+              - /url: https://www.gitbook.com
+          - generic [ref=e2022]:
+            - generic [ref=e2023]: 个人知识库与文档网站
+            - generic [ref=e2024]: 文档平台
+        - article [ref=e2025]:
+          - generic [ref=e2026]:
+            - heading "Diatáxis" [level=4] [ref=e2027]
+            - generic [ref=e2028]: curated
+          - paragraph [ref=e2029]: 文档信息架构：教程、指南、解释、参考。
+          - generic [ref=e2030]:
+            - button "查看细节" [ref=e2031] [cursor=pointer]
+            - link "打开资源" [ref=e2032] [cursor=pointer]:
+              - /url: https://diataxis.fr
+          - generic [ref=e2033]:
+            - generic [ref=e2034]: 个人知识库与文档网站
+            - generic [ref=e2035]: 技术写作
+        - article [ref=e2036]:
+          - generic [ref=e2037]:
+            - heading "The Good Docs Project" [level=4] [ref=e2038]
+            - generic [ref=e2039]: curated
+          - paragraph [ref=e2040]: 文档模板和写作模式。
+          - generic [ref=e2041]:
+            - button "查看细节" [ref=e2042] [cursor=pointer]
+            - link "打开资源" [ref=e2043] [cursor=pointer]:
+              - /url: https://www.thegooddocsproject.dev
+          - generic [ref=e2044]:
+            - generic [ref=e2045]: 个人知识库与文档网站
+            - generic [ref=e2046]: 技术写作
+        - article [ref=e2047]:
+          - generic [ref=e2048]:
+            - heading "Write the Docs" [level=4] [ref=e2049]
+            - generic [ref=e2050]: curated
+          - paragraph [ref=e2051]: 技术写作社区和资料。
+          - generic [ref=e2052]:
+            - button "查看细节" [ref=e2053] [cursor=pointer]
+            - link "打开资源" [ref=e2054] [cursor=pointer]:
+              - /url: https://www.writethedocs.org
+          - generic [ref=e2055]:
+            - generic [ref=e2056]: 个人知识库与文档网站
+            - generic [ref=e2057]: 技术写作
+        - article [ref=e2058]:
+          - generic [ref=e2059]:
+            - heading "Google Developer Documentation Style Guide" [level=4] [ref=e2060]
+            - generic [ref=e2061]: curated
+          - paragraph [ref=e2062]: Google 开发者文档风格指南。
+          - generic [ref=e2063]:
+            - button "查看细节" [ref=e2064] [cursor=pointer]
+            - link "打开资源" [ref=e2065] [cursor=pointer]:
+              - /url: https://developers.google.com/style
+          - generic [ref=e2066]:
+            - generic [ref=e2067]: 个人知识库与文档网站
+            - generic [ref=e2068]: 技术写作
+        - article [ref=e2069]:
+          - generic [ref=e2070]:
+            - heading "Microsoft Writing Style Guide" [level=4] [ref=e2071]
+            - generic [ref=e2072]: curated
+          - paragraph [ref=e2073]: Microsoft 写作风格指南。
+          - generic [ref=e2074]:
+            - button "查看细节" [ref=e2075] [cursor=pointer]
+            - link "打开资源" [ref=e2076] [cursor=pointer]:
+              - /url: https://learn.microsoft.com/style-guide
+          - generic [ref=e2077]:
+            - generic [ref=e2078]: 个人知识库与文档网站
+            - generic [ref=e2079]: 技术写作
+        - article [ref=e2080]:
+          - generic [ref=e2081]:
+            - heading "llms.txt" [level=4] [ref=e2082]
+            - generic [ref=e2083]: curated
+          - paragraph [ref=e2084]: 给 AI 读取网站文档的入口文件规范。
+          - generic [ref=e2085]:
+            - button "查看细节" [ref=e2086] [cursor=pointer]
+            - link "打开资源" [ref=e2087] [cursor=pointer]:
+              - /url: https://llmstxt.org
+          - generic [ref=e2088]:
+            - generic [ref=e2089]: 个人知识库与文档网站
+            - generic [ref=e2090]: AI 文档
+        - article [ref=e2091]:
+          - generic [ref=e2092]:
+            - heading "MDX" [level=4] [ref=e2093]
+            - generic [ref=e2094]: curated
+          - paragraph [ref=e2095]: 在 Markdown 中使用组件。
+          - generic [ref=e2096]:
+            - button "查看细节" [ref=e2097] [cursor=pointer]
+            - link "打开资源" [ref=e2098] [cursor=pointer]:
+              - /url: https://mdxjs.com
+          - generic [ref=e2099]:
+            - generic [ref=e2100]: 个人知识库与文档网站
+            - generic [ref=e2101]: AI 文档
+        - article [ref=e2102]:
+          - generic [ref=e2103]:
+            - heading "Pagefind" [level=4] [ref=e2104]
+            - generic [ref=e2105]: curated
+          - paragraph [ref=e2106]: 静态站点全文搜索。
+          - generic [ref=e2107]:
+            - button "查看细节" [ref=e2108] [cursor=pointer]
+            - link "打开资源" [ref=e2109] [cursor=pointer]:
+              - /url: https://pagefind.app
+          - generic [ref=e2110]:
+            - generic [ref=e2111]: 个人知识库与文档网站
+            - generic [ref=e2112]: 搜索
+        - article [ref=e2113]:
+          - generic [ref=e2114]:
+            - heading "Algolia DocSearch" [level=4] [ref=e2115]
+            - generic [ref=e2116]: curated
+          - paragraph [ref=e2117]: 文档站搜索服务。
+          - generic [ref=e2118]:
+            - button "查看细节" [ref=e2119] [cursor=pointer]
+            - link "打开资源" [ref=e2120] [cursor=pointer]:
+              - /url: https://docsearch.algolia.com
+          - generic [ref=e2121]:
+            - generic [ref=e2122]: 个人知识库与文档网站
+            - generic [ref=e2123]: 搜索
+        - article [ref=e2124]:
+          - generic [ref=e2125]:
+            - heading "OpenAPI" [level=4] [ref=e2126]
+            - generic [ref=e2127]: curated
+          - paragraph [ref=e2128]: API 描述标准。
+          - generic [ref=e2129]:
+            - button "查看细节" [ref=e2130] [cursor=pointer]
+            - link "打开资源" [ref=e2131] [cursor=pointer]:
+              - /url: https://www.openapis.org
+          - generic [ref=e2132]:
+            - generic [ref=e2133]: 个人知识库与文档网站
+            - generic [ref=e2134]: API 文档
+        - article [ref=e2135]:
+          - generic [ref=e2136]:
+            - heading "Scalar" [level=4] [ref=e2137]
+            - generic [ref=e2138]: curated
+          - paragraph [ref=e2139]: 现代 API 文档和交互式参考。
+          - generic [ref=e2140]:
+            - button "查看细节" [ref=e2141] [cursor=pointer]
+            - link "打开资源" [ref=e2142] [cursor=pointer]:
+              - /url: https://scalar.com
+          - generic [ref=e2143]:
+            - generic [ref=e2144]: 个人知识库与文档网站
+            - generic [ref=e2145]: API 文档
+        - article [ref=e2146]:
+          - generic [ref=e2147]:
+            - heading "Swagger UI" [level=4] [ref=e2148]
+            - generic [ref=e2149]: curated
+          - paragraph [ref=e2150]: OpenAPI 交互式 API 文档。
+          - generic [ref=e2151]:
+            - button "查看细节" [ref=e2152] [cursor=pointer]
+            - link "打开资源" [ref=e2153] [cursor=pointer]:
+              - /url: https://swagger.io/tools/swagger-ui
+          - generic [ref=e2154]:
+            - generic [ref=e2155]: 个人知识库与文档网站
+            - generic [ref=e2156]: API 文档
+        - article [ref=e2157]:
+          - generic [ref=e2158]:
+            - heading "Redocly" [level=4] [ref=e2159]
+            - generic [ref=e2160]: curated
+          - paragraph [ref=e2161]: API 文档、OpenAPI 工作流。
+          - generic [ref=e2162]:
+            - button "查看细节" [ref=e2163] [cursor=pointer]
+            - link "打开资源" [ref=e2164] [cursor=pointer]:
+              - /url: https://redocly.com
+          - generic [ref=e2165]:
+            - generic [ref=e2166]: 个人知识库与文档网站
+            - generic [ref=e2167]: API 文档
+        - article [ref=e2168]:
+          - generic [ref=e2169]:
+            - heading "Mermaid" [level=4] [ref=e2170]
+            - generic [ref=e2171]: curated
+          - paragraph [ref=e2172]: Markdown 中写流程图、架构图。
+          - generic [ref=e2173]:
+            - button "查看细节" [ref=e2174] [cursor=pointer]
+            - link "打开资源" [ref=e2175] [cursor=pointer]:
+              - /url: https://mermaid.js.org
+          - generic [ref=e2176]:
+            - generic [ref=e2177]: 个人知识库与文档网站
+            - generic [ref=e2178]: 图表
+        - article [ref=e2179]:
+          - generic [ref=e2180]:
+            - heading "Excalidraw" [level=4] [ref=e2181]
+            - generic [ref=e2182]: curated
+          - paragraph [ref=e2183]: 手绘风架构图、流程图。
+          - generic [ref=e2184]:
+            - button "查看细节" [ref=e2185] [cursor=pointer]
+            - link "打开资源" [ref=e2186] [cursor=pointer]:
+              - /url: https://excalidraw.com
+          - generic [ref=e2187]:
+            - generic [ref=e2188]: 个人知识库与文档网站
+            - generic [ref=e2189]: 图表
+        - article [ref=e2190]:
+          - generic [ref=e2191]:
+            - heading "Vercel" [level=4] [ref=e2192]
+            - generic [ref=e2193]: curated
+          - paragraph [ref=e2194]: Next.js / 前端部署首选之一。
+          - generic [ref=e2195]:
+            - button "查看细节" [ref=e2196] [cursor=pointer]
+            - link "打开资源" [ref=e2197] [cursor=pointer]:
+              - /url: https://vercel.com
+          - generic [ref=e2198]:
+            - generic [ref=e2199]: 个人知识库与文档网站
+            - generic [ref=e2200]: 部署
+        - article [ref=e2201]:
+          - generic [ref=e2202]:
+            - heading "Netlify" [level=4] [ref=e2203]
+            - generic [ref=e2204]: curated
+          - paragraph [ref=e2205]: 静态站点、表单、函数。
+          - generic [ref=e2206]:
+            - button "查看细节" [ref=e2207] [cursor=pointer]
+            - link "打开资源" [ref=e2208] [cursor=pointer]:
+              - /url: https://www.netlify.com
+          - generic [ref=e2209]:
+            - generic [ref=e2210]: 个人知识库与文档网站
+            - generic [ref=e2211]: 部署
+        - article [ref=e2212]:
+          - generic [ref=e2213]:
+            - heading "Cloudflare Pages" [level=4] [ref=e2214]
+            - generic [ref=e2215]: curated
+          - paragraph [ref=e2216]: 快速静态部署，适合知识库和文档。
+          - generic [ref=e2217]:
+            - button "查看细节" [ref=e2218] [cursor=pointer]
+            - link "打开资源" [ref=e2219] [cursor=pointer]:
+              - /url: https://pages.cloudflare.com
+          - generic [ref=e2220]:
+            - generic [ref=e2221]: 个人知识库与文档网站
+            - generic [ref=e2222]: 部署
+        - article [ref=e2223]:
+          - generic [ref=e2224]:
+            - heading "GitHub Pages" [level=4] [ref=e2225]
+            - generic [ref=e2226]: curated
+          - paragraph [ref=e2227]: 免费托管静态站点。
+          - generic [ref=e2228]:
+            - button "查看细节" [ref=e2229] [cursor=pointer]
+            - link "打开资源" [ref=e2230] [cursor=pointer]:
+              - /url: https://pages.github.com
+          - generic [ref=e2231]:
+            - generic [ref=e2232]: 个人知识库与文档网站
+            - generic [ref=e2233]: 部署
+      - generic [ref=e2234]:
+        - generic [ref=e2235]:
+          - heading "开发者速查与质量验证" [level=3] [ref=e2236]
+          - paragraph [ref=e2237]: Web 权威文档、兼容性、可访问性、性能、组件文档、端到端测试。用于把审美变成可维护产品。
+        - generic [ref=e2238]: 15 items
+      - generic [ref=e2239]:
+        - article [ref=e2240]:
+          - generic [ref=e2241]:
+            - heading "MDN Web Docs" [level=4] [ref=e2242]
+            - generic [ref=e2243]: curated
+          - paragraph [ref=e2244]: HTML / CSS / JS / Web API 权威文档。
+          - generic [ref=e2245]:
+            - button "查看细节" [ref=e2246] [cursor=pointer]
+            - link "打开资源" [ref=e2247] [cursor=pointer]:
+              - /url: https://developer.mozilla.org
+          - generic [ref=e2248]:
+            - generic [ref=e2249]: 开发者速查与质量验证
+            - generic [ref=e2250]: Web 文档
+        - article [ref=e2251]:
+          - generic [ref=e2252]:
+            - heading "web.dev" [level=4] [ref=e2253]
+            - generic [ref=e2254]: curated
+          - paragraph [ref=e2255]: 性能、PWA、可访问性、Web 最佳实践。
+          - generic [ref=e2256]:
+            - button "查看细节" [ref=e2257] [cursor=pointer]
+            - link "打开资源" [ref=e2258] [cursor=pointer]:
+              - /url: https://web.dev
+          - generic [ref=e2259]:
+            - generic [ref=e2260]: 开发者速查与质量验证
+            - generic [ref=e2261]: Web 文档
+        - article [ref=e2262]:
+          - generic [ref=e2263]:
+            - heading "Tailwind Cheat Sheet" [level=4] [ref=e2264]
+            - generic [ref=e2265]: curated
+          - paragraph [ref=e2266]: Tailwind 类名速查。
+          - generic [ref=e2267]:
+            - button "查看细节" [ref=e2268] [cursor=pointer]
+            - link "打开资源" [ref=e2269] [cursor=pointer]:
+              - /url: https://nerdcave.com/tailwind-cheat-sheet
+          - generic [ref=e2270]:
+            - generic [ref=e2271]: 开发者速查与质量验证
+            - generic [ref=e2272]: 速查
+        - article [ref=e2273]:
+          - generic [ref=e2274]:
+            - heading "Shadcn UI Builder" [level=4] [ref=e2275]
+            - generic [ref=e2276]: curated
+          - paragraph [ref=e2277]: 可视化搭 shadcn 页面。
+          - generic [ref=e2278]:
+            - button "查看细节" [ref=e2279] [cursor=pointer]
+            - link "打开资源" [ref=e2280] [cursor=pointer]:
+              - /url: https://shadcn-ui-builder.vercel.app
+          - generic [ref=e2281]:
+            - generic [ref=e2282]: 开发者速查与质量验证
+            - generic [ref=e2283]: 速查
+        - article [ref=e2284]:
+          - generic [ref=e2285]:
+            - heading "Can I Use" [level=4] [ref=e2286]
+            - generic [ref=e2287]: curated
+          - paragraph [ref=e2288]: 浏览器兼容性查询。
+          - generic [ref=e2289]:
+            - button "查看细节" [ref=e2290] [cursor=pointer]
+            - link "打开资源" [ref=e2291] [cursor=pointer]:
+              - /url: https://caniuse.com
+          - generic [ref=e2292]:
+            - generic [ref=e2293]: 开发者速查与质量验证
+            - generic [ref=e2294]: 兼容性
+        - article [ref=e2295]:
+          - generic [ref=e2296]:
+            - heading "CSS Triggers" [level=4] [ref=e2297]
+            - generic [ref=e2298]: curated
+          - paragraph [ref=e2299]: CSS 属性触发重排 / 重绘查询。
+          - generic [ref=e2300]:
+            - button "查看细节" [ref=e2301] [cursor=pointer]
+            - link "打开资源" [ref=e2302] [cursor=pointer]:
+              - /url: https://csstriggers.com
+          - generic [ref=e2303]:
+            - generic [ref=e2304]: 开发者速查与质量验证
+            - generic [ref=e2305]: 性能
+        - article [ref=e2306]:
+          - generic [ref=e2307]:
+            - heading "WCAG" [level=4] [ref=e2308]
+            - generic [ref=e2309]: curated
+          - paragraph [ref=e2310]: Web 可访问性标准。
+          - generic [ref=e2311]:
+            - button "查看细节" [ref=e2312] [cursor=pointer]
+            - link "打开资源" [ref=e2313] [cursor=pointer]:
+              - /url: https://www.w3.org/WAI/standards-guidelines/wcag
+          - generic [ref=e2314]:
+            - generic [ref=e2315]: 开发者速查与质量验证
+            - generic [ref=e2316]: 可访问性
+        - article [ref=e2317]:
+          - generic [ref=e2318]:
+            - heading "ARIA APG" [level=4] [ref=e2319]
+            - generic [ref=e2320]: curated
+          - paragraph [ref=e2321]: ARIA 组件模式和键盘交互参考。
+          - generic [ref=e2322]:
+            - button "查看细节" [ref=e2323] [cursor=pointer]
+            - link "打开资源" [ref=e2324] [cursor=pointer]:
+              - /url: https://www.w3.org/WAI/ARIA/apg
+          - generic [ref=e2325]:
+            - generic [ref=e2326]: 开发者速查与质量验证
+            - generic [ref=e2327]: 可访问性
+        - article [ref=e2328]:
+          - generic [ref=e2329]:
+            - heading "WebAIM" [level=4] [ref=e2330]
+            - generic [ref=e2331]: curated
+          - paragraph [ref=e2332]: 可访问性文章、检查清单、对比度工具。
+          - generic [ref=e2333]:
+            - button "查看细节" [ref=e2334] [cursor=pointer]
+            - link "打开资源" [ref=e2335] [cursor=pointer]:
+              - /url: https://webaim.org
+          - generic [ref=e2336]:
+            - generic [ref=e2337]: 开发者速查与质量验证
+            - generic [ref=e2338]: 可访问性
+        - article [ref=e2339]:
+          - generic [ref=e2340]:
+            - heading "axe DevTools" [level=4] [ref=e2341]
+            - generic [ref=e2342]: curated
+          - paragraph [ref=e2343]: 浏览器可访问性检查。
+          - generic [ref=e2344]:
+            - button "查看细节" [ref=e2345] [cursor=pointer]
+            - link "打开资源" [ref=e2346] [cursor=pointer]:
+              - /url: https://www.deque.com/axe/devtools
+          - generic [ref=e2347]:
+            - generic [ref=e2348]: 开发者速查与质量验证
+            - generic [ref=e2349]: 可访问性
+        - article [ref=e2350]:
+          - generic [ref=e2351]:
+            - heading "Lighthouse" [level=4] [ref=e2352]
+            - generic [ref=e2353]: curated
+          - paragraph [ref=e2354]: 性能、SEO、可访问性检查。
+          - generic [ref=e2355]:
+            - button "查看细节" [ref=e2356] [cursor=pointer]
+            - link "打开资源" [ref=e2357] [cursor=pointer]:
+              - /url: https://developer.chrome.com/docs/lighthouse
+          - generic [ref=e2358]:
+            - generic [ref=e2359]: 开发者速查与质量验证
+            - generic [ref=e2360]: 性能
+        - article [ref=e2361]:
+          - generic [ref=e2362]:
+            - heading "WebPageTest" [level=4] [ref=e2363]
+            - generic [ref=e2364]: curated
+          - paragraph [ref=e2365]: 深度性能分析。
+          - generic [ref=e2366]:
+            - button "查看细节" [ref=e2367] [cursor=pointer]
+            - link "打开资源" [ref=e2368] [cursor=pointer]:
+              - /url: https://www.webpagetest.org
+          - generic [ref=e2369]:
+            - generic [ref=e2370]: 开发者速查与质量验证
+            - generic [ref=e2371]: 性能
+        - article [ref=e2372]:
+          - generic [ref=e2373]:
+            - heading "Bundlephobia" [level=4] [ref=e2374]
+            - generic [ref=e2375]: curated
+          - paragraph [ref=e2376]: npm 包体积检查。
+          - generic [ref=e2377]:
+            - button "查看细节" [ref=e2378] [cursor=pointer]
+            - link "打开资源" [ref=e2379] [cursor=pointer]:
+              - /url: https://bundlephobia.com
+          - generic [ref=e2380]:
+            - generic [ref=e2381]: 开发者速查与质量验证
+            - generic [ref=e2382]: 性能
+        - article [ref=e2383]:
+          - generic [ref=e2384]:
+            - heading "Storybook" [level=4] [ref=e2385]
+            - generic [ref=e2386]: curated
+          - paragraph [ref=e2387]: 组件开发、文档、视觉状态和交互测试。
+          - generic [ref=e2388]:
+            - button "查看细节" [ref=e2389] [cursor=pointer]
+            - link "打开资源" [ref=e2390] [cursor=pointer]:
+              - /url: https://storybook.js.org
+          - generic [ref=e2391]:
+            - generic [ref=e2392]: 开发者速查与质量验证
+            - generic [ref=e2393]: 测试
+        - article [ref=e2394]:
+          - generic [ref=e2395]:
+            - heading "Playwright" [level=4] [ref=e2396]
+            - generic [ref=e2397]: curated
+          - paragraph [ref=e2398]: 端到端测试、截图验证、浏览器自动化。
+          - generic [ref=e2399]:
+            - button "查看细节" [ref=e2400] [cursor=pointer]
+            - link "打开资源" [ref=e2401] [cursor=pointer]:
+              - /url: https://playwright.dev
+          - generic [ref=e2402]:
+            - generic [ref=e2403]: 开发者速查与质量验证
+            - generic [ref=e2404]: 测试
+      - generic [ref=e2405]:
+        - generic [ref=e2406]:
+          - heading "待补充方向" [level=3] [ref=e2407]
+          - paragraph [ref=e2408]: AI 辅助开发工作流、全栈实现、LLM 应用、数据分析、安全、运维、产品增长。
+        - generic [ref=e2409]: 8 items
+      - generic [ref=e2410]:
+        - article [ref=e2411]:
+          - generic [ref=e2412]:
+            - heading "AI 辅助开发工作流" [level=4] [ref=e2413]
+            - generic [ref=e2414]: pending
+          - paragraph [ref=e2415]: Prompt、Agent、规格驱动开发、任务拆解、代码审查、AI pair programming。
+          - generic [ref=e2416]:
+            - button "查看细节" [ref=e2417] [cursor=pointer]
+            - generic [ref=e2418]: 待补充
+          - generic [ref=e2419]:
+            - generic [ref=e2420]: 待补充方向
+            - generic [ref=e2421]: AI 工作流
+        - article [ref=e2422]:
+          - generic [ref=e2423]:
+            - heading "全栈工程实现资源" [level=4] [ref=e2424]
+            - generic [ref=e2425]: pending
+          - paragraph [ref=e2426]: 前端框架、后端框架、API、认证、数据库、缓存、文件存储、任务队列。
+          - generic [ref=e2427]:
+            - button "查看细节" [ref=e2428] [cursor=pointer]
+            - generic [ref=e2429]: 待补充
+          - generic [ref=e2430]:
+            - generic [ref=e2431]: 待补充方向
+            - generic [ref=e2432]: 工程实现
+        - article [ref=e2433]:
+          - generic [ref=e2434]:
+            - heading "AI / LLM 应用开发" [level=4] [ref=e2435]
+            - generic [ref=e2436]: pending
+          - paragraph [ref=e2437]: RAG、Agent、工具调用、评测、向量数据库、模型选择、成本与延迟优化。
+          - generic [ref=e2438]:
+            - button "查看细节" [ref=e2439] [cursor=pointer]
+            - generic [ref=e2440]: 待补充
+          - generic [ref=e2441]:
+            - generic [ref=e2442]: 待补充方向
+            - generic [ref=e2443]: LLM 应用
+        - article [ref=e2444]:
+          - generic [ref=e2445]:
+            - heading "数据与分析" [level=4] [ref=e2446]
+            - generic [ref=e2447]: pending
+          - paragraph [ref=e2448]: 埋点、产品分析、BI、数据可视化、实验平台、数据质量。
+          - generic [ref=e2449]:
+            - button "查看细节" [ref=e2450] [cursor=pointer]
+            - generic [ref=e2451]: 待补充
+          - generic [ref=e2452]:
+            - generic [ref=e2453]: 待补充方向
+            - generic [ref=e2454]: 数据
+        - article [ref=e2455]:
+          - generic [ref=e2456]:
+            - heading "测试与质量工程" [level=4] [ref=e2457]
+            - generic [ref=e2458]: pending
+          - paragraph [ref=e2459]: 单测、集成测试、E2E、视觉回归、性能测试、可访问性、CI 质量门禁。
+          - generic [ref=e2460]:
+            - button "查看细节" [ref=e2461] [cursor=pointer]
+            - generic [ref=e2462]: 待补充
+          - generic [ref=e2463]:
+            - generic [ref=e2464]: 待补充方向
+            - generic [ref=e2465]: 质量
+        - article [ref=e2466]:
+          - generic [ref=e2467]:
+            - heading "安全 / 隐私 / 合规" [level=4] [ref=e2468]
+            - generic [ref=e2469]: pending
+          - paragraph [ref=e2470]: 密钥管理、权限模型、OWASP、隐私政策、日志脱敏、数据保留策略。
+          - generic [ref=e2471]:
+            - button "查看细节" [ref=e2472] [cursor=pointer]
+            - generic [ref=e2473]: 待补充
+          - generic [ref=e2474]:
+            - generic [ref=e2475]: 待补充方向
+            - generic [ref=e2476]: 安全
+        - article [ref=e2477]:
+          - generic [ref=e2478]:
+            - heading "部署 / 运维 / 可观测性" [level=4] [ref=e2479]
+            - generic [ref=e2480]: pending
+          - paragraph [ref=e2481]: Hosting、容器、日志、监控、告警、错误追踪、发布策略、回滚。
+          - generic [ref=e2482]:
+            - button "查看细节" [ref=e2483] [cursor=pointer]
+            - generic [ref=e2484]: 待补充
+          - generic [ref=e2485]:
+            - generic [ref=e2486]: 待补充方向
+            - generic [ref=e2487]: 运维
+        - article [ref=e2488]:
+          - generic [ref=e2489]:
+            - heading "产品 / 商业 / 增长" [level=4] [ref=e2490]
+            - generic [ref=e2491]: pending
+          - paragraph [ref=e2492]: 用户研究、定价、转化、增长实验、SEO、内容系统、运营工具。
+          - generic [ref=e2493]:
+            - button "查看细节" [ref=e2494] [cursor=pointer]
+            - generic [ref=e2495]: 待补充
+          - generic [ref=e2496]:
+            - generic [ref=e2497]: 待补充方向
+            - generic [ref=e2498]: 增长

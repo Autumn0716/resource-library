@@ -1,0 +1,420 @@
+- generic [ref=e3]:
+  - complementary "资源分类" [ref=e4]:
+    - link "Resources Library AI Builder Atlas" [ref=e5] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e6]: RB
+      - generic [ref=e7]:
+        - generic [ref=e8]: Resources Library
+        - generic [ref=e9]: AI Builder Atlas
+    - navigation [ref=e10]:
+      - generic [ref=e11]:
+        - paragraph [ref=e12]: Get Started
+        - button "Introduction" [ref=e13] [cursor=pointer]
+        - button "Product Paths" [ref=e14] [cursor=pointer]
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: Collections
+        - button "全部资源 204" [ref=e17] [cursor=pointer]:
+          - generic [ref=e18]: 全部资源
+          - generic [ref=e19]: "204"
+        - button "学术创作 3" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: 学术创作
+          - generic [ref=e22]: "3"
+        - button "极端审美参考 25" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: 极端审美参考
+          - generic [ref=e25]: "25"
+        - button "UI 工程基建 47" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: UI 工程基建
+          - generic [ref=e28]: "47"
+        - button "视觉素材与生成器 60" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: 视觉素材与生成器
+          - generic [ref=e31]: "60"
+        - button "AI 生成与 Vibe Coding 11" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: AI 生成与 Vibe Coding
+          - generic [ref=e34]: "11"
+        - button "个人知识库与文档网站 35" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: 个人知识库与文档网站
+          - generic [ref=e37]: "35"
+        - button "开发者速查与质量验证 15" [ref=e38] [cursor=pointer]:
+          - generic [ref=e39]: 开发者速查与质量验证
+          - generic [ref=e40]: "15"
+        - button "待补充方向 8" [ref=e41] [cursor=pointer]:
+          - generic [ref=e42]: 待补充方向
+          - generic [ref=e43]: "8"
+    - paragraph [ref=e44]: Local source. No private keys are shipped in this app.
+  - main [ref=e45]:
+    - generic [ref=e46]:
+      - generic "产品导航" [ref=e47]:
+        - generic [ref=e48]: Docs
+        - generic [ref=e49]: Showcase
+        - generic [ref=e50]: Tools
+        - generic [ref=e51]: Sponsors
+      - generic [ref=e52]:
+        - img [ref=e53]
+        - textbox "搜索资源" [ref=e55]:
+          - /placeholder: Search resources, patterns, tools...
+        - generic [ref=e56]: /
+      - link "React Bits ref" [ref=e57] [cursor=pointer]:
+        - /url: https://reactbits.dev/get-started/introduction
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - tablist "资源库视图" [ref=e60]:
+          - button "Introduction" [ref=e61] [cursor=pointer]
+          - button "Browse" [ref=e62] [cursor=pointer]
+          - button "Compare" [ref=e63] [cursor=pointer]
+          - button "Paths" [ref=e64] [cursor=pointer]
+        - generic [ref=e132]:
+          - button "全部类型" [ref=e133] [cursor=pointer]
+          - button "产品 UI" [ref=e134] [cursor=pointer]
+          - button "极简" [ref=e135] [cursor=pointer]
+          - button "交互" [ref=e136] [cursor=pointer]
+          - button "落地页" [ref=e137] [cursor=pointer]
+          - button "社区" [ref=e138] [cursor=pointer]
+          - button "网站灵感" [ref=e139] [cursor=pointer]
+          - button "移动端" [ref=e140] [cursor=pointer]
+          - button "主题" [ref=e141] [cursor=pointer]
+          - button "UX 流程" [ref=e142] [cursor=pointer]
+          - button "UX 研究" [ref=e143] [cursor=pointer]
+          - button "UX 原则" [ref=e144] [cursor=pointer]
+          - generic [ref=e145]: 25 visible
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - paragraph [ref=e149]: Collection
+              - heading "极端审美参考" [level=1] [ref=e150]
+              - paragraph [ref=e151]: 网站、落地页、产品 UI、UX 流程和设计师社区。用于建立品味、拆解结构、判断高级感。
+            - generic [ref=e152]: 25 items
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]:
+                - heading "Awwwards" [level=3] [ref=e156]
+                - generic [ref=e157]: curated
+              - paragraph [ref=e158]: 获奖网站设计，看顶级视觉、动效和创意交互。
+              - generic [ref=e159]:
+                - button "详情" [ref=e160] [cursor=pointer]
+                - link "打开资源" [ref=e161] [cursor=pointer]:
+                  - /url: https://www.awwwards.com
+              - generic [ref=e162]:
+                - generic [ref=e163]: 极端审美参考
+                - generic [ref=e164]: 网站灵感
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - heading "CSS Design Awards" [level=3] [ref=e167]
+                - generic [ref=e168]: curated
+              - paragraph [ref=e169]: 高质量网页视觉、UI、UX、创新作品。
+              - generic [ref=e170]:
+                - button "详情" [ref=e171] [cursor=pointer]
+                - link "打开资源" [ref=e172] [cursor=pointer]:
+                  - /url: https://www.cssdesignawards.com
+              - generic [ref=e173]:
+                - generic [ref=e174]: 极端审美参考
+                - generic [ref=e175]: 网站灵感
+            - generic [ref=e176]:
+              - generic [ref=e177]:
+                - heading "Siteinspire" [level=3] [ref=e178]
+                - generic [ref=e179]: curated
+              - paragraph [ref=e180]: 网页设计灵感，适合建立版式直觉。
+              - generic [ref=e181]:
+                - button "详情" [ref=e182] [cursor=pointer]
+                - link "打开资源" [ref=e183] [cursor=pointer]:
+                  - /url: https://www.siteinspire.com
+              - generic [ref=e184]:
+                - generic [ref=e185]: 极端审美参考
+                - generic [ref=e186]: 网站灵感
+            - generic [ref=e187]:
+              - generic [ref=e188]:
+                - heading "Godly" [level=3] [ref=e189]
+                - generic [ref=e190]: curated
+              - paragraph [ref=e191]: AI / SaaS 类产品落地页集合。
+              - generic [ref=e192]:
+                - button "详情" [ref=e193] [cursor=pointer]
+                - link "打开资源" [ref=e194] [cursor=pointer]:
+                  - /url: https://godly.website
+              - generic [ref=e195]:
+                - generic [ref=e196]: 极端审美参考
+                - generic [ref=e197]: 落地页
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - heading "Landingfolio" [level=3] [ref=e200]
+                - generic [ref=e201]: curated
+              - paragraph [ref=e202]: Landing page 设计合集。
+              - generic [ref=e203]:
+                - button "详情" [ref=e204] [cursor=pointer]
+                - link "打开资源" [ref=e205] [cursor=pointer]:
+                  - /url: https://www.landingfolio.com
+              - generic [ref=e206]:
+                - generic [ref=e207]: 极端审美参考
+                - generic [ref=e208]: 落地页
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - heading "Saaslandingpage" [level=3] [ref=e211]
+                - generic [ref=e212]: curated
+              - paragraph [ref=e213]: SaaS 落地页参考。
+              - generic [ref=e214]:
+                - button "详情" [ref=e215] [cursor=pointer]
+                - link "打开资源" [ref=e216] [cursor=pointer]:
+                  - /url: https://saaslandingpage.com
+              - generic [ref=e217]:
+                - generic [ref=e218]: 极端审美参考
+                - generic [ref=e219]: 落地页
+            - generic [ref=e220]:
+              - generic [ref=e221]:
+                - heading "One Page Love" [level=3] [ref=e222]
+                - generic [ref=e223]: curated
+              - paragraph [ref=e224]: 单页网站设计参考。
+              - generic [ref=e225]:
+                - button "详情" [ref=e226] [cursor=pointer]
+                - link "打开资源" [ref=e227] [cursor=pointer]:
+                  - /url: https://onepagelove.com
+              - generic [ref=e228]:
+                - generic [ref=e229]: 极端审美参考
+                - generic [ref=e230]: 落地页
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - heading "Dark Mode Design" [level=3] [ref=e233]
+                - generic [ref=e234]: curated
+              - paragraph [ref=e235]: 深色模式专项参考。
+              - generic [ref=e236]:
+                - button "详情" [ref=e237] [cursor=pointer]
+                - link "打开资源" [ref=e238] [cursor=pointer]:
+                  - /url: https://www.darkmodedesign.com
+              - generic [ref=e239]:
+                - generic [ref=e240]: 极端审美参考
+                - generic [ref=e241]: 主题
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - heading "Land-book" [level=3] [ref=e244]
+                - generic [ref=e245]: curated
+              - paragraph [ref=e246]: 高质量官网与落地页集合。
+              - generic [ref=e247]:
+                - button "详情" [ref=e248] [cursor=pointer]
+                - link "打开资源" [ref=e249] [cursor=pointer]:
+                  - /url: https://land-book.com
+              - generic [ref=e250]:
+                - generic [ref=e251]: 极端审美参考
+                - generic [ref=e252]: 网站灵感
+            - generic [ref=e253]:
+              - generic [ref=e254]:
+                - heading "Lapa Ninja" [level=3] [ref=e255]
+                - generic [ref=e256]: curated
+              - paragraph [ref=e257]: 落地页、作品集、创意网站灵感。
+              - generic [ref=e258]:
+                - button "详情" [ref=e259] [cursor=pointer]
+                - link "打开资源" [ref=e260] [cursor=pointer]:
+                  - /url: https://www.lapa.ninja
+              - generic [ref=e261]:
+                - generic [ref=e262]: 极端审美参考
+                - generic [ref=e263]: 落地页
+            - generic [ref=e264]:
+              - generic [ref=e265]:
+                - heading "Minimal Gallery" [level=3] [ref=e266]
+                - generic [ref=e267]: curated
+              - paragraph [ref=e268]: 极简网页、排版、留白与高级感参考。
+              - generic [ref=e269]:
+                - button "详情" [ref=e270] [cursor=pointer]
+                - link "打开资源" [ref=e271] [cursor=pointer]:
+                  - /url: https://minimal.gallery
+              - generic [ref=e272]:
+                - generic [ref=e273]: 极端审美参考
+                - generic [ref=e274]: 极简
+            - generic [ref=e275]:
+              - generic [ref=e276]:
+                - heading "Hoverstat.es" [level=3] [ref=e277]
+                - generic [ref=e278]: curated
+              - paragraph [ref=e279]: 交互动效、hover 状态和实验性网页参考。
+              - generic [ref=e280]:
+                - button "详情" [ref=e281] [cursor=pointer]
+                - link "打开资源" [ref=e282] [cursor=pointer]:
+                  - /url: https://hoverstat.es
+              - generic [ref=e283]:
+                - generic [ref=e284]: 极端审美参考
+                - generic [ref=e285]: 交互
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - heading "Codrops" [level=3] [ref=e288]
+                - generic [ref=e289]: curated
+              - paragraph [ref=e290]: 高级 Web 交互、动效、实验性 UI 教程。
+              - generic [ref=e291]:
+                - button "详情" [ref=e292] [cursor=pointer]
+                - link "打开资源" [ref=e293] [cursor=pointer]:
+                  - /url: https://tympanus.net/codrops
+              - generic [ref=e294]:
+                - generic [ref=e295]: 极端审美参考
+                - generic [ref=e296]: 交互
+            - generic [ref=e297]:
+              - generic [ref=e298]:
+                - heading "Mobbin" [level=3] [ref=e299]
+                - generic [ref=e300]: curated
+              - paragraph [ref=e301]: 真实产品 UI 截图，按功能和平台筛选。
+              - generic [ref=e302]:
+                - button "详情" [ref=e303] [cursor=pointer]
+                - link "打开资源" [ref=e304] [cursor=pointer]:
+                  - /url: https://mobbin.com
+              - generic [ref=e305]:
+                - generic [ref=e306]: 极端审美参考
+                - generic [ref=e307]: 产品 UI
+            - generic [ref=e308]:
+              - generic [ref=e309]:
+                - heading "Refero" [level=3] [ref=e310]
+                - generic [ref=e311]: curated
+              - paragraph [ref=e312]: 按组件类型分类的 UI 参考。
+              - generic [ref=e313]:
+                - button "详情" [ref=e314] [cursor=pointer]
+                - link "打开资源" [ref=e315] [cursor=pointer]:
+                  - /url: https://refero.design
+              - generic [ref=e316]:
+                - generic [ref=e317]: 极端审美参考
+                - generic [ref=e318]: 产品 UI
+            - generic [ref=e319]:
+              - generic [ref=e320]:
+                - heading "Page Flows" [level=3] [ref=e321]
+                - generic [ref=e322]: curated
+              - paragraph [ref=e323]: 产品流程录屏，看真实交互路径。
+              - generic [ref=e324]:
+                - button "详情" [ref=e325] [cursor=pointer]
+                - link "打开资源" [ref=e326] [cursor=pointer]:
+                  - /url: https://pageflows.com
+              - generic [ref=e327]:
+                - generic [ref=e328]: 极端审美参考
+                - generic [ref=e329]: UX 流程
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - heading "Design Vault" [level=3] [ref=e332]
+                - generic [ref=e333]: curated
+              - paragraph [ref=e334]: App / 网站设计截图库。
+              - generic [ref=e335]:
+                - button "详情" [ref=e336] [cursor=pointer]
+                - link "打开资源" [ref=e337] [cursor=pointer]:
+                  - /url: https://designvault.io
+              - generic [ref=e338]:
+                - generic [ref=e339]: 极端审美参考
+                - generic [ref=e340]: 产品 UI
+            - generic [ref=e341]:
+              - generic [ref=e342]:
+                - heading "Screenlane" [level=3] [ref=e343]
+                - generic [ref=e344]: curated
+              - paragraph [ref=e345]: 移动端 UI 截图参考。
+              - generic [ref=e346]:
+                - button "详情" [ref=e347] [cursor=pointer]
+                - link "打开资源" [ref=e348] [cursor=pointer]:
+                  - /url: https://screenlane.com
+              - generic [ref=e349]:
+                - generic [ref=e350]: 极端审美参考
+                - generic [ref=e351]: 移动端
+            - generic [ref=e352]:
+              - generic [ref=e353]:
+                - heading "Built for Mars" [level=3] [ref=e354]
+                - generic [ref=e355]: curated
+              - paragraph [ref=e356]: 产品 UX 拆解，学习细节与转化路径。
+              - generic [ref=e357]:
+                - button "详情" [ref=e358] [cursor=pointer]
+                - link "打开资源" [ref=e359] [cursor=pointer]:
+                  - /url: https://builtformars.com
+              - generic [ref=e360]:
+                - generic [ref=e361]: 极端审美参考
+                - generic [ref=e362]: UX 研究
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - heading "Baymard" [level=3] [ref=e365]
+                - generic [ref=e366]: curated
+              - paragraph [ref=e367]: 电商与转化 UX 研究，适合商业产品判断。
+              - generic [ref=e368]:
+                - button "详情" [ref=e369] [cursor=pointer]
+                - link "打开资源" [ref=e370] [cursor=pointer]:
+                  - /url: https://baymard.com
+              - generic [ref=e371]:
+                - generic [ref=e372]: 极端审美参考
+                - generic [ref=e373]: UX 研究
+            - generic [ref=e374]:
+              - generic [ref=e375]:
+                - heading "Nielsen Norman Group" [level=3] [ref=e376]
+                - generic [ref=e377]: curated
+              - paragraph [ref=e378]: UX 研究、可用性、信息架构基础。
+              - generic [ref=e379]:
+                - button "详情" [ref=e380] [cursor=pointer]
+                - link "打开资源" [ref=e381] [cursor=pointer]:
+                  - /url: https://www.nngroup.com
+              - generic [ref=e382]:
+                - generic [ref=e383]: 极端审美参考
+                - generic [ref=e384]: UX 研究
+            - generic [ref=e385]:
+              - generic [ref=e386]:
+                - heading "Laws of UX" [level=3] [ref=e387]
+                - generic [ref=e388]: curated
+              - paragraph [ref=e389]: 常用 UX 心理学原则速查。
+              - generic [ref=e390]:
+                - button "详情" [ref=e391] [cursor=pointer]
+                - link "打开资源" [ref=e392] [cursor=pointer]:
+                  - /url: https://lawsofux.com
+              - generic [ref=e393]:
+                - generic [ref=e394]: 极端审美参考
+                - generic [ref=e395]: UX 原则
+            - generic [ref=e396]:
+              - generic [ref=e397]:
+                - heading "Dribbble" [level=3] [ref=e398]
+                - generic [ref=e399]: curated
+              - paragraph [ref=e400]: 设计师作品，偏视觉概念和风格探索。
+              - generic [ref=e401]:
+                - button "详情" [ref=e402] [cursor=pointer]
+                - link "打开资源" [ref=e403] [cursor=pointer]:
+                  - /url: https://dribbble.com
+              - generic [ref=e404]:
+                - generic [ref=e405]: 极端审美参考
+                - generic [ref=e406]: 社区
+            - generic [ref=e407]:
+              - generic [ref=e408]:
+                - heading "Behance" [level=3] [ref=e409]
+                - generic [ref=e410]: curated
+              - paragraph [ref=e411]: Adobe 设计师社区，全品类作品集。
+              - generic [ref=e412]:
+                - button "详情" [ref=e413] [cursor=pointer]
+                - link "打开资源" [ref=e414] [cursor=pointer]:
+                  - /url: https://www.behance.net
+              - generic [ref=e415]:
+                - generic [ref=e416]: 极端审美参考
+                - generic [ref=e417]: 社区
+            - generic [ref=e418]:
+              - generic [ref=e419]:
+                - heading "Figma Community" [level=3] [ref=e420]
+                - generic [ref=e421]: curated
+              - paragraph [ref=e422]: 免费 Figma 模板、组件库、设计稿。
+              - generic [ref=e423]:
+                - button "详情" [ref=e424] [cursor=pointer]
+                - link "打开资源" [ref=e425] [cursor=pointer]:
+                  - /url: https://www.figma.com/community
+              - generic [ref=e426]:
+                - generic [ref=e427]: 极端审美参考
+                - generic [ref=e428]: 社区
+      - complementary "资源库状态" [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: ATLAS
+            - heading "Build a taste system." [level=3] [ref=e101]
+            - paragraph [ref=e102]: 204 个资源入口，先服务 UI 审美和文档网站，后续扩展全栈 AI 工程资源。
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - strong [ref=e105]: "204"
+              - generic [ref=e106]: resources
+            - generic [ref=e107]:
+              - strong [ref=e108]: "9"
+              - generic [ref=e109]: groups
+            - generic [ref=e110]:
+              - strong [ref=e111]: "25"
+              - generic [ref=e112]: visible
+          - button "Explore Library" [ref=e114] [cursor=pointer]
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - heading "Current Focus" [level=3] [ref=e117]
+            - paragraph [ref=e118]: 极端审美参考
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - generic [ref=e121]: 极端审美参考
+              - strong [ref=e122]: "25"
+            - generic [ref=e123]:
+              - generic [ref=e124]: UI 工程基建
+              - strong [ref=e125]: "47"
+            - generic [ref=e126]:
+              - generic [ref=e127]: 视觉素材与生成器
+              - strong [ref=e128]: "60"
+            - generic [ref=e129]:
+              - generic [ref=e130]: AI 生成与 Vibe Coding
+              - strong [ref=e131]: "11"

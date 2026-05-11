@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1778466692878,
+  "projectRoot": "/Users/jiangxun/resource library",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.0.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.0.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "7.0.0",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite --host 127.0.0.1",
+      "build": "tsc -b && vite build",
+      "preview": "vite preview --host 127.0.0.1"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 1,
+      "lastAccessed": 1778466692802,
+      "keyFiles": [
+        "index.html"
+      ]
+    },
+    "openspec": {
+      "path": "openspec",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1778466692802,
+      "keyFiles": []
+    },
+    "output": {
+      "path": "output",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1778466692819,
+      "keyFiles": []
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 3,
+      "lastAccessed": 1778466692820,
+      "keyFiles": [
+        "App.tsx",
+        "main.tsx",
+        "styles.css"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 2,
+      "lastAccessed": 1778466692857,
+      "keyFiles": [
+        "index-D9XQ2ew1.css",
+        "index-DrNdxeKi.js"
+      ]
+    },
+    "src/data": {
+      "path": "src/data",
+      "purpose": "Data files",
+      "fileCount": 1,
+      "lastAccessed": 1778466692870,
+      "keyFiles": [
+        "resources.ts"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

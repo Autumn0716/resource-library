@@ -1,0 +1,119 @@
+- generic [ref=e3]:
+  - complementary "资源分类" [ref=e4]:
+    - link "Resources Library AI Builder Atlas" [ref=e5] [cursor=pointer]:
+      - /url: "#top"
+      - generic [ref=e6]: RB
+      - generic [ref=e7]:
+        - generic [ref=e8]: Resources Library
+        - generic [ref=e9]: AI Builder Atlas
+    - navigation [ref=e10]:
+      - generic [ref=e11]:
+        - paragraph [ref=e12]: Get Started
+        - button "Introduction" [ref=e13] [cursor=pointer]
+        - button "Product Paths" [ref=e14] [cursor=pointer]
+      - generic [ref=e15]:
+        - button "全部资源" [ref=e16] [cursor=pointer]:
+          - generic [ref=e17]: 全部资源
+        - button "学术创作" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: 学术创作
+        - button "极端审美参考" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: 极端审美参考
+        - button "UI 工程基建" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: UI 工程基建
+        - button "视觉素材与生成器" [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: 视觉素材与生成器
+        - button "AI 生成与 Vibe Coding" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: AI 生成与 Vibe Coding
+        - button "个人知识库与文档网站" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 个人知识库与文档网站
+        - button "开发者速查与质量验证" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: 开发者速查与质量验证
+        - button "待补充方向" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: 待补充方向
+  - main [ref=e34]:
+    - generic [ref=e35]:
+      - generic "产品导航" [ref=e36]:
+        - generic [ref=e37]: Docs
+        - generic [ref=e38]: Showcase
+        - generic [ref=e39]: Tools
+        - generic [ref=e40]: Sponsors
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - textbox "搜索资源" [ref=e44]:
+          - /placeholder: Search resources, patterns, tools...
+        - generic [ref=e45]: /
+      - link "React Bits ref" [ref=e46] [cursor=pointer]:
+        - /url: https://reactbits.dev/get-started/introduction
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - tablist "资源库视图" [ref=e49]:
+          - button "Introduction" [ref=e50] [cursor=pointer]
+          - button "Browse" [ref=e51] [cursor=pointer]
+          - button "Compare" [ref=e52] [cursor=pointer]
+          - button "Paths" [ref=e53] [cursor=pointer]
+        - article [ref=e54]:
+          - paragraph [ref=e55]: Introduction
+          - heading "Animated taste, organized like documentation." [level=1] [ref=e56]
+          - paragraph [ref=e57]: 这不是一个普通收藏夹。它把 UI 审美、组件库、文档站、AI 开发和质量验证资源整理成一个可以持续扩展的产品级知识入口。
+          - paragraph [ref=e58]: React Bits 给这版的启发是清晰的暗色文档结构、鲜明但克制的产品卡和少量可记忆的视觉动作。HeroUI 则负责把按钮、卡片等基础组件放在更稳定的可访问组件体系里。
+          - generic [ref=e59]:
+            - button "Browse Library" [ref=e60] [cursor=pointer]
+            - button "UI Engineering" [ref=e61] [cursor=pointer]
+          - separator [ref=e62]
+          - generic [ref=e63]:
+            - heading "Mission" [level=2] [ref=e64]
+            - paragraph [ref=e65]: 资源库的目标不是收集更多链接，而是让你在做产品、网站、文档和 AI 应用时，能快速决定该看什么、参考什么、组合什么。
+            - list [ref=e66]:
+              - listitem [ref=e67]:
+                - strong [ref=e68]: "Visual taste first:"
+                - generic [ref=e69]: 先建立审美判断，再进入组件和实现。
+              - listitem [ref=e70]:
+                - strong [ref=e71]: "Product docs rhythm:"
+                - generic [ref=e72]: 像文档一样可查，像产品一样有状态和层级。
+              - listitem [ref=e73]:
+                - strong [ref=e74]: "Modular sources:"
+                - generic [ref=e75]: 每个资源都能迁移到后续 MDX / Fumadocs 内容集合。
+          - region "关键资源分类" [ref=e76]:
+            - button "极端审美参考 25" [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: 极端审美参考
+              - strong [ref=e79]: "25"
+            - button "UI 工程基建 47" [ref=e80] [cursor=pointer]:
+              - generic [ref=e81]: UI 工程基建
+              - strong [ref=e82]: "47"
+            - button "视觉素材与生成器 60" [ref=e83] [cursor=pointer]:
+              - generic [ref=e84]: 视觉素材与生成器
+              - strong [ref=e85]: "60"
+      - complementary "资源库状态" [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]: ATLAS
+            - heading "Build a taste system." [level=3] [ref=e90]
+            - paragraph [ref=e91]: 204 个资源入口，先服务 UI 审美和文档网站，后续扩展全栈 AI 工程资源。
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - strong [ref=e94]: "204"
+              - generic [ref=e95]: resources
+            - generic [ref=e96]:
+              - strong [ref=e97]: "9"
+              - generic [ref=e98]: groups
+            - generic [ref=e99]:
+              - strong [ref=e100]: "25"
+              - generic [ref=e101]: visible
+          - button "Explore Library" [ref=e103] [cursor=pointer]
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - heading "Current Focus" [level=3] [ref=e106]
+            - paragraph [ref=e107]: 极端审美参考
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: 极端审美参考
+              - strong [ref=e111]: "25"
+            - generic [ref=e112]:
+              - generic [ref=e113]: UI 工程基建
+              - strong [ref=e114]: "47"
+            - generic [ref=e115]:
+              - generic [ref=e116]: 视觉素材与生成器
+              - strong [ref=e117]: "60"
+            - generic [ref=e118]:
+              - generic [ref=e119]: AI 生成与 Vibe Coding
+              - strong [ref=e120]: "11"

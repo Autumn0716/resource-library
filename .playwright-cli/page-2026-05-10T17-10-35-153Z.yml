@@ -1,0 +1,244 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Private Atlas
+      - heading "Resources Library" [level=1] [ref=e6]
+      - paragraph [ref=e7]: 一个面向 AI 全栈工程师的资源地图：先作为单文件手册使用，之后可以升级成 Fumadocs / Next.js 站点。
+    - navigation [ref=e8]:
+      - button "全部资源 204" [ref=e9] [cursor=pointer]:
+        - generic [ref=e10]: 全部资源
+        - generic [ref=e11]: "204"
+      - button "学术创作 3" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: 学术创作
+        - generic [ref=e14]: "3"
+      - button "极端审美参考 25" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]: 极端审美参考
+        - generic [ref=e17]: "25"
+      - button "UI 工程基建 47" [ref=e18] [cursor=pointer]:
+        - generic [ref=e19]: UI 工程基建
+        - generic [ref=e20]: "47"
+      - button "视觉素材与生成器 60" [ref=e21] [cursor=pointer]:
+        - generic [ref=e22]: 视觉素材与生成器
+        - generic [ref=e23]: "60"
+      - button "AI 生成与 Vibe Coding 11" [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: AI 生成与 Vibe Coding
+        - generic [ref=e26]: "11"
+      - button "个人知识库与文档网站 35" [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]: 个人知识库与文档网站
+        - generic [ref=e29]: "35"
+      - button "开发者速查与质量验证 15" [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: 开发者速查与质量验证
+        - generic [ref=e32]: "15"
+      - button "待补充方向 8" [ref=e33] [cursor=pointer]:
+        - generic [ref=e34]: 待补充方向
+        - generic [ref=e35]: "8"
+    - generic [ref=e36]: 数据来自本地 Markdown 整理稿。网页里只收录资源入口和说明，不展示私有密钥。
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - img [ref=e40]
+        - searchbox / [ref=e42]
+        - generic [ref=e43]: /
+      - button "Command ⌘K" [ref=e44] [cursor=pointer]:
+        - generic [ref=e45]: Command
+        - generic [ref=e46]: ⌘K
+      - tablist "视图切换" [ref=e47]:
+        - tab "手册" [selected] [ref=e48] [cursor=pointer]
+        - tab "资源库" [ref=e49] [cursor=pointer]
+        - tab "矩阵" [ref=e50] [cursor=pointer]
+        - tab "路线" [ref=e51] [cursor=pointer]
+    - generic [ref=e52]:
+      - generic [ref=e53]:
+        - paragraph [ref=e54]: AI Full-stack Builder Atlas
+        - heading "把收藏夹变成可工作的知识地图" [level=2] [ref=e55]
+        - paragraph [ref=e56]: 这不是一个普通链接堆。它把 UI 审美、产品工程、文档系统、AI 开发、质量验证等资源按“什么时候用、为什么用、下一步怎么走”重新组织。
+        - generic [ref=e57]:
+          - button "浏览资源库" [ref=e58] [cursor=pointer]
+          - button "查看推荐路线" [ref=e59] [cursor=pointer]
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - strong [ref=e62]: "204"
+            - text: 资源条目
+          - generic [ref=e63]:
+            - strong [ref=e64]: "9"
+            - text: 主题分组
+          - generic [ref=e65]:
+            - strong [ref=e66]: "1"
+            - text: 单文件 HTML
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - paragraph [ref=e71]: UI / 审美 / 网站资源
+            - paragraph [ref=e72]: 灵感、组件库、素材、动效、文档站。
+          - generic [ref=e73]: curated
+        - generic [ref=e74]:
+          - paragraph [ref=e75]: Fumadocs + MDX
+          - paragraph [ref=e76]: 未来升级成真正文档站的首选方向。
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: AI 开发视角
+          - paragraph [ref=e79]: 需求、架构、实现、验证、部署、知识沉淀。
+    - generic [ref=e80]:
+      - button "全部类型" [ref=e81] [cursor=pointer]
+      - button "3D" [ref=e82] [cursor=pointer]
+      - button "安全" [ref=e83] [cursor=pointer]
+      - button "背景" [ref=e84] [cursor=pointer]
+      - button "部署" [ref=e85] [cursor=pointer]
+      - button "测试" [ref=e86] [cursor=pointer]
+      - button "插画" [ref=e87] [cursor=pointer]
+      - button "产品 UI" [ref=e88] [cursor=pointer]
+      - button "产品工程" [ref=e89] [cursor=pointer]
+      - button "动画编排" [ref=e90] [cursor=pointer]
+      - button "动效" [ref=e91] [cursor=pointer]
+      - button "动效工具" [ref=e92] [cursor=pointer]
+      - button "工程实现" [ref=e93] [cursor=pointer]
+      - button "滚动" [ref=e94] [cursor=pointer]
+      - button "极简" [ref=e95] [cursor=pointer]
+      - button "技术写作" [ref=e96] [cursor=pointer]
+      - button "兼容性" [ref=e97] [cursor=pointer]
+      - button "交互" [ref=e98] [cursor=pointer]
+      - button "科研" [ref=e99] [cursor=pointer]
+      - button "可访问性" [ref=e100] [cursor=pointer]
+      - button "可视化" [ref=e101] [cursor=pointer]
+      - button "跨平台" [ref=e102] [cursor=pointer]
+      - button "轮播" [ref=e103] [cursor=pointer]
+      - button "落地页" [ref=e104] [cursor=pointer]
+      - button "配色" [ref=e105] [cursor=pointer]
+      - button "设计工具" [ref=e106] [cursor=pointer]
+      - button "社区" [ref=e107] [cursor=pointer]
+      - button "数据" [ref=e108] [cursor=pointer]
+      - button "数字花园" [ref=e109] [cursor=pointer]
+      - button "搜索" [ref=e110] [cursor=pointer]
+      - button "速查" [ref=e111] [cursor=pointer]
+      - button "图标" [ref=e112] [cursor=pointer]
+      - button "图表" [ref=e113] [cursor=pointer]
+      - button "网站灵感" [ref=e114] [cursor=pointer]
+      - button "文档平台" [ref=e115] [cursor=pointer]
+      - button "文档站" [ref=e116] [cursor=pointer]
+      - button "写作" [ref=e117] [cursor=pointer]
+      - button "性能" [ref=e118] [cursor=pointer]
+      - button "移动端" [ref=e119] [cursor=pointer]
+      - button "运维" [ref=e120] [cursor=pointer]
+      - button "增长" [ref=e121] [cursor=pointer]
+      - button "照片视频" [ref=e122] [cursor=pointer]
+      - button "知识库" [ref=e123] [cursor=pointer]
+      - button "质量" [ref=e124] [cursor=pointer]
+      - button "主题" [ref=e125] [cursor=pointer]
+      - button "字体" [ref=e126] [cursor=pointer]
+      - button "组件库" [ref=e127] [cursor=pointer]
+      - button "组件灵感" [ref=e128] [cursor=pointer]
+      - button "AI 编码" [ref=e129] [cursor=pointer]
+      - button "AI 工作流" [ref=e130] [cursor=pointer]
+      - button "AI 设计" [ref=e131] [cursor=pointer]
+      - button "AI 生成" [ref=e132] [cursor=pointer]
+      - button "AI 图像" [ref=e133] [cursor=pointer]
+      - button "AI 文档" [ref=e134] [cursor=pointer]
+      - button "AI 原型" [ref=e135] [cursor=pointer]
+      - button "AI 站点" [ref=e136] [cursor=pointer]
+      - button "API 文档" [ref=e137] [cursor=pointer]
+      - button "CSS" [ref=e138] [cursor=pointer]
+      - button "Headless" [ref=e139] [cursor=pointer]
+      - button "LLM 应用" [ref=e140] [cursor=pointer]
+      - button "Mockup" [ref=e141] [cursor=pointer]
+      - button "UX 流程" [ref=e142] [cursor=pointer]
+      - button "UX 研究" [ref=e143] [cursor=pointer]
+      - button "UX 原则" [ref=e144] [cursor=pointer]
+      - button "Web 文档" [ref=e145] [cursor=pointer]
+    - generic [ref=e147]:
+      - article [ref=e148]:
+        - paragraph [ref=e149]: Documentation Mode
+        - heading "资源库使用手册" [level=3] [ref=e150]
+        - paragraph [ref=e151]: 这个单文件站点把原始 Markdown 的表格内容改造成文档站式浏览。它更接近 csdiy.wiki 和产品 documentation 的混合：左侧导航负责主题，顶部搜索负责找资源，中间内容可在手册、卡片、矩阵、路线之间切换。
+        - heading "这份 HTML 适合做什么" [level=4] [ref=e152]
+        - list [ref=e153]:
+          - listitem [ref=e154]: 作为个人资源库的本地入口，直接打开即可使用。
+          - listitem [ref=e155]: 作为未来 Fumadocs / Next.js / MDX 站点的信息架构原型。
+          - listitem [ref=e156]: 把“收藏链接”升级成“什么时候用、为什么用、下一步怎么走”的资源地图。
+        - heading "它暂时不做什么" [level=4] [ref=e157]
+        - list [ref=e158]:
+          - listitem [ref=e159]: 不连接数据库，不做登录，不做在线同步。
+          - listitem [ref=e160]: 不把私有密钥带进网页。
+          - listitem [ref=e161]: 不替代原始 Markdown；Markdown 仍然可以作为母稿。
+        - heading "全栈工程师用 AI 开发还要补的维度" [level=4] [ref=e162]
+        - table [ref=e164]:
+          - rowgroup [ref=e165]:
+            - row "角度 需要回答的问题 适合沉淀的资源" [ref=e166]:
+              - columnheader "角度" [ref=e167]
+              - columnheader "需要回答的问题" [ref=e168]
+              - columnheader "适合沉淀的资源" [ref=e169]
+          - rowgroup [ref=e170]:
+            - row "需求与规格 这个功能解决什么问题？成功标准是什么？哪些不做？ PRD 模板、OpenSpec、用户故事、验收标准" [ref=e171]:
+              - cell "需求与规格" [ref=e172]:
+                - strong [ref=e173]: 需求与规格
+              - cell "这个功能解决什么问题？成功标准是什么？哪些不做？" [ref=e174]
+              - cell "PRD 模板、OpenSpec、用户故事、验收标准" [ref=e175]
+            - row "信息架构与产品结构 页面、流程、导航、权限、状态如何组织？ UX 案例、用户流程、竞品拆解、信息架构资料" [ref=e176]:
+              - cell "信息架构与产品结构" [ref=e177]:
+                - strong [ref=e178]: 信息架构与产品结构
+              - cell "页面、流程、导航、权限、状态如何组织？" [ref=e179]
+              - cell "UX 案例、用户流程、竞品拆解、信息架构资料" [ref=e180]
+            - row "UI 与审美 它应该长什么样？为什么这样看起来高级？ 今天这批 UI / 审美 / 网站资源" [ref=e181]:
+              - cell "UI 与审美" [ref=e182]:
+                - strong [ref=e183]: UI 与审美
+              - cell "它应该长什么样？为什么这样看起来高级？" [ref=e184]
+              - cell "今天这批 UI / 审美 / 网站资源" [ref=e185]
+            - row "前端实现 用什么框架、组件、状态、表单、路由、数据请求？ React / Next.js / TanStack / shadcn / Base UI 等实现资源" [ref=e186]:
+              - cell "前端实现" [ref=e187]:
+                - strong [ref=e188]: 前端实现
+              - cell "用什么框架、组件、状态、表单、路由、数据请求？" [ref=e189]
+              - cell "React / Next.js / TanStack / shadcn / Base UI 等实现资源" [ref=e190]
+            - row "后端与 API 数据模型、接口边界、鉴权、异步任务怎么设计？ API 设计、后端框架、认证、队列、缓存资料" [ref=e191]:
+              - cell "后端与 API" [ref=e192]:
+                - strong [ref=e193]: 后端与 API
+              - cell "数据模型、接口边界、鉴权、异步任务怎么设计？" [ref=e194]
+              - cell "API 设计、后端框架、认证、队列、缓存资料" [ref=e195]
+            - row "数据层 数据库怎么建模？如何迁移、备份、分析？ PostgreSQL、Prisma / Drizzle、Supabase、数据建模资料" [ref=e196]:
+              - cell "数据层" [ref=e197]:
+                - strong [ref=e198]: 数据层
+              - cell "数据库怎么建模？如何迁移、备份、分析？" [ref=e199]
+              - cell "PostgreSQL、Prisma / Drizzle、Supabase、数据建模资料" [ref=e200]
+            - row "AI 能力 是否需要 RAG、Agent、工具调用、评测、记忆、上下文管理？ OpenAI、Agents SDK、LangGraph、LlamaIndex、向量数据库资料" [ref=e201]:
+              - cell "AI 能力" [ref=e202]:
+                - strong [ref=e203]: AI 能力
+              - cell "是否需要 RAG、Agent、工具调用、评测、记忆、上下文管理？" [ref=e204]
+              - cell "OpenAI、Agents SDK、LangGraph、LlamaIndex、向量数据库资料" [ref=e205]
+            - row "质量验证 怎么证明它真的可用？怎么防止回归？ Playwright、Storybook、Lighthouse、测试策略、CI" [ref=e206]:
+              - cell "质量验证" [ref=e207]:
+                - strong [ref=e208]: 质量验证
+              - cell "怎么证明它真的可用？怎么防止回归？" [ref=e209]
+              - cell "Playwright、Storybook、Lighthouse、测试策略、CI" [ref=e210]
+            - row "安全与隐私 密钥、权限、用户数据、日志、合规风险如何处理？ OWASP、密钥管理、隐私工程、安全 checklist" [ref=e211]:
+              - cell "安全与隐私" [ref=e212]:
+                - strong [ref=e213]: 安全与隐私
+              - cell "密钥、权限、用户数据、日志、合规风险如何处理？" [ref=e214]
+              - cell "OWASP、密钥管理、隐私工程、安全 checklist" [ref=e215]
+            - row "部署与运维 怎么上线？怎么监控？出问题怎么回滚？ Vercel、Cloudflare、Sentry、日志监控、发布策略" [ref=e216]:
+              - cell "部署与运维" [ref=e217]:
+                - strong [ref=e218]: 部署与运维
+              - cell "怎么上线？怎么监控？出问题怎么回滚？" [ref=e219]
+              - cell "Vercel、Cloudflare、Sentry、日志监控、发布策略" [ref=e220]
+            - row "文档与知识库 项目知识如何保存，AI 如何读懂文档？ Obsidian、Quartz、Fumadocs、llms.txt、ADR、运行手册" [ref=e221]:
+              - cell "文档与知识库" [ref=e222]:
+                - strong [ref=e223]: 文档与知识库
+              - cell "项目知识如何保存，AI 如何读懂文档？" [ref=e224]
+              - cell "Obsidian、Quartz、Fumadocs、llms.txt、ADR、运行手册" [ref=e225]
+            - row "成本与性能 模型调用、数据库、带宽、构建、运行时成本是否可控？ 成本估算、性能分析、缓存、模型路由、限流" [ref=e226]:
+              - cell "成本与性能" [ref=e227]:
+                - strong [ref=e228]: 成本与性能
+              - cell "模型调用、数据库、带宽、构建、运行时成本是否可控？" [ref=e229]
+              - cell "成本估算、性能分析、缓存、模型路由、限流" [ref=e230]
+        - heading "未来升级方向" [level=4] [ref=e231]
+        - paragraph [ref=e232]:
+          - text: 如果这个单文件版本用起来顺手，下一步可以把每个资源变成 MDX 页面，增加“什么时候用 / 不适合什么 / 替代方案 / 示例项目 / 相关笔记”。这时再迁移到
+          - code [ref=e233]: Fumadocs + Next.js + MDX
+          - text: 会比较自然。
+      - complementary [ref=e234]:
+        - heading "主题目录" [level=4] [ref=e235]
+        - button "资源库总览" [ref=e236] [cursor=pointer]
+        - button "学术创作" [ref=e237] [cursor=pointer]
+        - button "极端审美参考" [ref=e238] [cursor=pointer]
+        - button "UI 工程基建" [ref=e239] [cursor=pointer]
+        - button "视觉素材与生成器" [ref=e240] [cursor=pointer]
+        - button "AI 生成与 Vibe Coding" [ref=e241] [cursor=pointer]
+        - button "个人知识库与文档网站" [ref=e242] [cursor=pointer]
+        - button "开发者速查与质量验证" [ref=e243] [cursor=pointer]
+        - button "待补充方向" [ref=e244] [cursor=pointer]
