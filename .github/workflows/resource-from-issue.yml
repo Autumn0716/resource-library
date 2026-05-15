@@ -1,0 +1,100 @@
+name: Resource from issue → PR
+
+# 触发条件：维护者给一个已存在的「资源投稿」issue 加 `approved` 标签时跑一次。
+# 流程：解析 issue 的结构化表单 → 调用 scripts/add-resource.ts 写入 resources.json
+#       → 顺手抓 favicon → 开一个 PR → 把 issue 关掉并引用到 PR。
+#
+# 依赖：仓库 Settings → Actions → Workflow permissions 需要打开
+#      "Read and write permissions" 以及 "Allow GitHub Actions to create and approve pull requests"。
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  submit:
+    # 只在标签是 approved、且 issue 带 resource-submission 标签时跑
+    if: >
+      github.event.label.name == 'approved' &&
+      contains(github.event.issue.labels.*.name, 'resource-submission')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install deps
+        run: bun install --frozen-lockfile
+
+      - name: Parse issue form
+        id: parse
+        uses: stefanbuck/github-issue-parser@v3
+        with:
+          template-path: .github/ISSUE_TEMPLATE/add-resource.yml
+
+      - name: Run add-resource CLI
+        id: add
+        env:
+          RES_NAME: ${{ steps.parse.outputs.issueparser_name }}
+          RES_URL: ${{ steps.parse.outputs.issueparser_url }}
+          RES_GROUP: ${{ steps.parse.outputs.issueparser_group }}
+          RES_TYPE: ${{ steps.parse.outputs.issueparser_type }}
+          RES_USE: ${{ steps.parse.outputs.issueparser_use }}
+          RES_STATUS: ${{ steps.parse.outputs.issueparser_status }}
+        run: |
+          set -euo pipefail
+          bun scripts/add-resource.ts \
+            --name   "$RES_NAME" \
+            --url    "$RES_URL" \
+            --group  "$RES_GROUP" \
+            --type   "$RES_TYPE" \
+            --use    "$RES_USE" \
+            --status "$RES_STATUS"
+
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: |
+            feat(resources): add "${{ steps.parse.outputs.issueparser_name }}" (from issue #${{ github.event.issue.number }})
+
+            Co-authored-by: Codex <noreply@openai.com>
+          branch: resource/issue-${{ github.event.issue.number }}
+          delete-branch: true
+          title: "feat(resources): add \"${{ steps.parse.outputs.issueparser_name }}\""
+          body: |
+            Automated PR generated from issue #${{ github.event.issue.number }}.
+
+            | Field  | Value |
+            |--------|-------|
+            | name   | ${{ steps.parse.outputs.issueparser_name }} |
+            | url    | ${{ steps.parse.outputs.issueparser_url }} |
+            | group  | ${{ steps.parse.outputs.issueparser_group }} |
+            | type   | ${{ steps.parse.outputs.issueparser_type }} |
+            | use    | ${{ steps.parse.outputs.issueparser_use }} |
+            | status | ${{ steps.parse.outputs.issueparser_status }} |
+
+            Closes #${{ github.event.issue.number }}
+          labels: resource-submission
+
+      - name: Comment on the issue
+        if: steps.cpr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = '${{ steps.cpr.outputs.pull-request-number }}';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Resource submission was batched as PR #${prNumber}. It will close when merged.`,
+            });

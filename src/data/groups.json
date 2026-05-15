@@ -1,0 +1,47 @@
+[
+  {
+    "id": "overview",
+    "title": "资源库总览",
+    "description": "这部分不是具体工具清单，而是资源库未来要覆盖的地图。今天已经整理的是 UI / 审美 / 网站资源。"
+  },
+  {
+    "id": "academic",
+    "title": "学术创作",
+    "description": "论文写作、科研阅读、润色、翻译和学术表达相关的 AI 辅助资源。"
+  },
+  {
+    "id": "aesthetic",
+    "title": "极端审美参考",
+    "description": "网站、落地页、产品 UI、UX 流程和设计师社区。用于建立品味、拆解结构、判断高级感。"
+  },
+  {
+    "id": "ui-base",
+    "title": "UI 工程基建",
+    "description": "组件库、headless primitive、动效、产品工程库、数据可视化库。用于真正搭产品界面。"
+  },
+  {
+    "id": "assets",
+    "title": "视觉素材与生成器",
+    "description": "渐变、纹理、插画、照片、3D、图标、字体、配色、CSS 生成器。用于提升视觉完成度。"
+  },
+  {
+    "id": "ai-tools",
+    "title": "AI 生成与 Vibe Coding",
+    "description": "AI 生成 UI、全栈应用、视觉素材和原型的工具。用于快速探索和出草稿。"
+  },
+  {
+    "id": "docs",
+    "title": "个人知识库与文档网站",
+    "description": "Obsidian、数字花园、文档站框架、技术写作、AI 友好文档和部署平台。用于把知识长期发布。"
+  },
+  {
+    "id": "quality",
+    "title": "开发者速查与质量验证",
+    "description": "Web 权威文档、兼容性、可访问性、性能、组件文档、端到端测试。用于把审美变成可维护产品。"
+  },
+  {
+    "id": "future",
+    "title": "待补充方向",
+    "description": "AI 辅助开发工作流、全栈实现、LLM 应用、数据分析、安全、运维、产品增长。"
+  }
+]

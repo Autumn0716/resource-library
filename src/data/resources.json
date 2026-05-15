@@ -1,0 +1,1838 @@
+[
+  {
+    "id": "0",
+    "name": "humanizer",
+    "url": "https://github.com/blader/humanizer/blob/main/SKILL.md",
+    "group": "学术创作",
+    "type": "写作",
+    "use": "消除文本中人工智能生成的痕迹，使表达更自然。",
+    "status": "curated"
+  },
+  {
+    "id": "1",
+    "name": "awesome-ai-research-writing",
+    "url": "https://github.com/Leey21/awesome-ai-research-writing",
+    "group": "学术创作",
+    "type": "写作",
+    "use": "论文翻译、润色、分析相关 prompt 和 agent skills。",
+    "status": "curated"
+  },
+  {
+    "id": "2",
+    "name": "claude-scientific-skills",
+    "url": "https://github.com/K-Dense-AI/claude-scientific-skills/blob/main/scientific-skills/scientific-writing/SKILL.md",
+    "group": "学术创作",
+    "type": "科研",
+    "use": "科研写作、阅读、分析相关技巧库。",
+    "status": "curated"
+  },
+  {
+    "id": "3",
+    "name": "Awwwards",
+    "url": "https://www.awwwards.com",
+    "group": "极端审美参考",
+    "type": "网站灵感",
+    "use": "获奖网站设计，看顶级视觉、动效和创意交互。",
+    "status": "curated"
+  },
+  {
+    "id": "4",
+    "name": "CSS Design Awards",
+    "url": "https://www.cssdesignawards.com",
+    "group": "极端审美参考",
+    "type": "网站灵感",
+    "use": "高质量网页视觉、UI、UX、创新作品。",
+    "status": "curated"
+  },
+  {
+    "id": "5",
+    "name": "Siteinspire",
+    "url": "https://www.siteinspire.com",
+    "group": "极端审美参考",
+    "type": "网站灵感",
+    "use": "网页设计灵感，适合建立版式直觉。",
+    "status": "curated"
+  },
+  {
+    "id": "6",
+    "name": "Godly",
+    "url": "https://godly.website",
+    "group": "极端审美参考",
+    "type": "落地页",
+    "use": "AI / SaaS 类产品落地页集合。",
+    "status": "curated"
+  },
+  {
+    "id": "7",
+    "name": "Landingfolio",
+    "url": "https://www.landingfolio.com",
+    "group": "极端审美参考",
+    "type": "落地页",
+    "use": "Landing page 设计合集。",
+    "status": "curated"
+  },
+  {
+    "id": "8",
+    "name": "Saaslandingpage",
+    "url": "https://saaslandingpage.com",
+    "group": "极端审美参考",
+    "type": "落地页",
+    "use": "SaaS 落地页参考。",
+    "status": "curated"
+  },
+  {
+    "id": "9",
+    "name": "One Page Love",
+    "url": "https://onepagelove.com",
+    "group": "极端审美参考",
+    "type": "落地页",
+    "use": "单页网站设计参考。",
+    "status": "curated"
+  },
+  {
+    "id": "10",
+    "name": "Dark Mode Design",
+    "url": "https://www.darkmodedesign.com",
+    "group": "极端审美参考",
+    "type": "主题",
+    "use": "深色模式专项参考。",
+    "status": "curated"
+  },
+  {
+    "id": "11",
+    "name": "Land-book",
+    "url": "https://land-book.com",
+    "group": "极端审美参考",
+    "type": "网站灵感",
+    "use": "高质量官网与落地页集合。",
+    "status": "curated"
+  },
+  {
+    "id": "12",
+    "name": "Lapa Ninja",
+    "url": "https://www.lapa.ninja",
+    "group": "极端审美参考",
+    "type": "落地页",
+    "use": "落地页、作品集、创意网站灵感。",
+    "status": "curated"
+  },
+  {
+    "id": "13",
+    "name": "Minimal Gallery",
+    "url": "https://minimal.gallery",
+    "group": "极端审美参考",
+    "type": "极简",
+    "use": "极简网页、排版、留白与高级感参考。",
+    "status": "curated"
+  },
+  {
+    "id": "14",
+    "name": "Hoverstat.es",
+    "url": "https://hoverstat.es",
+    "group": "极端审美参考",
+    "type": "交互",
+    "use": "交互动效、hover 状态和实验性网页参考。",
+    "status": "curated"
+  },
+  {
+    "id": "15",
+    "name": "Codrops",
+    "url": "https://tympanus.net/codrops",
+    "group": "极端审美参考",
+    "type": "交互",
+    "use": "高级 Web 交互、动效、实验性 UI 教程。",
+    "status": "curated"
+  },
+  {
+    "id": "16",
+    "name": "Mobbin",
+    "url": "https://mobbin.com",
+    "group": "极端审美参考",
+    "type": "产品 UI",
+    "use": "真实产品 UI 截图，按功能和平台筛选。",
+    "status": "curated"
+  },
+  {
+    "id": "17",
+    "name": "Refero",
+    "url": "https://refero.design",
+    "group": "极端审美参考",
+    "type": "产品 UI",
+    "use": "按组件类型分类的 UI 参考。",
+    "status": "curated"
+  },
+  {
+    "id": "18",
+    "name": "Page Flows",
+    "url": "https://pageflows.com",
+    "group": "极端审美参考",
+    "type": "UX 流程",
+    "use": "产品流程录屏，看真实交互路径。",
+    "status": "curated"
+  },
+  {
+    "id": "19",
+    "name": "Design Vault",
+    "url": "https://designvault.io",
+    "group": "极端审美参考",
+    "type": "产品 UI",
+    "use": "App / 网站设计截图库。",
+    "status": "curated"
+  },
+  {
+    "id": "20",
+    "name": "Screenlane",
+    "url": "https://screenlane.com",
+    "group": "极端审美参考",
+    "type": "移动端",
+    "use": "移动端 UI 截图参考。",
+    "status": "curated"
+  },
+  {
+    "id": "21",
+    "name": "Built for Mars",
+    "url": "https://builtformars.com",
+    "group": "极端审美参考",
+    "type": "UX 研究",
+    "use": "产品 UX 拆解，学习细节与转化路径。",
+    "status": "curated"
+  },
+  {
+    "id": "22",
+    "name": "Baymard",
+    "url": "https://baymard.com",
+    "group": "极端审美参考",
+    "type": "UX 研究",
+    "use": "电商与转化 UX 研究，适合商业产品判断。",
+    "status": "curated"
+  },
+  {
+    "id": "23",
+    "name": "Nielsen Norman Group",
+    "url": "https://www.nngroup.com",
+    "group": "极端审美参考",
+    "type": "UX 研究",
+    "use": "UX 研究、可用性、信息架构基础。",
+    "status": "curated"
+  },
+  {
+    "id": "24",
+    "name": "Laws of UX",
+    "url": "https://lawsofux.com",
+    "group": "极端审美参考",
+    "type": "UX 原则",
+    "use": "常用 UX 心理学原则速查。",
+    "status": "curated"
+  },
+  {
+    "id": "25",
+    "name": "Dribbble",
+    "url": "https://dribbble.com",
+    "group": "极端审美参考",
+    "type": "社区",
+    "use": "设计师作品，偏视觉概念和风格探索。",
+    "status": "curated"
+  },
+  {
+    "id": "26",
+    "name": "Behance",
+    "url": "https://www.behance.net",
+    "group": "极端审美参考",
+    "type": "社区",
+    "use": "Adobe 设计师社区，全品类作品集。",
+    "status": "curated"
+  },
+  {
+    "id": "27",
+    "name": "Figma Community",
+    "url": "https://www.figma.com/community",
+    "group": "极端审美参考",
+    "type": "社区",
+    "use": "免费 Figma 模板、组件库、设计稿。",
+    "status": "curated"
+  },
+  {
+    "id": "28",
+    "name": "shadcn/ui",
+    "url": "https://ui.shadcn.com",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "极简、高度可定制，源码拷贝到项目中。",
+    "status": "curated"
+  },
+  {
+    "id": "29",
+    "name": "Base UI",
+    "url": "https://base-ui.com",
+    "group": "UI 工程基建",
+    "type": "Headless",
+    "use": "无样式、可组合、重视无障碍，适合自定义设计系统。",
+    "status": "curated"
+  },
+  {
+    "id": "30",
+    "name": "Radix UI",
+    "url": "https://www.radix-ui.com",
+    "group": "UI 工程基建",
+    "type": "Headless",
+    "use": "无样式，只提供无障碍行为和交互 primitive。",
+    "status": "curated"
+  },
+  {
+    "id": "31",
+    "name": "React Aria",
+    "url": "https://react-spectrum.adobe.com/react-aria",
+    "group": "UI 工程基建",
+    "type": "Headless",
+    "use": "Adobe 出品，无障碍、国际化、复杂交互能力强。",
+    "status": "curated"
+  },
+  {
+    "id": "32",
+    "name": "Ark UI",
+    "url": "https://ark-ui.com",
+    "group": "UI 工程基建",
+    "type": "Headless",
+    "use": "支持 React / Vue / Solid 的 headless 组件。",
+    "status": "curated"
+  },
+  {
+    "id": "33",
+    "name": "Ariakit",
+    "url": "https://ariakit.org",
+    "group": "UI 工程基建",
+    "type": "Headless",
+    "use": "Headless、无障碍、适合复杂交互。",
+    "status": "curated"
+  },
+  {
+    "id": "34",
+    "name": "Headless UI",
+    "url": "https://headlessui.com",
+    "group": "UI 工程基建",
+    "type": "Headless",
+    "use": "Tailwind 团队出品，无样式交互组件。",
+    "status": "curated"
+  },
+  {
+    "id": "35",
+    "name": "HeroUI",
+    "url": "https://www.heroui.com",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "现代、设计感强、暗色主题好看。",
+    "status": "curated"
+  },
+  {
+    "id": "36",
+    "name": "Ant Design",
+    "url": "https://ant.design",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "企业级、组件最全、中文友好。",
+    "status": "curated"
+  },
+  {
+    "id": "37",
+    "name": "Mantine",
+    "url": "https://mantine.dev",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "Hooks 丰富、TypeScript 原生。",
+    "status": "curated"
+  },
+  {
+    "id": "38",
+    "name": "Chakra UI",
+    "url": "https://chakra-ui.com",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "简洁、样式通过 props 写，适合快速原型。",
+    "status": "curated"
+  },
+  {
+    "id": "39",
+    "name": "Material UI",
+    "url": "https://mui.com",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "Google Material Design 规范。",
+    "status": "curated"
+  },
+  {
+    "id": "40",
+    "name": "Flowbite React",
+    "url": "https://flowbite-react.com",
+    "group": "UI 工程基建",
+    "type": "组件库",
+    "use": "Tailwind 风格组件库。",
+    "status": "curated"
+  },
+  {
+    "id": "41",
+    "name": "Gluestack UI",
+    "url": "https://gluestack.io",
+    "group": "UI 工程基建",
+    "type": "跨平台",
+    "use": "React Native + Web 双端。",
+    "status": "curated"
+  },
+  {
+    "id": "42",
+    "name": "Aceternity UI",
+    "url": "https://ui.aceternity.com",
+    "group": "UI 工程基建",
+    "type": "组件灵感",
+    "use": "液态玻璃、光效、鼠标追踪、苹果风动画。",
+    "status": "curated"
+  },
+  {
+    "id": "43",
+    "name": "Magic UI",
+    "url": "https://magicui.design",
+    "group": "UI 工程基建",
+    "type": "组件灵感",
+    "use": "3D 地球、Dock 栏、聚光灯、渐变边框。",
+    "status": "curated"
+  },
+  {
+    "id": "44",
+    "name": "React Bits",
+    "url": "https://reactbits.dev",
+    "group": "UI 工程基建",
+    "type": "组件灵感",
+    "use": "高质量动画交互组件。",
+    "status": "curated"
+  },
+  {
+    "id": "45",
+    "name": "Cult UI",
+    "url": "https://www.cult-ui.com",
+    "group": "UI 工程基建",
+    "type": "组件灵感",
+    "use": "创意动效，鼠标跟随、弹性布局。",
+    "status": "curated"
+  },
+  {
+    "id": "46",
+    "name": "Park UI",
+    "url": "https://park-ui.com",
+    "group": "UI 工程基建",
+    "type": "组件灵感",
+    "use": "多框架支持 React / Vue / Solid。",
+    "status": "curated"
+  },
+  {
+    "id": "47",
+    "name": "Motion",
+    "url": "https://motion.dev",
+    "group": "UI 工程基建",
+    "type": "动效",
+    "use": "产品 UI 动效、页面转场。",
+    "status": "curated"
+  },
+  {
+    "id": "48",
+    "name": "GSAP",
+    "url": "https://gsap.com",
+    "group": "UI 工程基建",
+    "type": "动效",
+    "use": "复杂滚动叙事、品牌官网动画。",
+    "status": "curated"
+  },
+  {
+    "id": "49",
+    "name": "React Spring",
+    "url": "https://www.react-spring.dev",
+    "group": "UI 工程基建",
+    "type": "动效",
+    "use": "物理弹簧动效，自然感。",
+    "status": "curated"
+  },
+  {
+    "id": "50",
+    "name": "Lottie Files",
+    "url": "https://lottiefiles.com",
+    "group": "UI 工程基建",
+    "type": "动效",
+    "use": "AE 动画 JSON 播放和素材。",
+    "status": "curated"
+  },
+  {
+    "id": "51",
+    "name": "Rive",
+    "url": "https://rive.app",
+    "group": "UI 工程基建",
+    "type": "动效",
+    "use": "可交互矢量动画和状态机动画。",
+    "status": "curated"
+  },
+  {
+    "id": "52",
+    "name": "Lenis",
+    "url": "https://lenis.darkroom.engineering",
+    "group": "UI 工程基建",
+    "type": "滚动",
+    "use": "丝滑滚动，适合高端滚动体验。",
+    "status": "curated"
+  },
+  {
+    "id": "53",
+    "name": "React Three Fiber",
+    "url": "https://docs.pmnd.rs/react-three-fiber",
+    "group": "UI 工程基建",
+    "type": "3D",
+    "use": "Three.js React 封装。",
+    "status": "curated"
+  },
+  {
+    "id": "54",
+    "name": "Drei",
+    "url": "https://github.com/pmndrs/drei",
+    "group": "UI 工程基建",
+    "type": "3D",
+    "use": "React Three Fiber 常用 helper。",
+    "status": "curated"
+  },
+  {
+    "id": "55",
+    "name": "Theatre.js",
+    "url": "https://www.theatrejs.com",
+    "group": "UI 工程基建",
+    "type": "动画编排",
+    "use": "时间线式 3D / 动画编排。",
+    "status": "curated"
+  },
+  {
+    "id": "56",
+    "name": "Splide",
+    "url": "https://splidejs.com",
+    "group": "UI 工程基建",
+    "type": "轮播",
+    "use": "轻量轮播 / 滑块。",
+    "status": "curated"
+  },
+  {
+    "id": "57",
+    "name": "TanStack Query",
+    "url": "https://tanstack.com/query",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "数据请求、缓存、同步服务端状态。",
+    "status": "curated"
+  },
+  {
+    "id": "58",
+    "name": "TanStack Router",
+    "url": "https://tanstack.com/router",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "类型安全路由。",
+    "status": "curated"
+  },
+  {
+    "id": "59",
+    "name": "TanStack Table",
+    "url": "https://tanstack.com/table",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "高级表格、排序、过滤、虚拟滚动。",
+    "status": "curated"
+  },
+  {
+    "id": "60",
+    "name": "React Hook Form",
+    "url": "https://react-hook-form.com",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "表单状态管理。",
+    "status": "curated"
+  },
+  {
+    "id": "61",
+    "name": "Zod",
+    "url": "https://zod.dev",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "Schema 校验、类型推导。",
+    "status": "curated"
+  },
+  {
+    "id": "62",
+    "name": "Zustand",
+    "url": "https://zustand-demo.pmnd.rs",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "简洁全局状态管理。",
+    "status": "curated"
+  },
+  {
+    "id": "63",
+    "name": "Jotai",
+    "url": "https://jotai.org",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "原子化状态管理。",
+    "status": "curated"
+  },
+  {
+    "id": "64",
+    "name": "XState",
+    "url": "https://xstate.js.org",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "状态机，适合复杂交互流程。",
+    "status": "curated"
+  },
+  {
+    "id": "65",
+    "name": "cmdk",
+    "url": "https://cmdk.paco.me",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "Command Menu / 快捷命令面板。",
+    "status": "curated"
+  },
+  {
+    "id": "66",
+    "name": "Sonner",
+    "url": "https://sonner.emilkowal.ski",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "精致 Toast 通知。",
+    "status": "curated"
+  },
+  {
+    "id": "67",
+    "name": "Vaul",
+    "url": "https://vaul.emilkowal.ski",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "Drawer / Sheet 交互。",
+    "status": "curated"
+  },
+  {
+    "id": "68",
+    "name": "React Day Picker",
+    "url": "https://react-day-picker.js.org",
+    "group": "UI 工程基建",
+    "type": "产品工程",
+    "use": "日期选择器。",
+    "status": "curated"
+  },
+  {
+    "id": "69",
+    "name": "Apache ECharts",
+    "url": "https://echarts.apache.org",
+    "group": "UI 工程基建",
+    "type": "可视化",
+    "use": "图表类型丰富，适合业务 Dashboard。",
+    "status": "curated"
+  },
+  {
+    "id": "70",
+    "name": "D3",
+    "url": "https://d3js.org",
+    "group": "UI 工程基建",
+    "type": "可视化",
+    "use": "自定义数据可视化底层能力。",
+    "status": "curated"
+  },
+  {
+    "id": "71",
+    "name": "Observable Plot",
+    "url": "https://observablehq.com/plot",
+    "group": "UI 工程基建",
+    "type": "可视化",
+    "use": "更快生成高质量统计图表。",
+    "status": "curated"
+  },
+  {
+    "id": "72",
+    "name": "Visx",
+    "url": "https://airbnb.io/visx",
+    "group": "UI 工程基建",
+    "type": "可视化",
+    "use": "React + D3 思路的数据可视化。",
+    "status": "curated"
+  },
+  {
+    "id": "73",
+    "name": "Recharts",
+    "url": "https://recharts.org",
+    "group": "UI 工程基建",
+    "type": "可视化",
+    "use": "React 常用图表库，易上手。",
+    "status": "curated"
+  },
+  {
+    "id": "74",
+    "name": "Tremor",
+    "url": "https://www.tremor.so",
+    "group": "UI 工程基建",
+    "type": "可视化",
+    "use": "Dashboard 组件和图表。",
+    "status": "curated"
+  },
+  {
+    "id": "75",
+    "name": "Grainient",
+    "url": "https://grainient.supply",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "渐变、动态渐变、颗粒纹理、AI 背景、Shader 工具。",
+    "status": "curated"
+  },
+  {
+    "id": "76",
+    "name": "Web Gradients",
+    "url": "https://webgradients.com",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "现成渐变背景，复制 CSS。",
+    "status": "curated"
+  },
+  {
+    "id": "77",
+    "name": "Grabient",
+    "url": "https://www.grabient.com",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "渐变编辑器，拖拽调色。",
+    "status": "curated"
+  },
+  {
+    "id": "78",
+    "name": "Mesh Gradients",
+    "url": "https://meshgradient.in",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "Mesh 渐变素材下载。",
+    "status": "curated"
+  },
+  {
+    "id": "79",
+    "name": "CSS Gradient",
+    "url": "https://cssgradient.io",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "CSS 渐变代码生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "80",
+    "name": "Haikei",
+    "url": "https://haikei.app",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "SVG 背景、形状、纹理、波浪生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "81",
+    "name": "Pattern Monster",
+    "url": "https://pattern.monster",
+    "group": "视觉素材与生成器",
+    "type": "背景",
+    "use": "SVG 图案素材，可调颜色和大小。",
+    "status": "curated"
+  },
+  {
+    "id": "82",
+    "name": "Humaaans",
+    "url": "https://www.humaaans.com",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "可定制人物插画。",
+    "status": "curated"
+  },
+  {
+    "id": "83",
+    "name": "Open Peeps",
+    "url": "https://www.openpeeps.com",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "手绘风格人物插画。",
+    "status": "curated"
+  },
+  {
+    "id": "84",
+    "name": "Blush",
+    "url": "https://blush.design",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "免费可定制插画集合。",
+    "status": "curated"
+  },
+  {
+    "id": "85",
+    "name": "Storyset",
+    "url": "https://storyset.com",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "动态插画，可调颜色和动画。",
+    "status": "curated"
+  },
+  {
+    "id": "86",
+    "name": "Isometric",
+    "url": "https://isometric.online",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "等距风格插画。",
+    "status": "curated"
+  },
+  {
+    "id": "87",
+    "name": "Ouch!",
+    "url": "https://icons8.com/illustrations",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "多风格插画。",
+    "status": "curated"
+  },
+  {
+    "id": "88",
+    "name": "Drawkit",
+    "url": "https://www.drawkit.com",
+    "group": "视觉素材与生成器",
+    "type": "插画",
+    "use": "免费 SVG 插画包。",
+    "status": "curated"
+  },
+  {
+    "id": "89",
+    "name": "Unsplash",
+    "url": "https://unsplash.com",
+    "group": "视觉素材与生成器",
+    "type": "照片视频",
+    "use": "高质量免费照片。",
+    "status": "curated"
+  },
+  {
+    "id": "90",
+    "name": "Pexels",
+    "url": "https://www.pexels.com",
+    "group": "视觉素材与生成器",
+    "type": "照片视频",
+    "use": "免费照片和视频。",
+    "status": "curated"
+  },
+  {
+    "id": "91",
+    "name": "Pixabay",
+    "url": "https://pixabay.com",
+    "group": "视觉素材与生成器",
+    "type": "照片视频",
+    "use": "免费照片、视频、插画。",
+    "status": "curated"
+  },
+  {
+    "id": "92",
+    "name": "Coverr",
+    "url": "https://coverr.co",
+    "group": "视觉素材与生成器",
+    "type": "照片视频",
+    "use": "免费视频素材。",
+    "status": "curated"
+  },
+  {
+    "id": "93",
+    "name": "Mixkit",
+    "url": "https://mixkit.co",
+    "group": "视觉素材与生成器",
+    "type": "照片视频",
+    "use": "免费视频和音效。",
+    "status": "curated"
+  },
+  {
+    "id": "94",
+    "name": "Spline",
+    "url": "https://spline.design",
+    "group": "视觉素材与生成器",
+    "type": "3D",
+    "use": "3D 场景设计，导出 React 组件。",
+    "status": "curated"
+  },
+  {
+    "id": "95",
+    "name": "Three.js Journey",
+    "url": "https://threejs-journey.com",
+    "group": "视觉素材与生成器",
+    "type": "3D",
+    "use": "3D Web 开发教程。",
+    "status": "curated"
+  },
+  {
+    "id": "96",
+    "name": "Poly Pizza",
+    "url": "https://poly.pizza",
+    "group": "视觉素材与生成器",
+    "type": "3D",
+    "use": "免费 3D 模型素材。",
+    "status": "curated"
+  },
+  {
+    "id": "97",
+    "name": "Sketchfab",
+    "url": "https://sketchfab.com",
+    "group": "视觉素材与生成器",
+    "type": "3D",
+    "use": "3D 模型市场。",
+    "status": "curated"
+  },
+  {
+    "id": "98",
+    "name": "Lucide",
+    "url": "https://lucide.dev",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "React 常用线性图标库。",
+    "status": "curated"
+  },
+  {
+    "id": "99",
+    "name": "Phosphor Icons",
+    "url": "https://phosphoricons.com",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "6 种粗细风格，更圆润。",
+    "status": "curated"
+  },
+  {
+    "id": "100",
+    "name": "Tabler Icons",
+    "url": "https://tabler-icons.io",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "开发者风格，线条简洁。",
+    "status": "curated"
+  },
+  {
+    "id": "101",
+    "name": "Heroicons",
+    "url": "https://heroicons.com",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "Tailwind 官方出品。",
+    "status": "curated"
+  },
+  {
+    "id": "102",
+    "name": "SF Symbols",
+    "url": "https://developer.apple.com/sf-symbols",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "Apple 系统图标。",
+    "status": "curated"
+  },
+  {
+    "id": "103",
+    "name": "Iconoir",
+    "url": "https://iconoir.com",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "开源免费，风格统一。",
+    "status": "curated"
+  },
+  {
+    "id": "104",
+    "name": "3dicons",
+    "url": "https://3dicons.co",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "3D 立体图标，产品展示用。",
+    "status": "curated"
+  },
+  {
+    "id": "105",
+    "name": "Icons8",
+    "url": "https://icons8.com",
+    "group": "视觉素材与生成器",
+    "type": "图标",
+    "use": "图标、插画、照片综合站。",
+    "status": "curated"
+  },
+  {
+    "id": "106",
+    "name": "Google Fonts",
+    "url": "https://fonts.google.com",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "免费字体，覆盖广。",
+    "status": "curated"
+  },
+  {
+    "id": "107",
+    "name": "Fontshare",
+    "url": "https://www.fontshare.com",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "免费高品质字体。",
+    "status": "curated"
+  },
+  {
+    "id": "108",
+    "name": "Type Scale",
+    "url": "https://typescale.com",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "字号层级可视化调整。",
+    "status": "curated"
+  },
+  {
+    "id": "109",
+    "name": "Font Pair",
+    "url": "https://www.fontpair.co",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "字体搭配推荐。",
+    "status": "curated"
+  },
+  {
+    "id": "110",
+    "name": "Fontesk",
+    "url": "https://fontesk.com",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "免费字体下载。",
+    "status": "curated"
+  },
+  {
+    "id": "111",
+    "name": "Variable Fonts",
+    "url": "https://v-fonts.com",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "可变字体参考。",
+    "status": "curated"
+  },
+  {
+    "id": "112",
+    "name": "Typewolf",
+    "url": "https://www.typewolf.com",
+    "group": "视觉素材与生成器",
+    "type": "字体",
+    "use": "高质量网页字体搭配灵感。",
+    "status": "curated"
+  },
+  {
+    "id": "113",
+    "name": "Realtime Colors",
+    "url": "https://www.realtimecolors.com",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "实时预览配色在真实页面上的效果。",
+    "status": "curated"
+  },
+  {
+    "id": "114",
+    "name": "Coolors",
+    "url": "https://coolors.co",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "配色方案生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "115",
+    "name": "Happy Hues",
+    "url": "https://www.happyhues.co",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "现成配色方案和页面预览。",
+    "status": "curated"
+  },
+  {
+    "id": "116",
+    "name": "UI Colors",
+    "url": "https://uicolors.app",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "Tailwind 色板生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "117",
+    "name": "OkLCH Color Picker",
+    "url": "https://oklch.com",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "精确颜色选择，OKLCH 格式。",
+    "status": "curated"
+  },
+  {
+    "id": "118",
+    "name": "Color Hunt",
+    "url": "https://colorhunt.co",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "社区投票配色方案。",
+    "status": "curated"
+  },
+  {
+    "id": "119",
+    "name": "Tints and Shades",
+    "url": "https://maketintsandshades.com",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "给一个颜色生成明暗梯度。",
+    "status": "curated"
+  },
+  {
+    "id": "120",
+    "name": "Palette App",
+    "url": "https://palette.app",
+    "group": "视觉素材与生成器",
+    "type": "配色",
+    "use": "AI 从图片提取配色。",
+    "status": "curated"
+  },
+  {
+    "id": "121",
+    "name": "CSS Grid Generator",
+    "url": "https://cssgrid-generator.netlify.app",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "Grid 布局可视化编辑。",
+    "status": "curated"
+  },
+  {
+    "id": "122",
+    "name": "Fancy Border Radius",
+    "url": "https://9elements.github.io/fancy-border-radius",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "不规则圆角生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "123",
+    "name": "Get Waves",
+    "url": "https://getwaves.io",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "SVG 波浪背景生成。",
+    "status": "curated"
+  },
+  {
+    "id": "124",
+    "name": "Blobmaker",
+    "url": "https://www.blobmaker.app",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "SVG Blob 形状生成。",
+    "status": "curated"
+  },
+  {
+    "id": "125",
+    "name": "Shadows Brm",
+    "url": "https://shadows.brumm.af",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "阴影参数调试器。",
+    "status": "curated"
+  },
+  {
+    "id": "126",
+    "name": "Smooth Shadow",
+    "url": "https://smoothshadow.com",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "多层平滑阴影生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "127",
+    "name": "Glass UI",
+    "url": "https://glassui.dev",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "Glassmorphism 毛玻璃效果生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "128",
+    "name": "Neumorphism.io",
+    "url": "https://neumorphism.io",
+    "group": "视觉素材与生成器",
+    "type": "CSS",
+    "use": "新拟态效果生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "129",
+    "name": "Animate CSS",
+    "url": "https://animate.style",
+    "group": "视觉素材与生成器",
+    "type": "动效工具",
+    "use": "CSS 动画预设库。",
+    "status": "curated"
+  },
+  {
+    "id": "130",
+    "name": "Cubic Bezier",
+    "url": "https://cubic-bezier.com",
+    "group": "视觉素材与生成器",
+    "type": "动效工具",
+    "use": "贝塞尔曲线调试器。",
+    "status": "curated"
+  },
+  {
+    "id": "131",
+    "name": "Keyframes.app",
+    "url": "https://keyframes.app",
+    "group": "视觉素材与生成器",
+    "type": "动效工具",
+    "use": "CSS 动画关键帧编辑器。",
+    "status": "curated"
+  },
+  {
+    "id": "132",
+    "name": "Figma",
+    "url": "https://www.figma.com",
+    "group": "视觉素材与生成器",
+    "type": "设计工具",
+    "use": "设计稿协作，行业标准。",
+    "status": "curated"
+  },
+  {
+    "id": "133",
+    "name": "Shots",
+    "url": "https://shots.so",
+    "group": "视觉素材与生成器",
+    "type": "Mockup",
+    "use": "设计稿 Mockup 生成器。",
+    "status": "curated"
+  },
+  {
+    "id": "134",
+    "name": "Mockup World",
+    "url": "https://www.mockupworld.co",
+    "group": "视觉素材与生成器",
+    "type": "Mockup",
+    "use": "免费 Mockup 素材。",
+    "status": "curated"
+  },
+  {
+    "id": "135",
+    "name": "v0",
+    "url": "https://v0.app",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 生成",
+    "use": "Vercel AI 生成 UI、全栈应用、原型和部署。",
+    "status": "curated"
+  },
+  {
+    "id": "136",
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 生成",
+    "use": "AI 生成完整 Web 应用。",
+    "status": "curated"
+  },
+  {
+    "id": "137",
+    "name": "Bolt",
+    "url": "https://bolt.new",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 生成",
+    "use": "AI 全栈应用生成，浏览器内运行项目。",
+    "status": "curated"
+  },
+  {
+    "id": "138",
+    "name": "Cursor",
+    "url": "https://cursor.com",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 编码",
+    "use": "AI 代码编辑器，内联生成和修改 UI。",
+    "status": "curated"
+  },
+  {
+    "id": "139",
+    "name": "Replit Agent",
+    "url": "https://replit.com",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 编码",
+    "use": "AI 生成、运行、部署应用。",
+    "status": "curated"
+  },
+  {
+    "id": "140",
+    "name": "Figma AI",
+    "url": "https://www.figma.com",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 设计",
+    "use": "Figma 内置 AI 设计辅助。",
+    "status": "curated"
+  },
+  {
+    "id": "141",
+    "name": "Framer AI",
+    "url": "https://www.framer.com",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 站点",
+    "use": "AI 生成网站、视觉页面和 CMS 站点。",
+    "status": "curated"
+  },
+  {
+    "id": "142",
+    "name": "Relume",
+    "url": "https://www.relume.io",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 站点",
+    "use": "AI 生成 sitemap、wireframe、Webflow / Figma 结构。",
+    "status": "curated"
+  },
+  {
+    "id": "143",
+    "name": "Uizard",
+    "url": "https://uizard.io",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 原型",
+    "use": "AI 生成 UI 原型和界面设计。",
+    "status": "curated"
+  },
+  {
+    "id": "144",
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 图像",
+    "use": "AI 生成视觉参考图。",
+    "status": "curated"
+  },
+  {
+    "id": "145",
+    "name": "OpenAI Images",
+    "url": "https://openai.com",
+    "group": "AI 生成与 Vibe Coding",
+    "type": "AI 图像",
+    "use": "AI 生成插画、图标、产品视觉素材。",
+    "status": "curated"
+  },
+  {
+    "id": "146",
+    "name": "Obsidian",
+    "url": "https://obsidian.md",
+    "group": "个人知识库与文档网站",
+    "type": "知识库",
+    "use": "本地 Markdown 知识库，适合长期笔记。",
+    "status": "curated"
+  },
+  {
+    "id": "147",
+    "name": "Quartz",
+    "url": "https://quartz.jzhao.xyz",
+    "group": "个人知识库与文档网站",
+    "type": "数字花园",
+    "use": "把 Obsidian Vault 发布成数字花园。",
+    "status": "curated"
+  },
+  {
+    "id": "148",
+    "name": "Obsidian Publish",
+    "url": "https://obsidian.md/publish",
+    "group": "个人知识库与文档网站",
+    "type": "数字花园",
+    "use": "Obsidian 官方发布服务。",
+    "status": "curated"
+  },
+  {
+    "id": "149",
+    "name": "Digital Garden Plugin",
+    "url": "https://github.com/oleeskild/obsidian-digital-garden",
+    "group": "个人知识库与文档网站",
+    "type": "数字花园",
+    "use": "Obsidian 插件式发布数字花园。",
+    "status": "curated"
+  },
+  {
+    "id": "150",
+    "name": "Logseq",
+    "url": "https://logseq.com",
+    "group": "个人知识库与文档网站",
+    "type": "知识库",
+    "use": "大纲式双链笔记。",
+    "status": "curated"
+  },
+  {
+    "id": "151",
+    "name": "Tana",
+    "url": "https://tana.inc",
+    "group": "个人知识库与文档网站",
+    "type": "知识库",
+    "use": "结构化知识管理、super tag 思路。",
+    "status": "curated"
+  },
+  {
+    "id": "152",
+    "name": "Notion",
+    "url": "https://www.notion.so",
+    "group": "个人知识库与文档网站",
+    "type": "知识库",
+    "use": "协作知识库、轻量发布和数据库。",
+    "status": "curated"
+  },
+  {
+    "id": "153",
+    "name": "Fumadocs",
+    "url": "https://www.fumadocs.dev",
+    "group": "个人知识库与文档网站",
+    "type": "文档站",
+    "use": "Next.js / React 文档框架，适合高定制审美。",
+    "status": "curated"
+  },
+  {
+    "id": "154",
+    "name": "Nextra",
+    "url": "https://nextra.site",
+    "group": "个人知识库与文档网站",
+    "type": "文档站",
+    "use": "Next.js + MDX 文档站，简单灵活。",
+    "status": "curated"
+  },
+  {
+    "id": "155",
+    "name": "Astro Starlight",
+    "url": "https://starlight.astro.build",
+    "group": "个人知识库与文档网站",
+    "type": "文档站",
+    "use": "Astro 官方文档主题，快、轻、默认无障碍。",
+    "status": "curated"
+  },
+  {
+    "id": "156",
+    "name": "Docusaurus",
+    "url": "https://docusaurus.io",
+    "group": "个人知识库与文档网站",
+    "type": "文档站",
+    "use": "成熟文档站框架，版本管理、插件生态好。",
+    "status": "curated"
+  },
+  {
+    "id": "157",
+    "name": "Material for MkDocs",
+    "url": "https://squidfunk.github.io/mkdocs-material",
+    "group": "个人知识库与文档网站",
+    "type": "文档站",
+    "use": "Python / Markdown 文档站，漂亮且成熟。",
+    "status": "curated"
+  },
+  {
+    "id": "158",
+    "name": "VitePress",
+    "url": "https://vitepress.dev",
+    "group": "个人知识库与文档网站",
+    "type": "文档站",
+    "use": "Vue / Vite 文档站，轻量快速。",
+    "status": "curated"
+  },
+  {
+    "id": "159",
+    "name": "Mintlify",
+    "url": "https://mintlify.com",
+    "group": "个人知识库与文档网站",
+    "type": "文档平台",
+    "use": "商业文档平台，AI 搜索、API playground、分析。",
+    "status": "curated"
+  },
+  {
+    "id": "160",
+    "name": "ReadMe",
+    "url": "https://readme.com",
+    "group": "个人知识库与文档网站",
+    "type": "文档平台",
+    "use": "商业开发者文档平台，API 文档能力强。",
+    "status": "curated"
+  },
+  {
+    "id": "161",
+    "name": "GitBook",
+    "url": "https://www.gitbook.com",
+    "group": "个人知识库与文档网站",
+    "type": "文档平台",
+    "use": "团队协作文档和公开文档站。",
+    "status": "curated"
+  },
+  {
+    "id": "162",
+    "name": "Diatáxis",
+    "url": "https://diataxis.fr",
+    "group": "个人知识库与文档网站",
+    "type": "技术写作",
+    "use": "文档信息架构：教程、指南、解释、参考。",
+    "status": "curated"
+  },
+  {
+    "id": "163",
+    "name": "The Good Docs Project",
+    "url": "https://www.thegooddocsproject.dev",
+    "group": "个人知识库与文档网站",
+    "type": "技术写作",
+    "use": "文档模板和写作模式。",
+    "status": "curated"
+  },
+  {
+    "id": "164",
+    "name": "Write the Docs",
+    "url": "https://www.writethedocs.org",
+    "group": "个人知识库与文档网站",
+    "type": "技术写作",
+    "use": "技术写作社区和资料。",
+    "status": "curated"
+  },
+  {
+    "id": "165",
+    "name": "Google Developer Documentation Style Guide",
+    "url": "https://developers.google.com/style",
+    "group": "个人知识库与文档网站",
+    "type": "技术写作",
+    "use": "Google 开发者文档风格指南。",
+    "status": "curated"
+  },
+  {
+    "id": "166",
+    "name": "Microsoft Writing Style Guide",
+    "url": "https://learn.microsoft.com/style-guide",
+    "group": "个人知识库与文档网站",
+    "type": "技术写作",
+    "use": "Microsoft 写作风格指南。",
+    "status": "curated"
+  },
+  {
+    "id": "167",
+    "name": "llms.txt",
+    "url": "https://llmstxt.org",
+    "group": "个人知识库与文档网站",
+    "type": "AI 文档",
+    "use": "给 AI 读取网站文档的入口文件规范。",
+    "status": "curated"
+  },
+  {
+    "id": "168",
+    "name": "MDX",
+    "url": "https://mdxjs.com",
+    "group": "个人知识库与文档网站",
+    "type": "AI 文档",
+    "use": "在 Markdown 中使用组件。",
+    "status": "curated"
+  },
+  {
+    "id": "169",
+    "name": "Pagefind",
+    "url": "https://pagefind.app",
+    "group": "个人知识库与文档网站",
+    "type": "搜索",
+    "use": "静态站点全文搜索。",
+    "status": "curated"
+  },
+  {
+    "id": "170",
+    "name": "Algolia DocSearch",
+    "url": "https://docsearch.algolia.com",
+    "group": "个人知识库与文档网站",
+    "type": "搜索",
+    "use": "文档站搜索服务。",
+    "status": "curated"
+  },
+  {
+    "id": "171",
+    "name": "OpenAPI",
+    "url": "https://www.openapis.org",
+    "group": "个人知识库与文档网站",
+    "type": "API 文档",
+    "use": "API 描述标准。",
+    "status": "curated"
+  },
+  {
+    "id": "172",
+    "name": "Scalar",
+    "url": "https://scalar.com",
+    "group": "个人知识库与文档网站",
+    "type": "API 文档",
+    "use": "现代 API 文档和交互式参考。",
+    "status": "curated"
+  },
+  {
+    "id": "173",
+    "name": "Swagger UI",
+    "url": "https://swagger.io/tools/swagger-ui",
+    "group": "个人知识库与文档网站",
+    "type": "API 文档",
+    "use": "OpenAPI 交互式 API 文档。",
+    "status": "curated"
+  },
+  {
+    "id": "174",
+    "name": "Redocly",
+    "url": "https://redocly.com",
+    "group": "个人知识库与文档网站",
+    "type": "API 文档",
+    "use": "API 文档、OpenAPI 工作流。",
+    "status": "curated"
+  },
+  {
+    "id": "175",
+    "name": "Mermaid",
+    "url": "https://mermaid.js.org",
+    "group": "个人知识库与文档网站",
+    "type": "图表",
+    "use": "Markdown 中写流程图、架构图。",
+    "status": "curated"
+  },
+  {
+    "id": "176",
+    "name": "Excalidraw",
+    "url": "https://excalidraw.com",
+    "group": "个人知识库与文档网站",
+    "type": "图表",
+    "use": "手绘风架构图、流程图。",
+    "status": "curated"
+  },
+  {
+    "id": "177",
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "group": "个人知识库与文档网站",
+    "type": "部署",
+    "use": "Next.js / 前端部署首选之一。",
+    "status": "curated"
+  },
+  {
+    "id": "178",
+    "name": "Netlify",
+    "url": "https://www.netlify.com",
+    "group": "个人知识库与文档网站",
+    "type": "部署",
+    "use": "静态站点、表单、函数。",
+    "status": "curated"
+  },
+  {
+    "id": "179",
+    "name": "Cloudflare Pages",
+    "url": "https://pages.cloudflare.com",
+    "group": "个人知识库与文档网站",
+    "type": "部署",
+    "use": "快速静态部署，适合知识库和文档。",
+    "status": "curated"
+  },
+  {
+    "id": "180",
+    "name": "GitHub Pages",
+    "url": "https://pages.github.com",
+    "group": "个人知识库与文档网站",
+    "type": "部署",
+    "use": "免费托管静态站点。",
+    "status": "curated"
+  },
+  {
+    "id": "181",
+    "name": "MDN Web Docs",
+    "url": "https://developer.mozilla.org",
+    "group": "开发者速查与质量验证",
+    "type": "Web 文档",
+    "use": "HTML / CSS / JS / Web API 权威文档。",
+    "status": "curated"
+  },
+  {
+    "id": "182",
+    "name": "web.dev",
+    "url": "https://web.dev",
+    "group": "开发者速查与质量验证",
+    "type": "Web 文档",
+    "use": "性能、PWA、可访问性、Web 最佳实践。",
+    "status": "curated"
+  },
+  {
+    "id": "183",
+    "name": "Tailwind Cheat Sheet",
+    "url": "https://nerdcave.com/tailwind-cheat-sheet",
+    "group": "开发者速查与质量验证",
+    "type": "速查",
+    "use": "Tailwind 类名速查。",
+    "status": "curated"
+  },
+  {
+    "id": "184",
+    "name": "Shadcn UI Builder",
+    "url": "https://shadcn-ui-builder.vercel.app",
+    "group": "开发者速查与质量验证",
+    "type": "速查",
+    "use": "可视化搭 shadcn 页面。",
+    "status": "curated"
+  },
+  {
+    "id": "185",
+    "name": "Can I Use",
+    "url": "https://caniuse.com",
+    "group": "开发者速查与质量验证",
+    "type": "兼容性",
+    "use": "浏览器兼容性查询。",
+    "status": "curated"
+  },
+  {
+    "id": "186",
+    "name": "CSS Triggers",
+    "url": "https://csstriggers.com",
+    "group": "开发者速查与质量验证",
+    "type": "性能",
+    "use": "CSS 属性触发重排 / 重绘查询。",
+    "status": "curated"
+  },
+  {
+    "id": "187",
+    "name": "WCAG",
+    "url": "https://www.w3.org/WAI/standards-guidelines/wcag",
+    "group": "开发者速查与质量验证",
+    "type": "可访问性",
+    "use": "Web 可访问性标准。",
+    "status": "curated"
+  },
+  {
+    "id": "188",
+    "name": "ARIA APG",
+    "url": "https://www.w3.org/WAI/ARIA/apg",
+    "group": "开发者速查与质量验证",
+    "type": "可访问性",
+    "use": "ARIA 组件模式和键盘交互参考。",
+    "status": "curated"
+  },
+  {
+    "id": "189",
+    "name": "WebAIM",
+    "url": "https://webaim.org",
+    "group": "开发者速查与质量验证",
+    "type": "可访问性",
+    "use": "可访问性文章、检查清单、对比度工具。",
+    "status": "curated"
+  },
+  {
+    "id": "190",
+    "name": "axe DevTools",
+    "url": "https://www.deque.com/axe/devtools",
+    "group": "开发者速查与质量验证",
+    "type": "可访问性",
+    "use": "浏览器可访问性检查。",
+    "status": "curated"
+  },
+  {
+    "id": "191",
+    "name": "Lighthouse",
+    "url": "https://developer.chrome.com/docs/lighthouse",
+    "group": "开发者速查与质量验证",
+    "type": "性能",
+    "use": "性能、SEO、可访问性检查。",
+    "status": "curated"
+  },
+  {
+    "id": "192",
+    "name": "WebPageTest",
+    "url": "https://www.webpagetest.org",
+    "group": "开发者速查与质量验证",
+    "type": "性能",
+    "use": "深度性能分析。",
+    "status": "curated"
+  },
+  {
+    "id": "193",
+    "name": "Bundlephobia",
+    "url": "https://bundlephobia.com",
+    "group": "开发者速查与质量验证",
+    "type": "性能",
+    "use": "npm 包体积检查。",
+    "status": "curated"
+  },
+  {
+    "id": "194",
+    "name": "Storybook",
+    "url": "https://storybook.js.org",
+    "group": "开发者速查与质量验证",
+    "type": "测试",
+    "use": "组件开发、文档、视觉状态和交互测试。",
+    "status": "curated"
+  },
+  {
+    "id": "195",
+    "name": "Playwright",
+    "url": "https://playwright.dev",
+    "group": "开发者速查与质量验证",
+    "type": "测试",
+    "use": "端到端测试、截图验证、浏览器自动化。",
+    "status": "curated"
+  },
+  {
+    "id": "196",
+    "name": "AI 辅助开发工作流",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "AI 工作流",
+    "use": "Prompt、Agent、规格驱动开发、任务拆解、代码审查、AI pair programming。",
+    "status": "pending"
+  },
+  {
+    "id": "197",
+    "name": "全栈工程实现资源",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "工程实现",
+    "use": "前端框架、后端框架、API、认证、数据库、缓存、文件存储、任务队列。",
+    "status": "pending"
+  },
+  {
+    "id": "198",
+    "name": "AI / LLM 应用开发",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "LLM 应用",
+    "use": "RAG、Agent、工具调用、评测、向量数据库、模型选择、成本与延迟优化。",
+    "status": "pending"
+  },
+  {
+    "id": "199",
+    "name": "数据与分析",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "数据",
+    "use": "埋点、产品分析、BI、数据可视化、实验平台、数据质量。",
+    "status": "pending"
+  },
+  {
+    "id": "200",
+    "name": "测试与质量工程",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "质量",
+    "use": "单测、集成测试、E2E、视觉回归、性能测试、可访问性、CI 质量门禁。",
+    "status": "pending"
+  },
+  {
+    "id": "201",
+    "name": "安全 / 隐私 / 合规",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "安全",
+    "use": "密钥管理、权限模型、OWASP、隐私政策、日志脱敏、数据保留策略。",
+    "status": "pending"
+  },
+  {
+    "id": "202",
+    "name": "部署 / 运维 / 可观测性",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "运维",
+    "use": "Hosting、容器、日志、监控、告警、错误追踪、发布策略、回滚。",
+    "status": "pending"
+  },
+  {
+    "id": "203",
+    "name": "产品 / 商业 / 增长",
+    "url": "#",
+    "group": "待补充方向",
+    "type": "增长",
+    "use": "用户研究、定价、转化、增长实验、SEO、内容系统、运营工具。",
+    "status": "pending"
+  }
+]

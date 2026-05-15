@@ -1,0 +1,88 @@
+name: 投稿新资源 / Submit a resource
+description: 推荐一个值得加入资源库的工具、站点或项目
+title: "[投稿] "
+labels: ["resource-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢投稿！提交后仓库维护者会审核。
+        通过审核会加 `approved` 标签，自动化会把这条投稿变成 PR，合并后就会出现在站上。
+        不通过会加 `rejected` 标签并说明原因。
+
+  - type: input
+    id: name
+    attributes:
+      label: 资源名字
+      description: 这条资源自己的显示名，会出现在卡片标题。
+      placeholder: 例如  Motion Primitives
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 资源链接
+      description: 指向该资源主页的完整 URL，http:// 或 https:// 开头。
+      placeholder: https://motion-primitives.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: group
+    attributes:
+      label: 所属大分组
+      description: 选一个最贴近的分组。如果没有合适的，请选「待补充方向」并在下面说明。
+      options:
+        - 资源库总览
+        - 学术创作
+        - 极端审美参考
+        - UI 工程基建
+        - 视觉素材与生成器
+        - AI 生成与 Vibe Coding
+        - 个人知识库与文档网站
+        - 开发者速查与质量验证
+        - 待补充方向
+    validations:
+      required: true
+
+  - type: input
+    id: type
+    attributes:
+      label: 小类型标签
+      description: 大分组内部的细分标签（会变成顶部筛选 chip）。尽量用已有标签，例如 组件库 / 动效库 / 网站灵感 / 图标 / 写作。
+      placeholder: 动效库
+    validations:
+      required: true
+
+  - type: textarea
+    id: use
+    attributes:
+      label: 使用场景
+      description: 一两句话说明「什么时候该打开这条资源」。会出现在卡片副文和详情抽屉。
+      placeholder: Copy-paste motion components built on framer-motion，做 marketing 页面的微交互特别快。
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: 状态
+      description: |
+        · `curated` = 已精选、链接可用、会正常展示
+        · `pending` = 计划中的方向，仅作为路标展示（链接可以留空填 `#`）
+      options:
+        - curated
+        - pending
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明（可选）
+      description: 想对维护者说的任何话，例如为什么推荐、是否本人相关、是否有版权注意事项。
+      placeholder: 可留空
+    validations:
+      required: false
