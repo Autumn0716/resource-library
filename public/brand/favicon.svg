@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Favicon variant: 32-unit viewport, no hairline border (borders disappear at 16px anyway).
+  Slightly thicker bars for legibility at tab-icon sizes.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#fafafa"/>
+  <circle cx="7" cy="10.25" r="1.25" fill="#c8a96e"/>
+  <rect x="10" y="9" width="12" height="2.5" rx="1.25" fill="#c8a96e"/>
+  <rect x="10" y="14.75" width="8" height="2.5" rx="1.25" fill="#c8a96e" fill-opacity="0.7"/>
+  <rect x="10" y="20.5" width="14" height="2.5" rx="1.25" fill="#c8a96e" fill-opacity="0.5"/>
+</svg>

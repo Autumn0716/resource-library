@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AI Builder Atlas — brand mark
+  Direction 2: stacked catalog bars with a selection dot.
+
+  - Off-white tile with a 1px hairline border
+  - Three gold horizontal bars, left-aligned
+    · top    (selected): medium width, full opacity, preceded by a dot
+    · middle: shorter, 70% opacity
+    · bottom: longer,  50% opacity
+  - Works at 16px (favicon) up to 96px (avatar) without visual breakage
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36" role="img" aria-label="AI Builder Atlas">
+  <rect x="0.5" y="0.5" width="35" height="35" rx="9" fill="#fafafa" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+  <!-- selection dot (top row) -->
+  <circle cx="8" cy="11.75" r="1.25" fill="#c8a96e"/>
+  <!-- top bar: selected -->
+  <rect x="11" y="10.5" width="13" height="2.5" rx="1.25" fill="#c8a96e"/>
+  <!-- middle bar: shorter, softer -->
+  <rect x="11" y="16.5" width="9" height="2.5" rx="1.25" fill="#c8a96e" fill-opacity="0.7"/>
+  <!-- bottom bar: longest, softest -->
+  <rect x="11" y="22.5" width="16" height="2.5" rx="1.25" fill="#c8a96e" fill-opacity="0.5"/>
+</svg>

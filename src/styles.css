@@ -226,20 +226,12 @@ a {
 }
 
 .brand-mark {
-  position: relative;
-  display: grid;
+  flex-shrink: 0;
+  display: block;
   width: 36px;
   height: 36px;
-  place-items: center;
-  overflow: hidden;
   border-radius: 10px;
-  background: var(--gold);
-  color: #ffffff;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  box-shadow: 0 2px 12px rgba(200, 169, 110, 0.25);
+  box-shadow: 0 2px 12px rgba(200, 169, 110, 0.18);
 }
 
 .brand-title,
@@ -636,35 +628,116 @@ a {
 }
 
 /* ==========================================================================
-   Topbar — light glass
+   Topbar — floating glass pill (matches Landing nav aesthetic)
    ========================================================================== */
-.topbar {
+.topbar-dock {
   position: sticky;
-  top: 0;
+  top: 16px;
   z-index: 20;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+  margin-bottom: 8px;
+  pointer-events: none; /* let clicks pass through the dock; pill itself re-enables */
+}
+
+.topbar-pill {
+  pointer-events: auto;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 18px;
+  grid-template-columns: auto auto minmax(0, 1fr) auto auto auto;
+  gap: 14px;
   align-items: center;
-  padding: 12px 38px;
-  border-bottom: 1px solid var(--border-primary);
-  background: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  max-width: 1280px;
+  padding: 8px 14px 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(22px) saturate(1.4);
   -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 28px rgba(180, 150, 90, 0.08);
+}
+
+.topbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px 4px 4px;
+  border: 0;
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.topbar-brand:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.topbar-brand-name {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .topbar-mark {
-  display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
-  border-radius: 8px;
-  background: var(--gold);
-  color: #ffffff;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 7px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.topbar-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.topbar-stats {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
   font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 700;
-  box-shadow: 0 2px 12px rgba(200, 169, 110, 0.25);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.topbar-stats-num {
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.topbar-stats-num.muted {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.topbar-stats-label {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.topbar-stats-dot {
+  color: var(--muted);
+  font-weight: 300;
+}
+
+@media (max-width: 880px) {
+  .topbar-stats,
+  .topbar-divider:nth-of-type(2) {
+    display: none;
+  }
+  .topbar-brand-name {
+    display: none;
+  }
 }
 
 .lang-toggle {
@@ -1681,9 +1754,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(18, 17, 15, 0.2);
+  backdrop-filter: blur(12px) saturate(0.84);
+  -webkit-backdrop-filter: blur(12px) saturate(0.84);
   padding: 24px;
 }
 

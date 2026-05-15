@@ -18,6 +18,7 @@ import {
 import { IntroductionHero } from "./components/IntroductionHero";
 import { AnimatedGradientText } from "./components/ui/animated-gradient-text";
 import { MagicCard } from "./components/ui/MagicCard";
+import { BrandMark } from "./components/BrandMark";
 import { useLang } from "./i18n/LangContext";
 
 import { BlurFade } from "./components/ui/BlurFade";
@@ -521,7 +522,14 @@ export function App() {
       />
 
       <main className="main-panel" id="top">
-        <Topbar searchRef={searchRef} query={query} onQueryChange={setQuery} />
+        <Topbar
+          searchRef={searchRef}
+          query={query}
+          onQueryChange={setQuery}
+          onBrandClick={() => chooseGroup("intro")}
+          curatedCount={curatedCount}
+          pendingCount={pendingCount}
+        />
 
         {currentChipGroup && (
           <CurrentGroupChip
@@ -681,9 +689,7 @@ function Sidebar({
   return (
     <aside className="sidebar" aria-label={t("sidebar.collections")} onMouseLeave={handleSidebarLeave}>
       <a className="brand" href="#top" onClick={() => onChooseGroup("intro")}>
-        <span className="brand-mark" aria-hidden="true">
-          RB
-        </span>
+        <BrandMark size={36} className="brand-mark" />
         <span>
           <span className="brand-title">Resources Library</span>
           <span className="brand-subtitle">AI Builder Atlas</span>
@@ -846,32 +852,64 @@ function Topbar({
   searchRef,
   query,
   onQueryChange,
+  onBrandClick,
+  curatedCount,
+  pendingCount,
 }: {
   searchRef: RefObject<HTMLInputElement | null>;
   query: string;
   onQueryChange: (value: string) => void;
+  onBrandClick: () => void;
+  curatedCount: number;
+  pendingCount: number;
 }) {
   const { lang, toggleLang, t } = useLang();
   return (
-    <header className="topbar">
-      <span className="topbar-mark" aria-hidden="true">
-        RB
-      </span>
-      <label className="search-box">
-        <SearchIcon />
-        <input
-          ref={searchRef}
-          value={query}
-          onChange={(event) => onQueryChange(event.target.value)}
-          placeholder={t("topbar.search")}
-          aria-label={t("topbar.search")}
-        />
-        <kbd>/</kbd>
-      </label>
-      <button className="lang-toggle" onClick={toggleLang} title={lang === "en" ? "切换中文" : "Switch to English"}>
-        {lang === "en" ? "中" : "EN"}
-      </button>
-    </header>
+    <div className="topbar-dock">
+      <header className="topbar-pill" role="banner">
+        <button
+          type="button"
+          className="topbar-brand"
+          onClick={onBrandClick}
+          aria-label="AI Builder Atlas — back to intro"
+        >
+          <BrandMark size={26} compact className="topbar-mark" />
+          <span className="topbar-brand-name">AI Builder Atlas</span>
+        </button>
+
+        <span className="topbar-divider" aria-hidden="true" />
+
+        <label className="search-box">
+          <SearchIcon />
+          <input
+            ref={searchRef}
+            value={query}
+            onChange={(event) => onQueryChange(event.target.value)}
+            placeholder={t("topbar.search")}
+            aria-label={t("topbar.search")}
+          />
+          <kbd>/</kbd>
+        </label>
+
+        <span className="topbar-divider" aria-hidden="true" />
+
+        <span className="topbar-stats" aria-label={`${curatedCount} curated, ${pendingCount} pending`}>
+          <span className="topbar-stats-num">{curatedCount}</span>
+          <span className="topbar-stats-label">{t("status.curated")}</span>
+          <span className="topbar-stats-dot" aria-hidden="true">·</span>
+          <span className="topbar-stats-num muted">{pendingCount}</span>
+          <span className="topbar-stats-label">{t("status.pending")}</span>
+        </span>
+
+        <button
+          className="lang-toggle"
+          onClick={toggleLang}
+          title={lang === "en" ? "切换中文" : "Switch to English"}
+        >
+          {lang === "en" ? "中" : "EN"}
+        </button>
+      </header>
+    </div>
   );
 }
 
