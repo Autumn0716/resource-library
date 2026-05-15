@@ -6,3 +6,6 @@ dist/
 image/
 output/
 openspec/
+.claude/
+.codex/
+CONTRIBUTING.md
