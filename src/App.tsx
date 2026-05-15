@@ -1375,24 +1375,33 @@ function ResourceCard({
       gradientOpacity={0.12}
     >
       <div className="resource-card-inner">
+        <div className="card-accent" aria-hidden="true" />
         <div className="card-head">
           <div className="card-head-title">
-            <FaviconImg id={item.id} />
-            <h3>{item.name}</h3>
+            <div className="card-icon-wrap">
+              <FaviconImg id={item.id} />
+            </div>
+            <div className="card-head-info">
+              <h3>{item.name}</h3>
+              <div className="card-meta">
+                <span className="card-type">{item.type}</span>
+                <span className="card-meta-dot">·</span>
+                <StatusBadge status={item.status} />
+              </div>
+            </div>
           </div>
-          <StatusBadge status={item.status} />
         </div>
         <p className="resource-card-desc">{item.use}</p>
+        <div className="card-divider" aria-hidden="true" />
         <div className="card-actions">
-          <span className="card-type">{item.type}</span>
+          <button
+            className="card-detail-btn"
+            type="button"
+            onClick={() => onInspect(item)}
+          >
+            Inspect
+          </button>
           <div className="card-actions-right">
-            <button
-              className="card-detail-btn"
-              type="button"
-              onClick={() => onInspect(item)}
-            >
-              Details
-            </button>
             {isExternal(item) ? (
               <a href={item.url} rel="noreferrer" target="_blank">
                 Open →
