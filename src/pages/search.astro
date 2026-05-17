@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sortResources } from "../lib/resources";
+
+const resources = sortResources(await getCollection("resources"));
+const groups = await getCollection("groups");
+const types = [...new Set(resources.map((resource) => resource.data.type))].sort((left, right) => left.localeCompare(right, "zh-Hans-CN"));
+---
+
+<BaseLayout title="Search" description="Search the AI Builder Atlas resource catalog." resources={resources}>
+  <main class="page-stack narrow-page" data-pagefind-body>
+    <section class="section-heading">
+      <span>Search</span>
+      <h1 class="section-heading-title" data-i18n-key="searchResourcesTitle">搜索资源</h1>
+      <p>Pagefind indexes the static Astro output after each production build. Use the generated search index in production, or browse the facets below while developing locally.</p>
+    </section>
+    <section class="filter-summary" aria-label="Search facets">
+      <p><strong>Resources:</strong> {resources.length}</p>
+      <p><strong>Groups:</strong> {groups.map((group) => group.data.name).join(" · ")}</p>
+      <p><strong>Types:</strong> {types.join(" · ")}</p>
+    </section>
+    <div id="search" class="search-mount" data-pagefind-ignore>
+      <p>Search UI loads from <code>/pagefind/pagefind-ui.js</code> after <code>bun run build</code>.</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script is:inline>
+  const searchRoot = document.querySelector("#search");
+
+  if (searchRoot) {
+    import("/pagefind/pagefind-ui.js")
+      .then(({ PagefindUI }) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+      })
+      .catch(() => {
+        searchRoot.innerHTML = "<p>Search index is available after running the production build.</p>";
+      });
+  }
+</script>

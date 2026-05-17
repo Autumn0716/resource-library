@@ -1,0 +1,14 @@
+---
+import ResourceCard from "./ResourceCard.astro";
+import type { ResourceEntry } from "../lib/resources";
+
+interface Props {
+  resources: ResourceEntry[];
+}
+
+const { resources } = Astro.props;
+---
+
+<div class="resource-grid">
+  {resources.map((resource) => <ResourceCard resource={resource} />)}
+</div>

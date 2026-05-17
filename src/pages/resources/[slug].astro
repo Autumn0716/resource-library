@@ -1,0 +1,78 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceGrid from "../../components/ResourceGrid.astro";
+import { getRelatedResources } from "../../lib/related";
+import { sortResources } from "../../lib/resources";
+import { buildResourceJsonLd } from "../../lib/seo";
+import FavoriteButton from "../../components/FavoriteButton";
+
+export async function getStaticPaths() {
+  const resources = await getCollection("resources");
+  return resources.map((resource) => ({ params: { slug: resource.id }, props: { resource } }));
+}
+
+const { resource } = Astro.props;
+const resources = sortResources(await getCollection("resources"));
+const groups = await getCollection("groups");
+const group = groups.find((candidate) => candidate.id === resource.data.group);
+const related = getRelatedResources(resource, resources, 6);
+const sameGroup = resources.filter((candidate) => candidate.id !== resource.id && candidate.data.group === resource.data.group).slice(0, 6);
+const jsonLd = buildResourceJsonLd(resource);
+const { Content } = await render(resource);
+---
+
+<BaseLayout title={resource.data.title} description={resource.data.summary} resources={resources} jsonLd={jsonLd} image={resource.data.screenshot}>
+  <main class="page-stack resource-detail" data-pagefind-body>
+    <article class="detail-panel">
+      {resource.data.favicon && <img class="favicon" src={resource.data.favicon} alt="" loading="lazy" />}
+      <p class="docs-badge">{resource.data.status}</p>
+      <h1>{resource.data.title}</h1>
+      <p>{resource.data.summary}</p>
+      <dl class="metadata-grid">
+        <div><dt>Group</dt><dd><a href={`/groups/${resource.data.group}/`}>{group?.data.name ?? resource.data.group}</a></dd></div>
+        <div><dt>Type</dt><dd>{resource.data.type}</dd></div>
+        <div><dt>Pricing</dt><dd>{resource.data.pricing}</dd></div>
+        <div><dt>Language</dt><dd>{resource.data.language}</dd></div>
+        <div><dt>Difficulty</dt><dd>{resource.data.difficulty}</dd></div>
+        {resource.data.lastCheckedAt && <div><dt>Last checked</dt><dd>{resource.data.lastCheckedAt}</dd></div>}
+      </dl>
+      <div class="tag-list">
+        {resource.data.tags.map((tag) => <a href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>)}
+      </div>
+      {resource.data.audience.length > 0 && (
+        <section class="prose-panel">
+          <h2>Audience</h2>
+          <ul>{resource.data.audience.map((item) => <li>{item}</li>)}</ul>
+        </section>
+      )}
+      {resource.data.useCases.length > 0 && (
+        <section class="prose-panel">
+          <h2>Use cases</h2>
+          <ul>{resource.data.useCases.map((item) => <li>{item}</li>)}</ul>
+        </section>
+      )}
+      {resource.data.alternatives.length > 0 && (
+        <section class="prose-panel">
+          <h2>Alternatives</h2>
+          <ul>{resource.data.alternatives.map((item) => <li>{item}</li>)}</ul>
+        </section>
+      )}
+      <div class="prose"><Content /></div>
+      <div class="detail-actions">
+        <a class="primary-link" href={resource.data.url} target="_blank" rel="noreferrer">Open resource →</a>
+        <FavoriteButton slug={resource.id} client:load />
+      </div>
+    </article>
+    <section class="section-heading">
+      <span>Related</span>
+      <h2 class="section-heading-title">相关资源</h2>
+    </section>
+    <ResourceGrid resources={related} />
+    <section class="section-heading">
+      <span>Same category</span>
+      <h2 class="section-heading-title">同分类资源</h2>
+    </section>
+    <ResourceGrid resources={sameGroup} />
+  </main>
+</BaseLayout>

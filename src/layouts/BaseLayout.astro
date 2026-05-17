@@ -1,0 +1,90 @@
+---
+import "../styles/global.css";
+import type { ResourceEntry } from "../lib/resources";
+import { buildTitle, buildDescription, buildCanonicalUrl, buildShareImageUrl } from "../lib/seo";
+import CommandPalette from "../components/CommandPalette";
+import SiteControls from "../components/SiteControls";
+
+interface Props {
+  title?: string;
+  description?: string;
+  resources?: ResourceEntry[];
+  jsonLd?: string;
+  image?: string;
+}
+
+const {
+  title = "AI Builder Atlas",
+  description = "A curated resource library for design-engineering, UI components, and AI workflow tools.",
+  resources = [],
+  jsonLd,
+  image,
+} = Astro.props;
+const pageTitle = buildTitle(title);
+const pageDescription = buildDescription(description);
+const canonicalUrl = buildCanonicalUrl(Astro.url.pathname);
+const shareImageUrl = buildShareImageUrl(image);
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="description" content={pageDescription} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={shareImageUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={shareImageUrl} />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+    <link rel="apple-touch-icon" href="/brand/logo.svg" />
+    {jsonLd && <script is:inline type="application/ld+json" set:html={jsonLd} />}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-brand" href="/">AI Builder Atlas</a>
+        <nav aria-label="Main navigation" class="site-nav">
+          <a href="/resources" data-i18n-key="navResources">资源</a>
+          <a href="/groups" data-i18n-key="navGroups">分类</a>
+          <a href="/search" data-i18n-key="navSearch">搜索</a>
+          <a href="/about" data-i18n-key="navAbout">关于</a>
+        </nav>
+        <div class="site-actions">
+          <CommandPalette
+            resources={resources.map((resource) => ({
+              slug: resource.id,
+              title: resource.data.title,
+              summary: resource.data.summary,
+              tags: resource.data.tags,
+            }))}
+            client:idle
+          />
+          <SiteControls client:load />
+        </div>
+      </header>
+      <slot />
+      <footer class="site-footer">
+        <span>{resources.length} resources</span>
+        <a href="/changelog" data-i18n-key="navChangelog">更新记录</a>
+      </footer>
+    </div>
+  </body>
+</html>

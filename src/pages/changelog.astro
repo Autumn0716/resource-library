@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sortResources, sortResourcesByRecency } from "../lib/resources";
+
+const resources = sortResources(await getCollection("resources"));
+const latestResources = sortResourcesByRecency(resources).slice(0, 12);
+---
+
+<BaseLayout title="Changelog" description="Migration and catalog update notes for AI Builder Atlas." resources={resources}>
+  <main class="page-stack narrow-page" data-pagefind-body>
+    <section class="section-heading">
+      <span>Changelog</span>
+      <h1 class="section-heading-title" data-i18n-key="changelogTitle">更新记录</h1>
+      <p>Static migration milestones and recent catalog entries.</p>
+    </section>
+    <article class="detail-panel prose-panel">
+      <h2>Astro content migration</h2>
+      <p>The resource catalog now builds from Markdown content collections, with generated resource, group, and tag pages.</p>
+      <ul>
+        <li>{resources.length} resource entries migrated.</li>
+        <li>Legacy IDs and original type labels preserved in frontmatter.</li>
+        <li>Related and same-group recommendations generated at build time.</li>
+      </ul>
+      <h2>Recent entries</h2>
+      <ul>
+        {latestResources.map((resource) => <li><a href={`/resources/${resource.id}/`}>{resource.data.title}</a> — {resource.data.type}</li>)}
+      </ul>
+    </article>
+  </main>
+</BaseLayout>

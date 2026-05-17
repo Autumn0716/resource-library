@@ -1,0 +1,43 @@
+---
+import type { ResourceEntry } from "../lib/resources";
+
+interface Props {
+  resource: ResourceEntry;
+}
+
+const { resource } = Astro.props;
+---
+
+<article
+  class="resource-card"
+  data-resource-card
+  data-group={resource.data.group}
+  data-type={resource.data.type}
+  data-tags={resource.data.tags.join(",")}
+  data-pricing={resource.data.pricing}
+  data-languages={resource.data.language.join(",")}
+  data-difficulty={resource.data.difficulty}
+  data-search={[resource.data.title, resource.data.summary, resource.data.type, resource.data.originalType, ...resource.data.tags].join(" ")}
+>
+  <div class="resource-card-inner">
+    <span class="card-accent"></span>
+    <div class="card-head">
+      <div class="card-icon-wrap">
+        {resource.data.favicon ? <img class="favicon" src={resource.data.favicon} alt="" loading="lazy" /> : <span class="favicon-fallback"></span>}
+      </div>
+      <div class="card-head-info">
+        <h3><a href={`/resources/${resource.id}/`}>{resource.data.title}</a></h3>
+        <p class="card-type">{resource.data.type}</p>
+      </div>
+    </div>
+    <p class="resource-card-desc">{resource.data.summary}</p>
+    <div class="tag-list">
+      <a href={`/groups/${resource.data.group}/`}>{resource.data.group}</a>
+      {resource.data.tags.slice(0, 2).map((tag) => <a href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>)}
+    </div>
+    <div class="card-actions">
+      <span class="status-badge">{resource.data.status}</span>
+      <a href={`/resources/${resource.id}/`}>View detail →</a>
+    </div>
+  </div>
+</article>

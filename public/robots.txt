@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /search
+
+Sitemap: https://resource-library-wheat.vercel.app/sitemap-index.xml

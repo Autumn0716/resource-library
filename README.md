@@ -8,59 +8,59 @@ Live site: https://resource-library-wheat.vercel.app/
 
 ## Overview
 
-Resources Library is a static, Git-backed catalog of high-signal tools and references. It currently contains **204 resources** across **9 groups**, with data stored in JSON files and deployed automatically on Vercel.
+Resources Library is a static, Git-backed catalog of high-signal tools and references. It currently contains **204 resources** across **9 groups**, now backed by Astro Content Collections rather than one large runtime JSON payload.
 
-The project is designed for lightweight maintenance: no backend, no database, no runtime writes. Resource changes are reviewed through Git, then Vercel rebuilds the site.
+The project remains deliberately lightweight: no backend, no database, no runtime writes. Resource changes are reviewed through Git, then the static site is rebuilt for Vercel or Cloudflare Pages.
 
 ## Features
 
-- Curated resource groups for academic writing, UI aesthetics, component libraries, visual assets, AI tools, documentation sites, and quality checks.
-- Fuzzy search powered by Fuse.js, with highlighted matches.
-- Group and type filters for browsing large collections quickly.
-- Resource detail drawer with related items by type and group.
-- Curated / pending status support for published resources and future directions.
-- Keyboard-friendly navigation and help panel.
-- Bilingual UI strings for English and Chinese.
-- Docs-as-code contribution flow using JSON, GitHub Issues, PRs, and Vercel.
+- Astro-generated resource, group, tag, changelog, about, and search pages.
+- Pagefind full-text search over generated HTML output.
+- Faceted browsing by group, type, tag, pricing, language, and difficulty.
+- Shareable resource detail pages with related-resource recommendations.
+- Bilingual UI chrome, theme switching, local favorites, and a command palette.
+- Schema-validated Markdown content files with build-time checks.
+- Static deployment to Vercel or Cloudflare Pages with no backend service.
 
 ![Resources Library cards grid](./images/cards-grid.png)
 
 ## Tech Stack
 
-- Vite
-- React 19
+- Astro
 - TypeScript
 - Bun
-- HeroUI v3
+- Content Collections
 - Tailwind CSS v4
-- Fuse.js
-- Motion / GSAP
-- Vercel
+- Pagefind
+- Small React islands for focused interactivity
+- Vercel / Cloudflare Pages
 
 ## Project Structure
 
 ```text
 .
 ├── src/
-│   ├── App.tsx
+│   ├── content.config.ts
+│   ├── content/
+│   │   ├── resources/
+│   │   └── groups/
+│   ├── pages/
+│   ├── layouts/
 │   ├── components/
-│   ├── data/
-│   │   ├── groups.json
-│   │   ├── resources.json
-│   │   └── resources.ts
-│   ├── i18n/
-│   └── styles.css
+│   ├── lib/
+│   └── styles/global.css
 ├── scripts/
-│   ├── add-resource.ts
-│   └── fetch-favicons.ts
-├── docs/
-│   └── resource-update-workflow.md
-├── images/
-│   ├── cards-grid.png
-│   └── landing.png
+│   ├── migrate-resources.ts
+│   ├── new-resource.ts
+│   ├── validate-content.ts
+│   ├── check-links.ts
+│   ├── fetch-favicons.ts
+│   └── generate-screenshots.ts
 ├── public/
-├── package.json
-└── vite.config.ts
+│   ├── favicons/
+│   └── screenshots/
+├── docs/
+└── astro.config.mjs
 ```
 
 ## Getting Started
@@ -91,51 +91,39 @@ bun run preview
 
 ## Resource Data
 
-Resource entries live in:
+Canonical catalog data now lives in Astro Content Collections:
 
-- `src/data/resources.json`
-- `src/data/groups.json`
+- `src/content/resources/*.md`
+- `src/content/groups/*.md`
 
-Each resource has this shape:
+Each resource stores card metadata in frontmatter and richer editorial notes in the Markdown body. The schema in `src/content.config.ts` validates URLs, statuses, pricing, language, difficulty, dates, and asset paths during the build.
 
-```json
-{
-  "id": "0",
-  "name": "Awwwards",
-  "url": "https://www.awwwards.com",
-  "group": "极端审美参考",
-  "type": "网站灵感",
-  "use": "获奖网站设计，看顶级视觉、动效和创意交互。",
-  "status": "curated"
-}
-```
-
-`status` can be:
-
-- `curated`: reviewed and shown as a real recommendation.
-- `pending`: planned direction or placeholder for future expansion.
+Legacy JSON files remain only as migration inputs for `bun run migrate:resources`.
 
 ## Adding Resources
 
-For maintainers, use the local helper:
+Create a new Markdown entry with the Astro helper:
 
 ```bash
-bun scripts/add-resource.ts
+bun run new:resource \
+  --title="Motion Primitives" \
+  --url="https://motion-primitives.com" \
+  --group="ui-base" \
+  --type="library" \
+  --summary="Copy-paste motion components built on motion." \
+  --tags="motion,ui" \
+  --language="en"
 ```
 
-Or add a resource in batch mode:
+Then validate and build:
 
 ```bash
-bun scripts/add-resource.ts \
-  --name "Motion Primitives" \
-  --url "https://motion-primitives.com" \
-  --group "UI 工程基建" \
-  --type "动效库" \
-  --use "Copy-paste motion components built on motion." \
-  --status curated
+bun run validate:content
+bun run check
+bun run build
 ```
 
-For contributors, submit a GitHub Issue using the resource submission template. Approved issues are turned into pull requests by the repository workflow.
+For contributors, submit a GitHub Issue using the resource submission template. Approved issues are reviewed through Git before publication.
 
 More details:
 
@@ -144,21 +132,28 @@ More details:
 
 ## Deployment
 
-The production site is deployed on Vercel:
+The production site is static Astro output and can be deployed to either platform:
 
-https://resource-library-wheat.vercel.app/
+| Platform | Build command | Output directory | Install command |
+| --- | --- | --- | --- |
+| Vercel | `bun run build` | `dist` | `bun install` |
+| Cloudflare Pages | `bun run build` | `dist` | `bun install` |
 
 Typical flow:
 
 ```text
-Edit JSON / approve issue
+Edit Markdown / approve issue
         ↓
 Pull request
         ↓
+CI: check + validate + build
+        ↓
 Merge
         ↓
-Vercel build and deploy
+Static deploy
 ```
+
+`bun run check:links` is available for maintenance and also runs weekly in GitHub Actions, but external-network failures are not part of the local release gate.
 
 ## License
 
