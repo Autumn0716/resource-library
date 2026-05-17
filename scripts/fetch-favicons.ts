@@ -1,23 +1,18 @@
 #!/usr/bin/env bun
-/**
- * Fetch favicons for every resource, cache into public/icons/<id>.png
- *
- * Source priority:
- *   1. icon.horse (clean high-quality icons, no CORS/rate limits)
- *   2. Google s2/favicons (fallback, always reachable)
- *   3. <host>/favicon.ico direct (last-ditch)
- *   4. Generate a letter SVG tile (never fails)
- *
- * Re-run anytime; existing files are skipped unless --force.
- * Single-id: bun scripts/fetch-favicons.ts --only <id>
- */
-
-import { resources, type Resource } from "../src/data/resources";
-import { mkdirSync, existsSync, writeFileSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { copyFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { readdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const OUT_DIR = join(ROOT, "public", "icons");
+const OUT_DIR = join(ROOT, "public", "favicons");
+
+interface ResourceIconTarget {
+  slug: string;
+  title: string;
+  url: string;
+  status: "active" | "pending" | "deprecated" | "broken";
+  legacyId?: string;
+}
 
 interface Options {
   force: boolean;
@@ -35,6 +30,35 @@ function parseArgs(): Options {
   return { force, only };
 }
 
+function getFrontmatterValue(frontmatter: string, key: string): string | undefined {
+  const line = frontmatter.split("\n").find((item) => item.startsWith(`${key}: `));
+  return line?.slice(key.length + 2).replace(/^"|"$/g, "");
+}
+
+function extractFrontmatter(content: string): string {
+  const match = /^---\n([\s\S]*?)\n---/.exec(content);
+  if (!match) throw new Error("Missing frontmatter");
+  return match[1];
+}
+
+async function readTargets(): Promise<ResourceIconTarget[]> {
+  const dir = join(ROOT, "src/content/resources");
+  const files = (await readdir(dir)).filter((file) => file.endsWith(".md"));
+  const targets = await Promise.all(
+    files.map(async (file) => {
+      const frontmatter = extractFrontmatter(await readFile(join(dir, file), "utf8"));
+      return {
+        slug: getFrontmatterValue(frontmatter, "slug") ?? file.replace(/\.md$/, ""),
+        title: getFrontmatterValue(frontmatter, "title") ?? file.replace(/\.md$/, ""),
+        url: getFrontmatterValue(frontmatter, "url") ?? "https://example.invalid/",
+        status: (getFrontmatterValue(frontmatter, "status") ?? "pending") as ResourceIconTarget["status"],
+        legacyId: getFrontmatterValue(frontmatter, "legacyId"),
+      };
+    }),
+  );
+  return targets;
+}
+
 function hostOf(url: string): string | null {
   try {
     return new URL(url).host;
@@ -43,13 +67,28 @@ function hostOf(url: string): string | null {
   }
 }
 
+function escapeXmlText(value: string): string {
+  return value.replace(/[&<>"']/g, (character) => {
+    switch (character) {
+      case "&":
+        return "&amp;";
+      case "<":
+        return "&lt;";
+      case ">":
+        return "&gt;";
+      case '"':
+        return "&quot;";
+      default:
+        return "&apos;";
+    }
+  });
+}
+
 function letterAvatar(name: string): string {
-  // Grab first meaningful glyph (skip spaces)
-  const glyph = name.trim().charAt(0).toUpperCase() || "?";
-  // Deterministic purple tone from name
+  const glyph = escapeXmlText(name.trim().charAt(0).toUpperCase() || "?");
   let h = 0;
-  for (const c of name) h = (h * 31 + c.charCodeAt(0)) & 0xffffff;
-  const hue = 260 + (h % 40); // 260–299: purples
+  for (const character of name) h = (h * 31 + character.charCodeAt(0)) & 0xffffff;
+  const hue = 260 + (h % 40);
   const bg = `hsl(${hue}, 55%, 38%)`;
   const fg = `hsl(${hue}, 85%, 92%)`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="${bg}"/><text x="16" y="21" text-anchor="middle" font-family="Geist, Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="${fg}">${glyph}</text></svg>`;
@@ -57,114 +96,95 @@ function letterAvatar(name: string): string {
 
 async function fetchBinary(url: string, timeout = 8000): Promise<Buffer | null> {
   try {
-    const ctl = new AbortController();
-    const timer = setTimeout(() => ctl.abort(), timeout);
-    const resp = await fetch(url, {
-      signal: ctl.signal,
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeout);
+    const response = await fetch(url, {
+      signal: controller.signal,
       headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122 Safari/537.36",
       },
     });
     clearTimeout(timer);
-    if (!resp.ok) return null;
-    const contentType = resp.headers.get("content-type") ?? "";
-    if (
-      !contentType.includes("image/") &&
-      !contentType.includes("application/octet-stream")
-    ) {
-      return null;
-    }
-    const buf = Buffer.from(await resp.arrayBuffer());
-    // Reject obviously broken (1x1 transparent tracker, < 100 bytes)
-    if (buf.length < 100) return null;
-    return buf;
+    if (!response.ok) return null;
+    const contentType = response.headers.get("content-type") ?? "";
+    if (!contentType.includes("image/") && !contentType.includes("application/octet-stream")) return null;
+    const buffer = Buffer.from(await response.arrayBuffer());
+    if (buffer.length < 100) return null;
+    return buffer;
   } catch {
     return null;
   }
 }
 
-async function tryFetch(host: string): Promise<{ buf: Buffer; ext: "png" | "ico" } | null> {
+async function tryFetch(host: string): Promise<{ buffer: Buffer; ext: "png" | "ico" } | null> {
   const candidates: Array<{ url: string; ext: "png" | "ico" }> = [
     { url: `https://icon.horse/icon/${host}`, ext: "png" },
     { url: `https://www.google.com/s2/favicons?domain=${host}&sz=64`, ext: "png" },
     { url: `https://${host}/favicon.ico`, ext: "ico" },
   ];
   for (const { url, ext } of candidates) {
-    const buf = await fetchBinary(url);
-    if (buf) return { buf, ext };
+    const buffer = await fetchBinary(url);
+    if (buffer) return { buffer, ext };
   }
   return null;
 }
 
-async function processOne(item: Resource, opts: Options) {
-  const host = hostOf(item.url);
-  const pngPath = join(OUT_DIR, `${item.id}.png`);
-  const icoPath = join(OUT_DIR, `${item.id}.ico`);
-  const svgPath = join(OUT_DIR, `${item.id}.svg`);
+export function findLegacyIconSource(root: string, legacyId: string | undefined): string | null {
+  if (!legacyId) return null;
+  for (const extension of ["png", "ico", "svg"]) {
+    const candidate = join(root, "public", "icons", `${legacyId}.${extension}`);
+    if (existsSync(candidate)) return candidate;
+  }
+  return null;
+}
 
-  if (
-    !opts.force &&
-    (existsSync(pngPath) || existsSync(icoPath) || existsSync(svgPath))
-  ) {
-    return { id: item.id, status: "skip" };
+async function processOne(item: ResourceIconTarget, opts: Options): Promise<"png" | "ico" | "svg" | "svg-fallback" | "skip"> {
+  const host = hostOf(item.url);
+  const pngPath = join(OUT_DIR, `${item.slug}.png`);
+  const icoPath = join(OUT_DIR, `${item.slug}.ico`);
+  const svgPath = join(OUT_DIR, `${item.slug}.svg`);
+
+  if (!opts.force && (existsSync(pngPath) || existsSync(icoPath) || existsSync(svgPath))) return "skip";
+
+  const legacyIcon = findLegacyIconSource(ROOT, item.legacyId);
+  if (legacyIcon) {
+    const extension = legacyIcon.split(".").pop() as "png" | "ico" | "svg";
+    copyFileSync(legacyIcon, join(OUT_DIR, `${item.slug}.${extension}`));
+    return extension;
   }
 
-  // Pending items or bad URLs → letter avatar
-  if (!host || item.status === "pending") {
-    writeFileSync(svgPath, letterAvatar(item.name));
-    return { id: item.id, status: "svg" };
+  if (!host || item.status === "pending" || item.url.includes("example.invalid")) {
+    writeFileSync(svgPath, letterAvatar(item.title));
+    return "svg";
   }
 
   const fetched = await tryFetch(host);
   if (fetched) {
-    const target = fetched.ext === "ico" ? icoPath : pngPath;
-    writeFileSync(target, fetched.buf);
-    return { id: item.id, status: fetched.ext };
+    writeFileSync(fetched.ext === "ico" ? icoPath : pngPath, fetched.buffer);
+    return fetched.ext;
   }
 
-  // All network sources failed → letter fallback
-  writeFileSync(svgPath, letterAvatar(item.name));
-  return { id: item.id, status: "svg-fallback" };
+  writeFileSync(svgPath, letterAvatar(item.title));
+  return "svg-fallback";
 }
 
-async function run() {
+async function run(): Promise<void> {
   const opts = parseArgs();
   mkdirSync(OUT_DIR, { recursive: true });
 
-  const targets = opts.only
-    ? resources.filter((r) => r.id === opts.only)
-    : resources;
-  if (opts.only && targets.length === 0) {
-    console.error(`No resource with id "${opts.only}"`);
-    process.exit(1);
-  }
+  const allTargets = await readTargets();
+  const targets = opts.only ? allTargets.filter((target) => target.slug === opts.only) : allTargets;
+  if (opts.only && targets.length === 0) throw new Error(`No resource with slug "${opts.only}"`);
 
-  console.log(`Fetching favicons for ${targets.length} resources → ${OUT_DIR}`);
   const results = { png: 0, ico: 0, svg: 0, "svg-fallback": 0, skip: 0 };
-
-  // Limited concurrency
-  const concurrency = 6;
-  let idx = 0;
-  async function worker() {
-    while (idx < targets.length) {
-      const i = idx++;
-      const item = targets[i];
-      const r = await processOne(item, opts);
-      results[r.status as keyof typeof results]++;
-      if (r.status !== "skip") {
-        console.log(`  [${i + 1}/${targets.length}] ${r.status.padEnd(12)} ${item.id}`);
-      }
-    }
+  for (const target of targets) {
+    const status = await processOne(target, opts);
+    results[status]++;
   }
-  await Promise.all(Array.from({ length: concurrency }, worker));
 
-  console.log();
-  console.log("Summary:");
-  for (const [k, v] of Object.entries(results)) console.log(`  ${k}: ${v}`);
+  process.stdout.write(`${JSON.stringify(results)}\n`);
 }
 
-run().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  await run();
+}

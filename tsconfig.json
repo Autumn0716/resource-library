@@ -1,7 +1,26 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "types": ["astro/client", "bun"],
+    "baseUrl": ".",
+    "resolveJsonModule": true
+  },
+  "include": [".astro/types.d.ts", "env.d.ts", "src/**/*", "scripts/**/*", "astro.config.mjs"],
+  "exclude": [
+    "src/App.tsx",
+    "src/Landing.tsx",
+    "src/main.tsx",
+    "src/i18n/**/*",
+    "src/components/**/*",
+    "src/data/**/*",
+    "scripts/add-resource.ts",
+    "scripts/add-resource-core.ts",
+    "scripts/add-resource-tui.tsx",
+    "scripts/fetch-favicons.ts",
+    "dist",
+    "node_modules"
   ]
 }

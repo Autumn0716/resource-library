@@ -1,6 +1,7 @@
 .vercel
 node_modules/
 dist/
+.astro/
 .omc/
 .DS_Store
 image/
@@ -9,3 +10,5 @@ openspec/
 .claude/
 .codex/
 CONTRIBUTING.md
+broken-links-report.json
+migration-report.json

@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceGrid from "../../components/ResourceGrid.astro";
+import ResourceFilters from "../../components/ResourceFilters";
+import { getResourceTags, sortResources } from "../../lib/resources";
+
+const resources = sortResources(await getCollection("resources"));
+const groups = await getCollection("groups");
+const types = [...new Set(resources.map((resource) => resource.data.type))].sort((left, right) => left.localeCompare(right, "zh-Hans-CN"));
+const tags = getResourceTags(resources);
+const pricing = [...new Set(resources.map((resource) => resource.data.pricing))].sort((left, right) => left.localeCompare(right, "en"));
+const languages = [...new Set(resources.flatMap((resource) => resource.data.language))].sort((left, right) => left.localeCompare(right, "en"));
+const difficulties = [...new Set(resources.map((resource) => resource.data.difficulty))].sort((left, right) => left.localeCompare(right, "en"));
+---
+
+<BaseLayout title="Resources" description="Browse all curated resources." resources={resources}>
+  <main class="page-stack" data-pagefind-body>
+    <section class="section-heading">
+      <span>Resources</span>
+      <h1 class="section-heading-title" data-i18n-key="resourceListTitle">资源列表</h1>
+      <p>{resources.length} resources across {groups.length} groups.</p>
+    </section>
+    <section class="filter-summary" aria-label="Available filters">
+      <p><strong>Groups:</strong> {groups.map((group) => group.data.name).join(" · ")}</p>
+      <p><strong>Types:</strong> {types.join(" · ")}</p>
+      <p><strong>Tags:</strong> {tags.slice(0, 24).join(" · ")}</p>
+    </section>
+    <ResourceFilters
+      groups={groups.map((group) => ({ value: group.id, label: group.data.name }))}
+      types={types}
+      tags={tags}
+      pricing={pricing}
+      languages={languages}
+      difficulties={difficulties}
+      client:idle
+    />
+    <ResourceGrid resources={resources} />
+  </main>
+</BaseLayout>

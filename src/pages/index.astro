@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ResourceGrid from "../components/ResourceGrid.astro";
+import { sortResources } from "../lib/resources";
+import { buildSiteJsonLd } from "../lib/seo";
+
+const resources = sortResources(await getCollection("resources"));
+const groups = await getCollection("groups");
+const featured = resources.filter((resource) => resource.data.featured).slice(0, 6);
+const jsonLd = buildSiteJsonLd();
+---
+
+<BaseLayout resources={resources} jsonLd={jsonLd}>
+  <main class="landing-page" data-pagefind-body>
+    <section class="hero-panel">
+      <p class="docs-badge">Curated resource atlas</p>
+      <h1>AI Builder Atlas</h1>
+      <p>面向 AI 构建者的设计工程、学术创作、UI 资源与工作流知识库。</p>
+      <div class="hero-actions">
+        <a href="/resources"><span data-i18n-key="browseResources">浏览资源</span> {resources.length}</a>
+        <a href="/groups"><span data-i18n-key="exploreGroups">探索分类</span> {groups.length}</a>
+      </div>
+    </section>
+    <section class="section-heading">
+      <span>Featured</span>
+      <h2 class="section-heading-title" data-i18n-key="featured">精选资源</h2>
+    </section>
+    <ResourceGrid resources={featured.length > 0 ? featured : resources.slice(0, 6)} />
+  </main>
+</BaseLayout>

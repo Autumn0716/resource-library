@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceGrid from "../../components/ResourceGrid.astro";
+import { sortGroups } from "../../lib/groups";
+import { sortResources } from "../../lib/resources";
+
+const resources = sortResources(await getCollection("resources"));
+const groups = sortGroups(await getCollection("groups"));
+---
+
+<BaseLayout title="Groups" description="Browse resources by curated knowledge group." resources={resources}>
+  <main class="page-stack" data-pagefind-body>
+    <section class="section-heading">
+      <span>Groups</span>
+      <h1 class="section-heading-title" data-i18n-key="groupNavigationTitle">分类导航</h1>
+      <p>{groups.length} groups covering AI building, design engineering, academic work, and creative workflows.</p>
+    </section>
+    <div class="group-grid">
+      {
+        groups.map((group) => {
+          const groupResources = resources.filter((resource) => resource.data.group === group.id);
+          return (
+            <article class="group-card">
+              <a href={`/groups/${group.id}/`}>
+                <span>{groupResources.length} resources</span>
+                <h2>{group.data.name}</h2>
+                <p>{group.data.description}</p>
+              </a>
+            </article>
+          );
+        })
+      }
+    </div>
+    <section class="section-heading">
+      <span>Latest</span>
+      <h2 class="section-heading-title">近期资源</h2>
+    </section>
+    <ResourceGrid resources={resources.slice(0, 6)} />
+  </main>
+</BaseLayout>

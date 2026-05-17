@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceGrid from "../../components/ResourceGrid.astro";
+import { sortGroups } from "../../lib/groups";
+import { sortResources } from "../../lib/resources";
+
+export async function getStaticPaths() {
+  const groups = await getCollection("groups");
+  return groups.map((group) => ({ params: { slug: group.id }, props: { group } }));
+}
+
+const { group } = Astro.props;
+const resources = sortResources(await getCollection("resources"));
+const groups = sortGroups(await getCollection("groups"));
+const groupResources = resources.filter((resource) => resource.data.group === group.id);
+---
+
+<BaseLayout title={group.data.name} description={group.data.description} resources={resources}>
+  <main class="page-stack" data-pagefind-body>
+    <section class="section-heading">
+      <span>Group</span>
+      <h1 class="section-heading-title">{group.data.name}</h1>
+      <p>{group.data.description}</p>
+    </section>
+    <section class="filter-summary" aria-label="Group metadata">
+      <p><strong>Resources:</strong> {groupResources.length}</p>
+      <p><strong>Other groups:</strong> {groups.filter((candidate) => candidate.id !== group.id).map((candidate) => candidate.data.name).join(" · ")}</p>
+    </section>
+    <ResourceGrid resources={groupResources} />
+  </main>
+</BaseLayout>

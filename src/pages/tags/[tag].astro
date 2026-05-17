@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResourceGrid from "../../components/ResourceGrid.astro";
+import { deriveTagCounts } from "../../lib/tags";
+import { sortResources } from "../../lib/resources";
+
+export async function getStaticPaths() {
+  const resources = await getCollection("resources");
+  const tags = [...new Set(resources.flatMap((resource) => resource.data.tags))];
+  return tags.map((tag) => ({ params: { tag }, props: { tag } }));
+}
+
+const { tag } = Astro.props;
+const resources = sortResources(await getCollection("resources"));
+const taggedResources = resources.filter((resource) => resource.data.tags.includes(tag));
+const tagCounts = deriveTagCounts(resources).slice(0, 32);
+---
+
+<BaseLayout title={`Tag: ${tag}`} description={`Resources tagged with ${tag}.`} resources={resources}>
+  <main class="page-stack" data-pagefind-body>
+    <section class="section-heading">
+      <span>Tag</span>
+      <h1 class="section-heading-title">#{tag}</h1>
+      <p>{taggedResources.length} resources matched this tag.</p>
+    </section>
+    <nav class="tag-list" aria-label="Popular tags">
+      {tagCounts.map(([name, count]) => <a href={`/tags/${encodeURIComponent(name)}/`}>{name} <span>{count}</span></a>)}
+    </nav>
+    <ResourceGrid resources={taggedResources} />
+  </main>
+</BaseLayout>

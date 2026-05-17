@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { sortResources } from "../lib/resources";
+
+const resources = sortResources(await getCollection("resources"));
+const groups = await getCollection("groups");
+---
+
+<BaseLayout title="About" description="About the AI Builder Atlas resource library." resources={resources}>
+  <main class="page-stack narrow-page" data-pagefind-body>
+    <section class="section-heading">
+      <span>About</span>
+      <h1 class="section-heading-title" data-i18n-key="aboutTitle">关于 AI Builder Atlas</h1>
+      <p>AI Builder Atlas collects practical resources for builders working across design, engineering, research, writing, and AI workflows.</p>
+    </section>
+    <article class="detail-panel prose-panel">
+      <h2>What is included</h2>
+      <p>The catalog currently includes {resources.length} resources across {groups.length} groups, migrated from the legacy JSON library into Astro content collections.</p>
+      <h2>How resources are organized</h2>
+      <p>Each resource keeps a stable legacy ID, normalized group, original type label, tags, pricing, language, difficulty, status, and a Markdown body for future editorial notes.</p>
+      <h2>Status labels</h2>
+      <p><strong>curated</strong> resources are ready for browsing. <strong>pending</strong> resources are preserved from the legacy catalog and still need editorial review.</p>
+    </article>
+  </main>
+</BaseLayout>
